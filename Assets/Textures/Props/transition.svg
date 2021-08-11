@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="385px" height="385px" viewBox="0 0 385 385" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ICON</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transition" transform="translate(-14.000000, -256.000000)" fill="#609AFF">
+            <g id="All" transform="translate(14.360000, 256.360000)">
+                <g id="EarthShine">
+                    <circle id="Oval-Copy-2" opacity="0.02" cx="192" cy="192" r="192"></circle>
+                    <circle id="Oval-Copy-4" opacity="0.02" cx="192" cy="192" r="158"></circle>
+                    <circle id="Oval-Copy-3" opacity="0.02" cx="192" cy="192" r="130"></circle>
+                    <circle id="Oval-Copy-2" opacity="0.06" cx="192.56" cy="191.44" r="110"></circle>
+                    <circle id="Oval-Copy" opacity="0.08" cx="192.64" cy="191.64" r="90"></circle>
+                    <circle id="Oval" opacity="0.100336119" cx="192.64" cy="191.64" r="70"></circle>
+                </g>
+                <g id="Earth" transform="translate(142.640000, 141.640000)">
+                    <circle id="Oval" cx="49.8214286" cy="49.8214286" r="49.8214286"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

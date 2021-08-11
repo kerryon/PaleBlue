@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="385px" height="385px" viewBox="0 0 385 385" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>ICON</title>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Transition" transform="translate(-14.000000, -256.000000)">
+            <g id="ICON" transform="translate(14.360000, 256.360000)">
+                <g id="Regler" transform="translate(106.840000, 170.240000)">
+                    <path d="M3.17689485,93.9113041 C23.3339159,116.776191 52.8425274,131.2 85.72,131.2 C146.471322,131.2 195.72,81.9513225 195.72,21.2 C195.72,14.9131892 195.192595,8.74956037 194.179617,2.75094417" id="Path" stroke="#609AFF" stroke-width="2"></path>
+                    <circle id="Oval-Copy-7" fill="#609AFF" cx="4" cy="95" r="4"></circle>
+                    <circle id="Oval-Copy-9" fill="#609AFF" cx="194" cy="4" r="4"></circle>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
