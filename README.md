@@ -1,6 +1,7 @@
 [![Issues][issues-shield]][issues-url]
-[![Generic badge](https://img.shields.io/badge/LICENSE-PRIVATE-black.svg?style=for-the-badge)](https://github.com/kerryon/PaleBlue/blob/main/LICENSE.md)
+[![MIT License][license-shield]][license-url]
 ![GitHub repo size](https://img.shields.io/github/repo-size/kerryon/PaleBlue?style=for-the-badge)
+<!--[![Generic badge](https://img.shields.io/badge/LICENSE-PRIVATE-black.svg?style=for-the-badge)](https://github.com/kerryon/PaleBlue/blob/main/LICENSE.md)-->
 
 # Pale Blue
 <!-- PROJECT LOGO -->
@@ -67,3 +68,5 @@ This work is licensed under a private license. See `LICENSE` for more informatio
 <!-- REF -->
 [issues-shield]: https://img.shields.io/github/issues/kerryon/PaleBlue.svg?style=for-the-badge
 [issues-url]: https://github.com/kerryon/PaleBlue/issues
+[license-shield]: https://img.shields.io/github/license/kerryon/PaleBlue.svg?style=for-the-badge
+[license-url]: https://github.com/kerryon/PaleBlue/blob/main/LICENSE.md
