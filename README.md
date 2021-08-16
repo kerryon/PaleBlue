@@ -16,7 +16,7 @@
   <p align="center">
     Discover your own world in a 'planetary test tube'. Follow and decide the course of the geographical history of a planet with its inhabitants from a cosmic perspective.
     <br />
-    <a href="#"><strong>Explore docs »</strong></a>
+    <a href="https://kerrybartels.de/Bartels_Kerry_Thesis.pdf"><strong>explore master's thesis [GER] »</strong></a>
     <br />
     <br />
     <a href="https://paleblue.webflow.io">More Info</a>
@@ -55,7 +55,7 @@ A mobile learning experience on your own smartphone - inside and also outside th
 <!-- LICENSE -->
 ## License
 
-This work is licensed under a private license. See `LICENSE` for more information.
+This work is licensed under a **GPL-3.0** license. See `LICENSE` for more information.
 
 <!-- CONTACT -->
 ## Contact
