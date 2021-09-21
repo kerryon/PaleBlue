@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0021957303, g: 0.010546057, b: 0.011911288, a: 1}
+  m_IndirectSpecularColor: {r: 0.002143902, g: 0.010003124, b: 0.011359228, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -966,6 +966,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   expectedInteractable: 1
+  requiredButtons: -1
   multiDown: 0
   dragThreshold: 10
   normalTransitions:
@@ -2181,6 +2182,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   expectedInteractable: 1
+  requiredButtons: -1
   multiDown: 0
   dragThreshold: 10
   normalTransitions:
@@ -3372,6 +3374,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   expectedInteractable: 1
+  requiredButtons: -1
   multiDown: 0
   dragThreshold: 10
   normalTransitions:
