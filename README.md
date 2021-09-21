@@ -31,7 +31,9 @@
 ## About The Project
 <p align="center">
   <a href="https://paleblue.webflow.io">
-    <img src="https://github.com/kerryon/PaleBlue/blob/main/screens/pb.jpg" alt="Icon" width="70%">
+    <img src="https://github.com/kerryon/PaleBlue/blob/main/screens/Phase32.png" alt="sampleimg_1" width="30%">
+    <img src="https://github.com/kerryon/PaleBlue/blob/main/screens/Startscreen.png" alt="sampleimg_2" width="30%">
+    <img src="https://github.com/kerryon/PaleBlue/blob/main/screens/New2.png" alt="sampleimg_3" width="30%">
   </a>
 </p>
 
