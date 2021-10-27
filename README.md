@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/kerryon/PaleBlue/">
-    <img src="Assets/Textures/Props/transition_old.svg" alt="Logo" width="100" height="100">
+    <img src="Assets/Textures/Props/Logo/transition_old.svg" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Serious Game</h3>
