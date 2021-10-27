@@ -539,7 +539,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266291245}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3540015f9ba0cda41a7033d3e6c9cdf1, type: 3}
   m_Name: 
@@ -576,16 +576,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1266291245}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 525c20db756212541b45a451d17a89f7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1b6f868ab7406c2459d74ba2d3218a02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 100.8
-  smallestTriangleSize: 0.25
+  radius: 101.5
+  smallestTriangleSize: 1
   resolution: 128
   detail: 1
   autoPreview: 1
   observer: {fileID: 0}
   areas: {fileID: 0}
+  ground: {fileID: 178146883}
   bakedDetailTilingA: 16
   bakedDetailTilingB: 1000
   bakedDetailTilingC: 100000

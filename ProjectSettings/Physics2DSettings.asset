@@ -8,7 +8,7 @@ Physics2DSettings:
   m_DefaultMaterial: {fileID: 0}
   m_VelocityIterations: 8
   m_PositionIterations: 3
-  m_VelocityThreshold: 0.0001
+  m_VelocityThreshold: 1
   m_MaxLinearCorrection: 0.2
   m_MaxAngularCorrection: 8
   m_MaxTranslationSpeed: 100
@@ -42,7 +42,7 @@ Physics2DSettings:
   m_QueriesHitTriggers: 1
   m_QueriesStartInColliders: 1
   m_CallbacksOnDisable: 1
-  m_ReuseCollisionCallbacks: 1
+  m_ReuseCollisionCallbacks: 0
   m_AutoSyncTransforms: 0
   m_AlwaysShowColliders: 0
   m_ShowColliderSleep: 1

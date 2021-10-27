@@ -302,9 +302,9 @@ MonoBehaviour:
   radius: 100
   material: {fileID: 2100000, guid: 9d3567a56a949dc4c99f04b09081a4db, type: 2}
   sharedMaterial: {fileID: 423592942}
-  waterLevel: 0.155
+  waterLevel: 0.2
   displace: 1
-  displacement: 14
+  displacement: 13
   clampWater: 1
 --- !u!114 &178146882
 MonoBehaviour:
@@ -318,7 +318,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4080d44a32d734534ac8e0663a890e15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  number: 4
   prefab: {fileID: 159879799}
   PlanetRadius: 100
   PlanetOrigin: {fileID: 178146877}
@@ -336,27 +335,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 218874539}
-  - component: {fileID: 218874538}
   m_Layer: 7
   m_Name: UI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!114 &218874538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 218874537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b007475ddc0ae4981a12008143617db5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txt: {fileID: 1831831840}
+  m_IsActive: 1
 --- !u!4 &218874539
 Transform:
   m_ObjectHideFlags: 0
@@ -623,7 +608,6 @@ MonoBehaviour:
     Offset: 0
   innerDepthTex: {fileID: 0}
   innerMeshRadius: 99
-  innerOffset: 0.1
   outerDepthTex: {fileID: 0}
   outerMesh: {fileID: 4300000, guid: 662157716ef2b6840841e610138115a4, type: 3}
   outerMeshRadius: 1.15
@@ -681,7 +665,7 @@ GameObject:
   - component: {fileID: 817806336}
   - component: {fileID: 817806335}
   m_Layer: 7
-  m_Name: Interactions
+  m_Name: Buttons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -852,19 +836,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 969823251}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 218874538}
-        m_TargetAssemblyTypeName: HELPER, Assembly-CSharp
-        m_MethodName: HideAll
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &969823251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1204,7 +1176,7 @@ GameObject:
   - component: {fileID: 1373888988}
   - component: {fileID: 1373888987}
   m_Layer: 7
-  m_Name: FAB
+  m_Name: Action
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1272,19 +1244,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1373888989}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 218874538}
-        m_TargetAssemblyTypeName: HELPER, Assembly-CSharp
-        m_MethodName: HideTxt
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1373888989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1705,7 +1665,7 @@ GameObject:
   - component: {fileID: 1831831842}
   - component: {fileID: 1831831841}
   m_Layer: 7
-  m_Name: HEAD
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1868,7 +1828,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1838757345
 RectTransform:
   m_ObjectHideFlags: 0
