@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using LylekGames;
 using System.Collections;
+using TMPro;
 
 public class Creature : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Creature : MonoBehaviour
         StartCoroutine(SaveAndLoadAvatar());
     }
 
-    IEnumerator SaveAndLoadAvatar() // Delete wenn vorhanden einbauen + EASYSAVE für Bild speichern
+    IEnumerator SaveAndLoadAvatar()
     {
         if (Resources.Load<Texture2D>("avatar"))
         {
@@ -50,5 +51,11 @@ public class Creature : MonoBehaviour
     {
         Props.SetActive(false);
         Card.SetActive(true);
+    }
+
+    public void SaveNameOfLife()
+    {
+        string name = gameObject.GetComponentInChildren<TMP_InputField>().text;
+        ES3.Save("LIFE", name);
     }
 }

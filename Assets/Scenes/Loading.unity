@@ -942,6 +942,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   expectedInteractable: 0
+  requiredButtons: -1
   multiDown: 0
   dragThreshold: 10
   normalTransitions:
@@ -1239,7 +1240,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 232374259}
-  - component: {fileID: 232374263}
   - component: {fileID: 232374262}
   - component: {fileID: 232374261}
   - component: {fileID: 232374260}
@@ -1312,23 +1312,6 @@ MonoBehaviour:
     Target: {fileID: 0}
     Value: {x: 1.1, y: 1.1}
     Ease: 100
---- !u!114 &232374263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 232374258}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 622df6012652bdb498c7ec99b1b8a532, type: 3}
-    Volume: 1
 --- !u!1 &248139135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2064,7 +2047,6 @@ GameObject:
   - component: {fileID: 434713164}
   - component: {fileID: 434713167}
   - component: {fileID: 434713166}
-  - component: {fileID: 434713165}
   m_Layer: 0
   m_Name: '[Down Transitions]'
   m_TagString: Untagged
@@ -2086,23 +2068,6 @@ Transform:
   m_Father: {fileID: 2086869113}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &434713165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 434713163}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 3cdf6946b7f8a1549ab339405d1c0146, type: 3}
-    Volume: 1
 --- !u!114 &434713166
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3042,7 +3007,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 33.55
+  m_fontSize: 35.5
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -6403,6 +6368,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   expectedInteractable: 1
+  requiredButtons: -1
   multiDown: 0
   dragThreshold: 10
   normalTransitions:

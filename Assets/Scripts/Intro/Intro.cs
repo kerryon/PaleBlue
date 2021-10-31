@@ -57,7 +57,7 @@ public class Intro : MonoBehaviour
         string name = planetName.text;
         ES3.Save("NAME", name);
 
-        if (String.IsNullOrEmpty(name))
+        if (string.IsNullOrEmpty(name))
         {
             thirdScreen.transform.GetChild(3).gameObject.SetActive(false);
         } else

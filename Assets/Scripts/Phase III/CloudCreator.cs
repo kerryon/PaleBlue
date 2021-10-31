@@ -5,6 +5,7 @@ using System.Collections;
 public class CloudCreator : MonoBehaviour
 {
     private SgtCloudsphere cloudsphere;
+
     void Start()
     {
         cloudsphere = gameObject.GetComponent<SgtCloudsphere>();
@@ -25,10 +26,5 @@ public class CloudCreator : MonoBehaviour
             count += 0.1f;
         }
         yield return null;
-    }
-
-    public void StartWorldBreeding()
-    {
-        //in Echtzeit Pins + Popups auf den Planeten setzen
     }
 }

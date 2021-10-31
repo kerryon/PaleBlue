@@ -49,7 +49,7 @@ public class Menu : MonoBehaviour
         {
             Levels.transform.GetChild(i).gameObject.SetActive(true);
         }
-        menuScreen.gameObject.SetActive(false);
+        menuScreen.SetActive(false);
     }
 
     public void ToggleMenu()
@@ -67,7 +67,7 @@ public class Menu : MonoBehaviour
         yield return new WaitForSeconds(1);
         }
         toggleBool = !toggleBool;
-        menuScreen.gameObject.SetActive(toggleBool);
+        menuScreen.SetActive(toggleBool);
     }
 
     public void BackToMenu()
@@ -94,6 +94,6 @@ public class Menu : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        Textbox.gameObject.SetActive(false);
+        Textbox.SetActive(false);
     }
 }

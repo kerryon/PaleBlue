@@ -2986,6 +2986,7 @@ GameObject:
   - component: {fileID: 386584914}
   - component: {fileID: 386584917}
   - component: {fileID: 386584916}
+  - component: {fileID: 386584919}
   - component: {fileID: 386584915}
   - component: {fileID: 386584918}
   m_Layer: 0
@@ -3055,17 +3056,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.8301887, g: 0.4627121, b: 0.254539, a: 1}
-  brightness: 0.01
+  brightness: 1.5
   renderQueue:
     Group: 3000
     Offset: 0
-  radius: 1.5
+  radius: 1.48
   cameraOffset: 0
-  mainTex: {fileID: 8900000, guid: d586e911a4da611458ee6b84965f8c6a, type: 3}
+  mainTex: {fileID: 8900000, guid: 3d7c6b60d4634485082a80f59872abc5, type: 3}
   depthTex: {fileID: 0}
   softness: 0
-  lit: 0
-  ambientColor: {r: 0, g: 0, b: 0, a: 0}
+  lit: 1
+  ambientColor: {r: 0.8584906, g: 0.55822873, b: 0.36850303, a: 0}
   ambientBrightness: 1
   maxLights: 2
   maxSphereShadows: 2
@@ -3073,10 +3074,10 @@ MonoBehaviour:
   near: 0
   nearTex: {fileID: 0}
   nearDistance: 1
-  detail: 0
-  detailTex: {fileID: 0}
-  detailScale: 8
-  detailTiling: 90
+  detail: 1
+  detailTex: {fileID: 2800000, guid: 33108e6ed5e881c4581d9a330b484260, type: 3}
+  detailScale: -3
+  detailTiling: 100
   mesh: {fileID: 4300002, guid: d3c72eb619c9ab640803adf4c43f367c, type: 3}
   meshRadius: 1.45
 --- !u!114 &386584918
@@ -3091,6 +3092,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f3cc3c7f5e914207b642c01577a0991, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &386584919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386584913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b05a7c567bcca04dbd0e4f5d8431c39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  width: 256
+  format: 5
+  sunsetEase: 0
+  sunsetStart: 0.51
+  sunsetEnd: 0.6
+  sunsetSharpnessR: 2
+  sunsetSharpnessG: 2
+  sunsetSharpnessB: 2
 --- !u!1 &388850336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4208482054774832623, guid: 28cb89f383cdaae4cab9b89a291cb963, type: 3}
@@ -4456,11 +4477,11 @@ MonoBehaviour:
   lightingTex: {fileID: 0}
   powerRgb: 0
   seed: 0
-  thickness: 72
+  thickness: 75
   thicknessBias: 1.95
   innerRadius: 100
-  innerSpeed: 0.1
-  outerRadius: 170
+  innerSpeed: 0.2
+  outerRadius: 200
   outerSpeed: 0.05
   radiusBias: 2
   speedSpread: 0
@@ -6753,6 +6774,7 @@ GameObject:
   - component: {fileID: 794408285}
   - component: {fileID: 794408284}
   - component: {fileID: 794408283}
+  - component: {fileID: 794408288}
   - component: {fileID: 794408287}
   m_Layer: 0
   m_Name: Planet
@@ -6872,6 +6894,22 @@ MonoBehaviour:
   - {fileID: 21300000, guid: a6dbe8258b0b44385bff842726849083, type: 3}
   - {fileID: 21300000, guid: a6dbe8258b0b44385bff842726849083, type: 3}
   - {fileID: 21300000, guid: a6dbe8258b0b44385bff842726849083, type: 3}
+--- !u!114 &794408288
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 794408281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95a7e6fc5af524152a0139869efe4ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials:
+  - {fileID: 2100000, guid: 8459cb83085646f4c9ddcdca43d26569, type: 2}
+  - {fileID: 2100000, guid: 9d3567a56a949dc4c99f04b09081a4db, type: 2}
+  - {fileID: 2100000, guid: 815d32ad3e6234b4ea2864ec185c712e, type: 2}
 --- !u!1 &809225991
 GameObject:
   m_ObjectHideFlags: 0

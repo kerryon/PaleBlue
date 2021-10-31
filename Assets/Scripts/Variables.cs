@@ -7,6 +7,9 @@ public class Variables : MonoBehaviour
 
     public static Variables Instance { get { return _instance; } }
 
+    [Header("Utillity")]
+    public int phaseCount;
+
     [Header("Parameter")]
     public float water;
     public int human;
@@ -81,6 +84,6 @@ public class Variables : MonoBehaviour
         ES3.Save("WATER", water);
         ES3.Save("HUMAN", human);
 
-        ES3.Save("CurrentAt", timespan);
+        ES3.Save("CurrentTime", timespan);
     }
 }
