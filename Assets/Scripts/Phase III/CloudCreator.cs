@@ -18,13 +18,13 @@ public class CloudCreator : MonoBehaviour
 
     private IEnumerator Clouds()
     {
-        float count = 0.01f;
+        float CloudDensity = cloudsphere.Brightness;
+        float count = 0.0f;
         while (count <= 1)
         {
-            cloudsphere.Brightness = count;
-            yield return new WaitForSeconds(0.05f);
-            count += 0.1f;
+            cloudsphere.Brightness = Mathf.Lerp(CloudDensity, 1.2f, count);
+            count += Time.deltaTime;
+            yield return null;
         }
-        yield return null;
     }
 }

@@ -85,8 +85,8 @@ MonoBehaviour:
     dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
     nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
     voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \n\n<link=\"https://de.wikipedia.org/wiki/Link\"><u>Klick
-    hier</u></link>"
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \n\n<link=\"https://de.wikipedia.org/wiki/Link\"><style=Link>Klick
+    hier</style></link>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06d43814ad1a64bc48abd0cb3c59498a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  canvasScale: {fileID: 0}
+  canvasScale: {fileID: 3435954769362881789}
   rt: {fileID: 3435954771016725030}
   rtBG: {fileID: 3435954771348268167}
   percentThreshold: 0.2
@@ -1221,19 +1221,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3435954771201851136}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: LevelInitiator, Assembly-CSharp
-        m_MethodName: NextChapter
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!95 &3435954771201851138
 Animator:
   serializedVersion: 3

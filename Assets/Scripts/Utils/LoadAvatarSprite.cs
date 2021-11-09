@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadAvatar : MonoBehaviour
+public class LoadAvatarSprite : MonoBehaviour
 {
     private Texture2D SourceImage;
     private Sprite MySprite;

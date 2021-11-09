@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.002143902, g: 0.010003124, b: 0.011359228, a: 1}
+  m_IndirectSpecularColor: {r: 0.0021432748, g: 0.009973416, b: 0.011328647, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1832,6 +1832,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 1
   m_Antialiasing: 2
   m_AntialiasingQuality: 1
@@ -2010,7 +2011,6 @@ MonoBehaviour:
     Offset: 0
   innerDepthTex: {fileID: 0}
   innerMeshRadius: 0.98
-  innerOffset: 0.1
   outerDepthTex: {fileID: 0}
   outerMesh: {fileID: 4300000, guid: 662157716ef2b6840841e610138115a4, type: 3}
   outerMeshRadius: 1
@@ -2450,8 +2450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.76093, y: -253.61}
-  m_SizeDelta: {x: 513.52185, y: 367.22}
+  m_AnchoredPosition: {x: 306.76093, y: -461.635}
+  m_SizeDelta: {x: 513.52185, y: 783.27}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1408946630
 MonoBehaviour:
@@ -2473,11 +2473,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<font=Fonts/Config-Bold><size=150%><link=https://de.wikipedia.org/wiki/Serious_Game><u>Serious
-    Game</u><link>: pale blue</size></font>\n\nEin interaktives Modell \xFCber das
-    Thema Wasser. Entdecke eine eigene kleine Welt in deinem planetaren Reagenzglas.
-    Verfolge und bestimme die geografische Geschichte eines Planeten und seinem Leben
-    aus kosmischer Perspektive."
+  m_text: "<font=Fonts/Config-Bold><size=150%>Pale Blue \u2013 ein <link=https://de.wikipedia.org/wiki/Serious_Game><style=Link>Serious
+    Game</style><link> in Echtzeit</size></font>\n\nEin interaktives Planeten-Modell
+    \xFCber das Thema Wasser. Entdecke eine eigene kleine Welt in deinem planetaren
+    Reagenzglas. Verfolge und bestimme die geografische Geschichte eines Planeten
+    und seinem Leben aus kosmischer Perspektive.\n\nErfahre mehr \xFCber das Spiel,
+    die Funktionen und die Einsatzm\xF6glichkeiten als Lehrmedium. Alle Informationen
+    kannst du <link=https://paleblue.webflow.io/><style=Link>hier</style></link>
+    nachlesen.\n\n<size=80%>\xA9 Kerry Bartels</size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -2620,7 +2623,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -40, y: -757.8727}
+  m_SizeDelta: {x: -40, y: -341.82263}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1413525254
 MonoBehaviour:
@@ -2636,7 +2639,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 0.98039216}
-  m_RaycastTarget: 0
+  m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -2783,6 +2786,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
   m_RenderPostProcessing: 0
   m_Antialiasing: 1
   m_AntialiasingQuality: 2
@@ -2991,7 +2995,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.76093, y: -547.22}
+  m_AnchoredPosition: {x: 306.76093, y: -963.27}
   m_SizeDelta: {x: 513.52185, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1621870215

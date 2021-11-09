@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -19,6 +20,8 @@ public class Difficulty : MonoBehaviour
     public TMP_Text reproductionValueCount;
     public TMP_Text waterStorageValueCount;
 
+    public GameObject continueBtn;
+
     private Color32 blue = new Color32(96, 154, 255, 10);
     private Color32 red = new Color32(255, 96, 96, 10);
 
@@ -31,46 +34,37 @@ public class Difficulty : MonoBehaviour
         value = 0;
         difficultySlider = GetComponent<Image>();
         difficultySlider.fillAmount = value;
-    }
 
-    public void DisplayDifficultyValues(int prefab01, int prefab02, int prefab03)
-    {
-        waterUseValueCount.text = "Wasserverbrach\n—\n" + "<font=Fonts/Config-Bold>" + prefab01.ToString() + "</font>";
-        reproductionValueCount.text = "Reproduktion\n—\n" + "<font=Fonts/Config-Bold>" + prefab02.ToString() + "</font>";
-        waterStorageValueCount.text = "Auskommen ohne Wasser\n—\n" + "<font=Fonts/Config-Bold>" + prefab03.ToString() + "</font>";
-
-        waterUseValueColor.color = Color.Lerp(blue, red, (float)prefab01 / 10);
-        reproductionValueColor.color = Color.Lerp(blue, red, (float)prefab02 / 10);
-        waterStorageValueColor.color = Color.Lerp(blue, red, (float)prefab03 / 10);
+        continueBtn.SetActive(false);
     }
 
     public void ChangeDifficulty(float changeValue)
     {
+        StartCoroutine(DifficultyCounter(changeValue));
+    }
+
+    private IEnumerator DifficultyCounter(float changeValue)
+    {
+        yield return new WaitForEndOfFrame();
         prefab01 = GameObject.FindGameObjectsWithTag("Prefab1").Length;
         prefab02 = GameObject.FindGameObjectsWithTag("Prefab2").Length;
         prefab03 = GameObject.FindGameObjectsWithTag("Prefab3").Length;
 
-        if (prefab01 > 10)
+        if (!continueBtn.activeSelf)
         {
-            return;
-        } else if (prefab02 > 10) 
-        {
-            return;
-        } else if (prefab03 > 10)
-        {
-            return;
-        } else
-        {
-            value += changeValue;
-            Variables.Instance.waterUseRate = waterUseValue * prefab01;
-            Variables.Instance.reproductionRate = reproductionValue * prefab02;
-            Variables.Instance.waterStorageRate = waterStorageValue * prefab03;
+            continueBtn.SetActive(true);
         }
-            
+
+        value += changeValue;
+        Variables.Instance.waterUseRate = waterUseValue * prefab01;
+        Variables.Instance.reproductionRate = reproductionValue * prefab02;
+        Variables.Instance.waterStorageRate = waterStorageValue * prefab03;
+
         if (value < 0)
         {
             value = 0;
-        } else if (value > 1)
+        }
+        else if (value > 1)
         {
             value = 1;
         }
@@ -92,5 +86,16 @@ public class Difficulty : MonoBehaviour
 
         difficultySlider.fillAmount = value;
         DisplayDifficultyValues(prefab01, prefab02, prefab03);
+    }
+
+    public void DisplayDifficultyValues(int prefab01, int prefab02, int prefab03)
+    {
+        waterUseValueCount.text = "Wasserverbrach\n—\n" + "<font=Fonts/Config-Bold>" + prefab01.ToString() + "</font>";
+        reproductionValueCount.text = "Reproduktion\n—\n" + "<font=Fonts/Config-Bold>" + prefab02.ToString() + "</font>";
+        waterStorageValueCount.text = "Auskommen ohne Wasser\n—\n" + "<font=Fonts/Config-Bold>" + prefab03.ToString() + "</font>";
+
+        waterUseValueColor.color = Color.Lerp(blue, red, (float)prefab01 / 10);
+        reproductionValueColor.color = Color.Lerp(blue, red, (float)prefab02 / 10);
+        waterStorageValueColor.color = Color.Lerp(blue, red, (float)prefab03 / 10);
     }
 }

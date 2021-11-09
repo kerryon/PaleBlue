@@ -9,12 +9,13 @@ TagManager:
   - Menu
   - Avatar
   - Asteroid
-  - Recorder
   - CameraPivot
   - Lightsource
   - Prefab1
   - Prefab2
   - Prefab3
+  - Statistics
+  - Goals
   layers:
   - Default
   - TransparentFX

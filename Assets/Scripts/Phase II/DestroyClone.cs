@@ -4,9 +4,15 @@ using UnityEngine.UI;
 public class DestroyClone : MonoBehaviour
 {
     private GameObject[] clone;
+    private Button btn;
     public string prefabTag;
 
-    public void DetroyClone(string tag)
+    void Start()
+    {
+        btn = GetComponent<Button>();
+    }
+
+    public void DestroyClones(string tag)
     {
         if (GameObject.FindGameObjectsWithTag(tag).Length > 0)
         {
@@ -19,10 +25,10 @@ public class DestroyClone : MonoBehaviour
     {
         if (GameObject.FindGameObjectsWithTag(prefabTag).Length == 0)
         {
-            gameObject.GetComponent<Button>().interactable = false;
+            btn.interactable = false;
         } else
         {
-            gameObject.GetComponent<Button>().interactable = true;
+            btn.interactable = true;
         }
 
         if (GameObject.FindGameObjectsWithTag("Prefab1").Length > 10)

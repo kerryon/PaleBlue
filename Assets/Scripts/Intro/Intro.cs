@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 using TMPro;
 using System.Collections;
 using System.Collections.Generic;
-using System;
 
 public class Intro : MonoBehaviour
 {
@@ -19,6 +18,8 @@ public class Intro : MonoBehaviour
     public int collisionCount = 0;
 
     private int EverythingDeleted = 0;
+
+    private GameObject[] asteroids;
 
     public void Awake()
     {
@@ -84,8 +85,11 @@ public class Intro : MonoBehaviour
             {
                 float progress = 1f;
                 progress -= Mathf.Clamp01(scenesToLoad[i].progress);
-                loadingAnim.transform.localScale = new Vector3(progress, progress, progress);
-                //loadingAnimTxt.color = new Color(loadingAnim.color.r, loadingAnim.color.g, loadingAnim.color.b, progress);
+                asteroids = GameObject.FindGameObjectsWithTag("Asteroid");
+                for (int j = 0; j < asteroids.Length; j++)
+                {
+                    asteroids[j].transform.localScale = new Vector3(progress * 0.3f, progress * 0.3f, progress * 0.3f);
+                }
                 yield return null;
             }
         }

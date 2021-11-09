@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 
-public class UI : MonoBehaviour
+public class SetupUI : MonoBehaviour
 {
     public Camera UICamera;
     public GameObject Instructions_info;
@@ -31,14 +31,16 @@ public class UI : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
+
+        if (transform.parent.name == "Part_1")
+        {
+            Variables.Instance.historyCount = 1;
+        }
     }
 
     void Start()
-    {
-        if (Variables.Instance.currentLevelIndex >= 3)
-        {
-           StartCoroutine(OpenInterface());
-        }
+    { 
+        StartCoroutine(OpenInterface());
 
         isShown = false;
         UpDown1 = true;
@@ -60,7 +62,13 @@ public class UI : MonoBehaviour
 
     IEnumerator OpenInterface()
     {
-        yield return new WaitForSeconds(7);
+        if (Variables.Instance.historyCount == 1)
+        {
+            yield return new WaitForSeconds(15);
+        } else
+        {
+            yield return new WaitForSeconds(1);
+        }
         OpenUI();
     }
 

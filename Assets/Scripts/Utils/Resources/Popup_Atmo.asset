@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7515b7e6b92bb451bbe658101270b044, type: 3}
   m_Name: Popup_Atmo
   m_EditorClassIdentifier: 
+  index: 1
+  topic: 
   description: "<size=130%><line-height=60%><font=\"Fonts/Config-Bold\">Atmosph\xE4re;
     \u2014;</font></line-height></size> Consetetur sadipscing elitr, sed diam nonumy
     eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
@@ -36,6 +38,6 @@ MonoBehaviour:
     dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
     nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
     voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   <link="https://de.wikipedia.org/wiki/Link">;<u>Klick
-    hier</u></link>
+    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   <link="https://de.wikipedia.org/wiki/Link">;<style=Link>Klick
+    hier</style></link>
   titleImage: {fileID: 21300000, guid: b04bfea9417114ff8821876ac92f3a91, type: 3}

@@ -7,7 +7,8 @@ public class SpherePins : MonoBehaviour
     public float PlanetRadius;
     public GameObject PlanetOrigin;
 
-    private int interval = 1;
+    [Header("Interval in Minuten")]
+    public int interval = 1;
  
     public Sprite[] sprites;
 
@@ -26,6 +27,7 @@ public class SpherePins : MonoBehaviour
         Vector3 onPlanet = Random.onUnitSphere * PlanetRadius;
         prefab.GetComponentInChildren<SpriteRenderer>().sprite = sprites[pinCount];
         GameObject newObject = Instantiate(prefab, onPlanet, Quaternion.identity);
+        newObject.SetActive(true);
         newObject.name = pinCount.ToString();
         newObject.transform.LookAt(PlanetOrigin.transform.position);
         newObject.transform.rotation = newObject.transform.rotation * Quaternion.Euler(-90, 0, 0);

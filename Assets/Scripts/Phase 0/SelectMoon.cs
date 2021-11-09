@@ -19,7 +19,7 @@ public class SelectMoon : MonoBehaviour
         isShown = !isShown;
         moon.gameObject.SetActive(isShown);
 
-        UI.GetComponent<UI>().PhaseFourTrigger(number);
+        UI.GetComponent<SetupUI>().PhaseFourTrigger(number);
     }
 
     public void MoonDeselect(int number)
@@ -27,6 +27,6 @@ public class SelectMoon : MonoBehaviour
         isShown = !isShown;
         moon.gameObject.SetActive(isShown);
 
-        UI.GetComponent<UI>().PhaseFourDeselectTrigger(number);
+        UI.GetComponent<SetupUI>().PhaseFourDeselectTrigger(number);
     }
 }

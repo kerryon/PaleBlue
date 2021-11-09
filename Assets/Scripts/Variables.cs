@@ -8,7 +8,7 @@ public class Variables : MonoBehaviour
     public static Variables Instance { get { return _instance; } }
 
     [Header("Utillity")]
-    public int phaseCount;
+    public int historyCount;
 
     [Header("Parameter")]
     public float water;
@@ -38,6 +38,7 @@ public class Variables : MonoBehaviour
         }
 
         currentLevelIndex = ES3.Load("CLI", 3);
+        historyCount = ES3.Load("HC", 0);
         water = ES3.Load("WATER", 0f);
         human = ES3.Load("HUMAN", 0);
         waterUseRate = ES3.Load("Property_waterUseRate", 0f);
@@ -49,7 +50,7 @@ public class Variables : MonoBehaviour
     {
         currentDate = DateTime.Now;
 
-        if (Instance.currentLevelIndex <= 3)
+        if (currentLevelIndex <= 3)
         {
             ES3.Save("StartedAt", currentDate);
         }
@@ -73,17 +74,23 @@ public class Variables : MonoBehaviour
         if (pauseStatus)
         {
             ES3.Save("CLI", currentLevelIndex);
+            ES3.Save("HC", historyCount);
             ES3.Save("WATER", water);
             ES3.Save("HUMAN", human);
+            ES3.Save("Property_waterUseRate", waterUseRate);
+            ES3.Save("Property_reproductionRate", reproductionRate);
+            ES3.Save("Property_storageRate", waterStorageRate);
         }
     }
 
     void OnApplicationQuit()
     {
         ES3.Save("CLI", currentLevelIndex);
+        ES3.Save("HC", historyCount);
         ES3.Save("WATER", water);
         ES3.Save("HUMAN", human);
-
-        ES3.Save("CurrentTime", timespan);
+        ES3.Save("Property_waterUseRate", waterUseRate);
+        ES3.Save("Property_reproductionRate", reproductionRate);
+        ES3.Save("Property_storageRate", waterStorageRate);
     }
 }
