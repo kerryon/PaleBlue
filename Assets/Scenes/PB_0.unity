@@ -1544,7 +1544,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 185376709}
-  - component: {fileID: 185376713}
   - component: {fileID: 185376712}
   - component: {fileID: 185376711}
   - component: {fileID: 185376710}
@@ -1617,23 +1616,6 @@ MonoBehaviour:
     Target: {fileID: 862855642}
     Value: {x: 1.1, y: 1.1}
     Ease: 100
---- !u!114 &185376713
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 185376708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 622df6012652bdb498c7ec99b1b8a532, type: 3}
-    Volume: 1
 --- !u!1 &204814188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4950,7 +4932,6 @@ GameObject:
   m_Component:
   - component: {fileID: 765285409}
   - component: {fileID: 765285411}
-  - component: {fileID: 765285410}
   m_Layer: 0
   m_Name: '[Down Transitions]'
   m_TagString: Untagged
@@ -4972,23 +4953,6 @@ Transform:
   m_Father: {fileID: 921914903}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &765285410
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 765285408}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 3cdf6946b7f8a1549ab339405d1c0146, type: 3}
-    Volume: 1
 --- !u!114 &765285411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7331,7 +7295,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1119470938}
   - component: {fileID: 1119470940}
-  - component: {fileID: 1119470939}
   m_Layer: 0
   m_Name: '[Down Transitions]'
   m_TagString: Untagged
@@ -7353,23 +7316,6 @@ Transform:
   m_Father: {fileID: 1264278949}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1119470939
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1119470937}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 3cdf6946b7f8a1549ab339405d1c0146, type: 3}
-    Volume: 1
 --- !u!114 &1119470940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12318,7 +12264,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1936364751}
-  - component: {fileID: 1936364755}
   - component: {fileID: 1936364754}
   - component: {fileID: 1936364753}
   - component: {fileID: 1936364752}
@@ -12391,23 +12336,6 @@ MonoBehaviour:
     Target: {fileID: 1030951772}
     Value: {x: 1.1, y: 1.1}
     Ease: 100
---- !u!114 &1936364755
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936364750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85492e6e5abb6364ab68b8b794f4fd97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Alias: 
-  Data:
-    Duration: 0
-    Target: {fileID: 8300000, guid: 622df6012652bdb498c7ec99b1b8a532, type: 3}
-    Volume: 1
 --- !u!1 &1937513507
 GameObject:
   m_ObjectHideFlags: 0

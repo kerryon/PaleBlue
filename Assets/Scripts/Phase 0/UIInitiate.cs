@@ -34,7 +34,7 @@ public class UIInitiate : MonoBehaviour
         Camera.main.GetComponent<Animator>().SetTrigger("PhaseTransition");
 
         yield return new WaitForSeconds(0.5f);
-        menu.NewScene();
+        menu.AppendHistory(Variables.Instance.historyCount);
         gameObject.SetActive(false);
         nextPhase.SetActive(true);
     }

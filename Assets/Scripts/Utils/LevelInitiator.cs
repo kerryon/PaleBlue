@@ -4,14 +4,14 @@ public class LevelInitiator : MonoBehaviour
 {
 
     LevelLoader levelloader;
-    Menu menu;
+    //Menu menu;
 
     public void NextChapter()
     {
         levelloader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
-        menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
+        //menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
 
         levelloader.LoadNextLvl();
-        menu.NewScene();
+        //menu.AppendHistory(0);
     }
 }

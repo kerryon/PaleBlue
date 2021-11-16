@@ -9,6 +9,11 @@ public class SwipeDetectorOnFinger : MonoBehaviour
 
     public void OnInitiation()
     {
+        Invoke(nameof(InitiationDelay), .5f);
+    }
+
+    private void InitiationDelay()
+    {
         SwipeObject.SetActive(true);
         TrailObject.SetActive(true);
     }

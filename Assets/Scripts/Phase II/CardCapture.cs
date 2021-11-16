@@ -4,16 +4,33 @@ using UnityEngine;
 public class CardCapture : MonoBehaviour
 {
     public Camera captureCam;
+    LevelInitiator initiateNextLevel;
+
+    void Start()
+    {
+        initiateNextLevel = gameObject.GetComponent<LevelInitiator>();
+    }
 
     public void CaptureCard()
     {
-        StartCoroutine(CaptureThis());
+        StartCoroutine(CaptureThenProceed());
+    }
+
+    private IEnumerator CaptureThenProceed()
+    {
+        yield return StartCoroutine(CaptureThis());
+        yield return StartCoroutine(LoadNextLevel());
+    }
+
+    private IEnumerator LoadNextLevel()
+    {
+        initiateNextLevel.NextChapter();
+        yield return null;
     }
 
     private IEnumerator CaptureThis()
     {
-        yield return new WaitForSeconds(1);
-        yield return new WaitForEndOfFrame(); // ???
+        yield return new WaitForSeconds(0.5f);
         CaptureTransparentScreenshot(captureCam, 1080, 1920);
     }
 
@@ -66,6 +83,7 @@ public class CardCapture : MonoBehaviour
             }
         }
         ES3.SaveImage(tex_transparent, "StatCard.png");
+        NativeGallery.SaveImageToGallery(tex_transparent, "PaleBlue", "StatCard", null);
 
         cam.clearFlags = bak_cam_clearFlags;
         cam.targetTexture = bak_cam_targetTexture;

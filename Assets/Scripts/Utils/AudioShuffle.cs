@@ -10,13 +10,14 @@ public class AudioShuffle : MonoBehaviour
     void Start()
     {
         _as = GetComponent<AudioSource>();
-        if (audioClipArray.Length > 5)
-        {
-            PlayStartAudioClip();
-        } else
-        {
+
+        //if (audioClipArray.Length > 5)
+        //{
+        //    PlayStartAudioClip();
+        //} else
+        //{
             PlayRandomAudioClip();
-        }
+        //}
 
         isMuted = ES3.Load("MUTE", false);
         if (isMuted)

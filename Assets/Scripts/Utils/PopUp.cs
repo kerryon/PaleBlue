@@ -11,13 +11,14 @@ public class PopUp : MonoBehaviour
     private Animator animatorPopup;
 
     [Header("Scriptable Objects")]
-    public ScriptableObjectPopUp[] popUpContent;
+    public ScriptableObjectContent[] popUpContent;
 
     public TMP_Text description;
 
     public TMP_Text FABText;
     public TMP_Text FABInfoTitle;
     public TMP_Text FABInfo;
+    public Button button;
 
     public Image titleImage;
 

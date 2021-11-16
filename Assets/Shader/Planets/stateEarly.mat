@@ -245,7 +245,7 @@ Material:
     - _HasNight: 0
     - _HasWater: 1
     - _IceOverWater: 0
-    - _Metallic: 1.8999993
+    - _Metallic: 3.7499976
     - _Mode: 0
     - _NightOffset: 0
     - _NightSharpness: 1

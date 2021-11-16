@@ -2585,14 +2585,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 1}
+  m_Color: {r: 0.84313726, g: 0.84313726, b: 0.84313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02d730ef530b14bada20a8674eeb7f30, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 21e530502503d476091f375b512e23b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -3627,9 +3627,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Der Mensch hat durch  rasante Entwicklungen einen gro\xDFen Einfluss auf
-    die Umwelt des Planeten \u2014 und somit auch auf das Wasser. Er wird zur geologischen
-    Kraft."
+  m_text: "Der Mensch hat durch seine rasanten wirtschaftlichen und kulturellen Entwicklungen
+    einen gro\xDFen Einfluss auf die Umwelt des Planeten \u2014 und somit auch auf
+    das Wasser. Er wird zur <font=Fonts/Config-Bold>geologischen Kraft</font>."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -4508,7 +4508,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 2100000, guid: 837ac322bca7448bfbcf2e7ff09a37ad, type: 2}
   m_Color: {r: 0.84313726, g: 0.84313726, b: 0.84313726, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
@@ -5569,8 +5569,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 1344282656
-  m_fontColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.3137255}
+    rgba: 1679826976
+  m_fontColor: {r: 0.1254902, g: 0.1254902, b: 0.1254902, a: 0.39215687}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:

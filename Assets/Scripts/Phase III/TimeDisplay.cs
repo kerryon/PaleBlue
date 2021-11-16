@@ -11,6 +11,6 @@ public class TimeDisplay : MonoBehaviour
     }
     void Update()
     {
-        time.text = Variables.Instance.timespan.ToString("'Verbrachte Zeit: 'd' Tage,\n 'hh' Stunden, 'mm' Minuten'");
+        time.text = Variables.Instance.timespan.ToString("'<font=Fonts/Config-Bold><size=180%>'d'</size></font> <color=#609AFF1D>d</color> <font=Fonts/Config-Bold><size=180%>'hh'</size></font> <color=#609AFF1D>h</color> <font=Fonts/Config-Bold><size=180%>'mm'</size></font> <color=#609AFF1D>min</color>\n<color=#609AFF80>überlebt</color>'");
     }
 }

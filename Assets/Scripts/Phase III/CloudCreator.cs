@@ -11,18 +11,22 @@ public class CloudCreator : MonoBehaviour
         cloudsphere = gameObject.GetComponent<SgtCloudsphere>();
     }
 
-    public void CloudCreation()
+    public void CreateCloud()
     {
         StartCoroutine(Clouds());
     }
 
     private IEnumerator Clouds()
     {
-        float CloudDensity = cloudsphere.Brightness;
+        Color cloudColorA = cloudsphere.Color;
+        Color cloudColorB = cloudsphere.Color;
+        cloudColorA.a = 0f;
+        cloudColorB.a = 1f;
+
         float count = 0.0f;
         while (count <= 1)
         {
-            cloudsphere.Brightness = Mathf.Lerp(CloudDensity, 1.2f, count);
+            cloudsphere.Color = Color.Lerp(cloudColorA, cloudColorB, count);
             count += Time.deltaTime;
             yield return null;
         }

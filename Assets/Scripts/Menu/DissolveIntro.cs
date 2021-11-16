@@ -4,7 +4,6 @@ public class DissolveIntro : MonoBehaviour
 {
 
     public Material material;
-    public GameObject canvas;
 
     float fade = -0.9f;
     float multiplier = 0.001f;
@@ -18,7 +17,7 @@ public class DissolveIntro : MonoBehaviour
     {
         if (Variables.Instance.currentLevelIndex > 3)
         {
-            Destroy(canvas);
+            Destroy(gameObject);
         }
     }
 
@@ -34,7 +33,7 @@ public class DissolveIntro : MonoBehaviour
             if (fade >= 1f)
             {
                 fade = 1f;
-                Destroy(canvas);
+                Destroy(gameObject);
             }
 
             material.SetFloat("_EllipseSize", fade);

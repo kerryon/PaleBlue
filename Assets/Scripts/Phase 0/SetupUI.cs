@@ -31,11 +31,6 @@ public class SetupUI : MonoBehaviour
         {
             child.gameObject.SetActive(false);
         }
-
-        if (transform.parent.name == "Part_1")
-        {
-            Variables.Instance.historyCount = 1;
-        }
     }
 
     void Start()

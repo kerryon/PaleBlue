@@ -1,24 +1,26 @@
-using System;
 using UnityEngine;
 
 public class Gyroscope : MonoBehaviour
 {
     public Material MenuDis;
-    public GameObject Planet;
+    public GameObject CameraPivot;
     private Vector3 currentEulerAngles;
+    private Quaternion correctionEulerAngles;
 
     void Start()
     {
         currentEulerAngles = new Vector3(0, 0, 0);
+        correctionEulerAngles = Quaternion.Euler(90, 0, 0);
     }
 
     void Update()
     {
         if (SystemInfo.supportsGyroscope)
         {
-            currentEulerAngles = Input.gyro.attitude.eulerAngles / 7;
+            currentEulerAngles = Input.gyro.attitude.eulerAngles / 8;
             MenuDis.SetVector("_Rotation", currentEulerAngles);
-            Planet.transform.localRotation = GyroToUnity(Input.gyro.attitude);
+
+            CameraPivot.transform.localRotation = correctionEulerAngles * GyroToUnity(Input.gyro.attitude);
         }
     }
 

@@ -20,6 +20,18 @@ public class Variables : MonoBehaviour
     public float reproductionRate;
     public float waterStorageRate;
 
+    [Header("Human Values")]
+    public int humanState;
+    public float humanWellbeing;
+    public float humanEconomy;
+    public float humanClimate;
+
+    [Header("Water Values")]
+    public float waterEcology;
+    public float waterQuality;
+    public float waterQuantity;
+    public float waterSealevel;
+
 
     public DateTime currentDate;
     public TimeSpan timespan;
@@ -38,7 +50,13 @@ public class Variables : MonoBehaviour
         }
 
         currentLevelIndex = ES3.Load("CLI", 3);
-        historyCount = ES3.Load("HC", 0);
+        if (currentLevelIndex > 3)
+        {
+            historyCount = ES3.Load("HC", 1);
+        } else
+        {
+            historyCount = 1;
+        }
         water = ES3.Load("WATER", 0f);
         human = ES3.Load("HUMAN", 0);
         waterUseRate = ES3.Load("Property_waterUseRate", 0f);

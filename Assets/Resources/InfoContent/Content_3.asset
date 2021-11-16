@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7515b7e6b92bb451bbe658101270b044, type: 3}
-  m_Name: Popup_Feuer
+  m_Name: Content_3
   m_EditorClassIdentifier: 
-  index: 2
-  topic: 
-  description: fuck fuck shit
-  FABText: lolo blub
-  FABInfoTitle: xkcbmnfjjdfdj
-  FABInfo: "nein nein, ich wei\xDF."
-  titleImage: {fileID: 21300000, guid: 417f0614df8174ff3bf6d0cbce10d0d2, type: 3}
+  index: 3
+  topic: 3
+  description: 3
+  FABText: 3
+  FABInfoTitle: 3
+  FABInfo: 3
+  titleImage: {fileID: 21300000, guid: 144a10ca9883c449491467d7c122cc22, type: 3}

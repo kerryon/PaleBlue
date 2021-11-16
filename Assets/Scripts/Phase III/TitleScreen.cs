@@ -28,11 +28,20 @@ public class TitleScreen : MonoBehaviour
                 UI.SetActive(true);
             }
         }
+
+#if UNITY_EDITOR
+        if (Input.GetMouseButtonDown(0))
+        {
+            StartCoroutine(FadeTitle());
+            StartCoroutine(DestroyTitle());
+            UI.SetActive(true);
+        }
+#endif
     }
 
     IEnumerator ActivateInteraction()
     {
-        yield return new WaitForSeconds(15);
+        yield return new WaitForSeconds(12);
         isInteractable = true;
     }
 

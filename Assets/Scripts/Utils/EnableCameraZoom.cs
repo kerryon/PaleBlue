@@ -9,8 +9,8 @@ public class EnableCameraZoom : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            cam = GameObject.FindGameObjectWithTag("CameraPivot");
-            cam.GetComponent<LeanMultiUpdate>().enabled = true;
+            cam = GameObject.FindGameObjectWithTag("MainCamera");
+            cam.GetComponent<LeanPinchCamera>().enabled = true;
         }
     }
 }

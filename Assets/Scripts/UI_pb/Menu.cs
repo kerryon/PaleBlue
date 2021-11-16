@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
@@ -15,14 +16,22 @@ public class Menu : MonoBehaviour
     public Animator menuBtnTrigger;
     public Animator transition;
 
+    public GameObject infoWindow;
+
     public Animator textboxTrigger;
     public GameObject Textbox, Levels;
     public GameObject prefab;
     public GameObject NameDisplay;
     public GameObject LifeNameDisplay;
 
+    [Header("Scriptable Objects")]
+    public ScriptableObjectContent[] historyContent;
+
     private bool statisticsToggle = false;
     private bool goalsToggle = false;
+    private bool textboxToggle = false;
+
+    private bool historyLoaded = false;
 
     public void Awake()
     {
@@ -39,7 +48,13 @@ public class Menu : MonoBehaviour
     void Start()
     {
         StartCoroutine(ShowMenuButton());
-        NewScene();
+        if (Variables.Instance.historyCount == 1)
+        {
+            CreateHistory();
+        } else
+        {
+            AppendHistory(0);
+        }
         NameDisplay.GetComponent<TMP_Text>().text = (string)ES3.Load("NAME");
         LifeNameDisplay.GetComponent<TMP_Text>().text = (string)ES3.Load("LIFE");
     }
@@ -50,26 +65,73 @@ public class Menu : MonoBehaviour
         menuBtn.SetActive(true);
     }
 
-    public void NewScene()
+    public void CreateHistory()
     {
-        if (Levels.transform.childCount >= 3)
+        var sheet = new ES3Spreadsheet();
+
+        for (int row = 0; row < Variables.Instance.historyCount; row++)
         {
-            for (int i = 2; i < Variables.Instance.historyCount; i++)
-            {
-                Destroy(Levels.transform.GetChild(i));
-            }
+            sheet.SetCell(0, row, row);
+            sheet.SetCell(1, row, 0);
         }
 
-        Variables.Instance.historyCount++;
+        sheet.Save("history.csv");
 
-        for (int i = 0; i < Variables.Instance.historyCount; i++)
-        {
-            GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
-            newHistoryObject.name = "History" + i;
-            newHistoryObject.SetActive(true);
-        }
+        GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
+        newHistoryObject.name = "History" + 0;
+        newHistoryObject.SetActive(true);
 
         menuScreen.SetActive(false);
+    }
+
+    public void AppendHistory(int ScriptableObjectValue)
+    {
+        var sheet = new ES3Spreadsheet();
+
+        if (Levels.transform.childCount == 2)
+        {
+            sheet.Load("history.csv");
+
+            for (int i = 0; i < Variables.Instance.historyCount; i++)
+            {
+                GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
+                newHistoryObject.name = "History" + i;
+                newHistoryObject.SetActive(true);
+            }
+        }
+        else
+        {
+            sheet.SetCell(0, 0, Variables.Instance.historyCount);
+            sheet.SetCell(1, 0, ScriptableObjectValue);
+
+            GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
+            newHistoryObject.name = "History" + Variables.Instance.historyCount;
+            newHistoryObject.SetActive(true);
+
+            sheet.Save("history.csv", true);
+            Variables.Instance.historyCount++;
+        }
+
+        historyLoaded = false;
+        menuScreen.SetActive(false);
+    }
+
+    public void LoadHistory()
+    {
+        if (!historyLoaded)
+        {
+            var sheet = new ES3Spreadsheet();
+            sheet.Load("history.csv");
+
+            for (int i = 0; i < Variables.Instance.historyCount; i++)
+            {
+                Image titleImage = Levels.transform.GetChild(i + 2).GetComponent<Image>();
+                TMP_Text title = Levels.transform.GetChild(i + 2).GetChild(0).GetComponent<TMP_Text>();
+                titleImage.sprite = historyContent[sheet.GetCell<int>(1, i)].titleImage;
+                title.text = historyContent[sheet.GetCell<int>(1, i)].topic;
+            }
+            historyLoaded = true;
+        }
     }
 
     public void ToggleMenu()
@@ -109,11 +171,13 @@ public class Menu : MonoBehaviour
 
     IEnumerator TextboxToggle()
     {
-        textboxTrigger.SetTrigger("MenuInfoToggle");
-
-        yield return new WaitForSeconds(1);
-
-        Textbox.SetActive(false);
+        if (textboxToggle)
+        {
+            textboxTrigger.SetTrigger("MenuInfoToggle");
+            yield return new WaitForSeconds(1);
+        }
+        textboxToggle = !textboxToggle;
+        Textbox.SetActive(textboxToggle);
     }
 
     public void ToggleStatistics()
@@ -126,5 +190,22 @@ public class Menu : MonoBehaviour
     {
         goalsToggle = !goalsToggle;
         GoalsOverlay.SetActive(goalsToggle);
+    }
+
+    public void OpenInfo()
+    {
+        infoWindow.SetActive(true);
+    }
+
+    public void CloseInfo()
+    {
+        StartCoroutine(CloseInfoCoroutine());
+    }
+
+    IEnumerator CloseInfoCoroutine()
+    {
+        infoWindow.GetComponent<Animator>().SetTrigger("MenuScreenInfoTrigger");
+        yield return new WaitForSeconds(1);
+        infoWindow.SetActive(false);
     }
 }

@@ -65,7 +65,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Planetengr\xF6\xDFe"
+  m_text: "l\xE4dt ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bac27df286a49424485a2cbe2d7e8bb9, type: 2}
   m_sharedMaterial: {fileID: 4339336349970594091, guid: bac27df286a49424485a2cbe2d7e8bb9, type: 2}
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 417f0614df8174ff3bf6d0cbce10d0d2, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f020ccbac1c7a41e29eb40f73962d9be, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -277,7 +277,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 3793434097584350855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3793434097584350853}
+        m_TargetAssemblyTypeName: HistoryObject, Assembly-CSharp
+        m_MethodName: GetText
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: ToggleTextbox
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &3793434097584350853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -290,21 +314,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07cd2d61283434d0d8054129196728b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  InfoText: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-    diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-    diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
   TextObject: {fileID: 0}
 --- !u!95 &3793434097584350905
 Animator:

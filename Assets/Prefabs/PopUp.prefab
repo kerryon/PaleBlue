@@ -67,26 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<font=\"Fonts/Config-Bold\">Lorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</font>\n\nStet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \n\n<link=\"https://de.wikipedia.org/wiki/Link\"><style=Link>Klick
-    hier</style></link>"
+  m_text: "<font=\"Fonts/Config-Bold\">l\xE4dt ...</font>\n\nl\xE4dt ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -335,12 +316,17 @@ MonoBehaviour:
   animatorTXT: {fileID: 3435954769828982277}
   animatorInfoPopup: {fileID: 3435954769750189288}
   popUpContent:
+  - {fileID: 11400000, guid: 0499e14baea93456eabeef7c2b0642fe, type: 2}
   - {fileID: 11400000, guid: 3b02133a191944fe9ae9950ba73181f8, type: 2}
   - {fileID: 11400000, guid: 68c98ecfc288b4d2abd4e81d51e4d211, type: 2}
+  - {fileID: 11400000, guid: 022a21c15021b4c7aa9192bff37b5ddb, type: 2}
+  - {fileID: 11400000, guid: 7f976af56682d4465b493ff63b194c5d, type: 2}
+  - {fileID: 11400000, guid: 1117615ec2fdc4b3e88692195baa4023, type: 2}
   description: {fileID: 3435954770094288098}
   FABText: {fileID: 3435954769828982276}
   FABInfoTitle: {fileID: 3435954771391020656}
   FABInfo: {fileID: 3435954769318952147}
+  button: {fileID: 3435954771201851137}
   titleImage: {fileID: 3435954771186159597}
 --- !u!1 &3435954769429116986
 GameObject:
@@ -709,10 +695,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<size=130%><line-height=60%><font=\"Fonts/Config-Bold\">Atmosph\xE4re\n\u2014</font></line-height></size>\nConsetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren."
+  m_text: "<size=130%><line-height=60%><font=\"Fonts/Config-Bold\">l\xE4dt ...\n\u2014</font></line-height></size>\nl\xE4dt
+    ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -1091,7 +1075,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b04bfea9417114ff8821876ac92f3a91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f020ccbac1c7a41e29eb40f73962d9be, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1522,7 +1506,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit ament consectour
+  m_text: "l\xE4dt ..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 027aa439dcd7e4d3f960e74f16c86095, type: 2}
   m_sharedMaterial: {fileID: -5528352581523629363, guid: 027aa439dcd7e4d3f960e74f16c86095, type: 2}

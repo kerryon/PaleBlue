@@ -3,6 +3,7 @@ using UnityEngine;
 public class SpherePins : MonoBehaviour
 {
     private int PinCount = 0;
+    public int PinsMax;
     public GameObject prefab;
     public float PlanetRadius;
     public GameObject PlanetOrigin;
@@ -14,11 +15,14 @@ public class SpherePins : MonoBehaviour
 
     void Update()
     {
-        if (Variables.Instance.timespan.TotalMinutes > interval)
+        if (PinCount < PinsMax)
         {
-            interval++;
-            CreatePinPrefab(PinCount);
-            PinCount++;
+            if (Variables.Instance.timespan.TotalMinutes > interval)
+            {
+                interval++;
+                CreatePinPrefab(PinCount);
+                PinCount++;
+            }
         }
     }
 
@@ -32,5 +36,16 @@ public class SpherePins : MonoBehaviour
         newObject.transform.LookAt(PlanetOrigin.transform.position);
         newObject.transform.rotation = newObject.transform.rotation * Quaternion.Euler(-90, 0, 0);
         newObject.transform.parent = gameObject.transform;
+
+        var sheet = new ES3Spreadsheet();
+        sheet.Load("history.csv");
+        for (int i = 0; i < Variables.Instance.historyCount; i++)
+        {
+            if (PinCount == sheet.GetCell<int>(1, i))
+            {
+                newObject.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 96, 96, 255);
+                return;
+            }
+        }
     }
 }

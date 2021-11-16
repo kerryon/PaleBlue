@@ -3,18 +3,20 @@ using TMPro;
 
 public class HistoryObject : MonoBehaviour
 {
-    [TextArea(15, 20)]
-    public string InfoText;
     public GameObject TextObject;
+
     private TMP_Text text;
+    Menu _menu;
 
-    public void AddText()
+    public void GetText()
     {
+        _menu = gameObject.transform.parent.GetComponentInParent<Menu>();
         text = TextObject.GetComponent<TMP_Text>();
-        text.text = InfoText;
 
-        Menu _menu = FindObjectOfType<Menu>();
+        var sheet = new ES3Spreadsheet();
+        sheet.Load("history.csv");
+        int value = sheet.GetCell<int>(1, transform.GetSiblingIndex() - 2);
 
-        _menu.Textbox.gameObject.SetActive(true);
+        text.text = "<font=Fonts/Config-Bold>" + _menu.historyContent[value].FABInfoTitle.Replace(";", "\n") + "</font>" + "\n\n" + _menu.historyContent[value].FABInfo.Replace(";", "\n");
     }
 }

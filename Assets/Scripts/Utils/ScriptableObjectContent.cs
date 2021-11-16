@@ -1,7 +1,7 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "New PopUp", menuName = "PopUp")]
-public class ScriptableObjectPopUp : ScriptableObject
+[CreateAssetMenu(fileName = "New Content", menuName = "Content")]
+public class ScriptableObjectContent : ScriptableObject
 {
     public int index;
     [TextArea(1, 5)]

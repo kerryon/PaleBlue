@@ -19,28 +19,30 @@ public class EvolvePlanet : MonoBehaviour
     public Material[] materials;
 
     private bool changeMat = true;
-    [Header("New Planet Variables", order = 1)]
+    private bool changeNextMat = true;
+
+    [Header("New Planet Variables for Materials", order = 1)]
     [Space(10)]
     [Header("SgtPlanet", order = 2)]
-    public float _Displacement;
-    public float _WaterLevel;
+    public float[] _Displacement;
+    public float[] _WaterLevel;
     [Header("SgtPlanetWaterGradient")]
-    public Color _Shallow;
-    public Color _Deep;
-    public float _Sharpness;
-    public float _Scale;
+    public Color[] _Shallow;
+    public Color[] _Deep;
+    public float[] _Sharpness;
+    public float[] _Scale;
     [Header("SgtCloudsphere")]
-    public Color _CColor;
-    public Color _AmbientColor;
-    public float _Radius;
+    public Color[] _CColor;
+    public Color[] _AmbientColor;
+    public float[] _Radius;
     [Header("SgtCloudsphereDepthTex")]
-    public Color _RimColor;
+    public Color[] _RimColor;
     [Header("SgtAtmopshere")]
-    public Color _AColor;
+    public Color[] _AColor;
     [Header("SgtAtmosphereDepthTex")]
-    public Color _HorizonColor;
-    public Color _InnerColor;
-    public Color _OuterColor;
+    public Color[] _HorizonColor;
+    public Color[] _InnerColor;
+    public Color[] _OuterColor;
 
     void Start()
     {
@@ -60,17 +62,22 @@ public class EvolvePlanet : MonoBehaviour
         {
             planet.WaterLevel = Mathf.Lerp(0.0f, 0.45f, (float)(Variables.Instance.timespan.TotalSeconds / (Minutes * 60)));
         }
-        else if (Variables.Instance.timespan.TotalMinutes > Minutes && changeMat)
+        else if (Variables.Instance.timespan.TotalMinutes > Minutes && Variables.Instance.timespan.TotalMinutes < Minutes * 2 && changeMat)
         {
             changeMat = false;
-            StartCoroutine(ChangeOverTime(10, 1));
+            StartCoroutine(ChangeOverTime(0, 1, 10));
+        }
+        else if (Variables.Instance.timespan.TotalMinutes > Minutes * 2 && changeNextMat)
+        {
+            changeNextMat = false;
+            StartCoroutine(ChangeOverTime(1, 2, 10));
         }
     }
 
-    private IEnumerator ChangeOverTime(float duration, int material)
+    private IEnumerator ChangeOverTime(int materialIndex, int material, float duration)
     {
-        float planetDisplacement_Initial = planet.Displacement;
-        float planetWaterLevel_Initial = planet.WaterLevel;
+        //float planetDisplacement_Initial = planet.Displacement;
+        //float planetWaterLevel_Initial = planet.WaterLevel;
         Color planetWaterGradientShallow_Initial = planetWaterGradient.Shallow;
         Color planetWaterGradientDeep_Initial = planetWaterGradient.Deep;
         float planetWaterGradientSharpness_Initial = planetWaterGradient.Sharpness;
@@ -87,32 +94,32 @@ public class EvolvePlanet : MonoBehaviour
         float time = 0f;
         while (time < duration)
         {
-            planet.Displacement = Mathf.Lerp(planetDisplacement_Initial, _Displacement, time / duration); //notwendig?
-            planet.WaterLevel = Mathf.Lerp(planetWaterLevel_Initial, _WaterLevel, time / duration); //notwendig?
+            //planet.Displacement = Mathf.Lerp(planetDisplacement_Initial, _Displacement[materialIndex], time / duration);
+            //planet.WaterLevel = Mathf.Lerp(planetWaterLevel_Initial, _WaterLevel[materialIndex], time / duration);
 
-            planetWaterGradient.Shallow = Color.Lerp(planetWaterGradientShallow_Initial, _Shallow, time / duration);
-            planetWaterGradient.Deep = Color.Lerp(planetWaterGradientDeep_Initial, _Deep, time / duration);
-            planetWaterGradient.Sharpness = Mathf.Lerp(planetWaterGradientSharpness_Initial, _Sharpness, time / duration);
-            planetWaterGradient.Scale = Mathf.Lerp(planetWaterGradientScale_Initial, _Scale, time / duration);
+            planetWaterGradient.Shallow = Color.Lerp(planetWaterGradientShallow_Initial, _Shallow[materialIndex], time / duration);
+            planetWaterGradient.Deep = Color.Lerp(planetWaterGradientDeep_Initial, _Deep[materialIndex], time / duration);
+            planetWaterGradient.Sharpness = Mathf.Lerp(planetWaterGradientSharpness_Initial, _Sharpness[materialIndex], time / duration);
+            planetWaterGradient.Scale = Mathf.Lerp(planetWaterGradientScale_Initial, _Scale[materialIndex], time / duration);
 
 
-            cloudsphere.Color = Color.Lerp(cloudsphereColor_Initial, _CColor, time / duration);
-            cloudsphere.AmbientColor = Color.Lerp(cloudsphereAmbientColor_Initial, _AmbientColor, time / duration);
-            cloudsphere.Radius = Mathf.Lerp(cloudsphereRadius_Initial, _Radius, time / duration);
-            cloudsphereDepth.RimColor = Color.Lerp(cloudsphereDepthRimColor_Initial, _RimColor, time / duration);
+            cloudsphere.Color = Color.Lerp(cloudsphereColor_Initial, _CColor[materialIndex], time / duration);
+            cloudsphere.AmbientColor = Color.Lerp(cloudsphereAmbientColor_Initial, _AmbientColor[materialIndex], time / duration);
+            cloudsphere.Radius = Mathf.Lerp(cloudsphereRadius_Initial, _Radius[materialIndex], time / duration);
+            cloudsphereDepth.RimColor = Color.Lerp(cloudsphereDepthRimColor_Initial, _RimColor[materialIndex], time / duration);
 
-            atmosphere.Color = Color.Lerp(atmosphereColor_Initial, _AColor, time / duration);
-            atmosphereDepth.HorizonColor = Color.Lerp(atmosphereHorizonColor_Initial, _HorizonColor, time / duration);
-            atmosphereDepth.InnerColor = Color.Lerp(atmosphereInnerColor_Initial, _InnerColor, time / duration);
-            atmosphereDepth.OuterColor = Color.Lerp(atmosphereOuterColor_Initial, _OuterColor, time / duration);
+            atmosphere.Color = Color.Lerp(atmosphereColor_Initial, _AColor[materialIndex], time / duration);
+            atmosphereDepth.HorizonColor = Color.Lerp(atmosphereHorizonColor_Initial, _HorizonColor[materialIndex], time / duration);
+            atmosphereDepth.InnerColor = Color.Lerp(atmosphereInnerColor_Initial, _InnerColor[materialIndex], time / duration);
+            atmosphereDepth.OuterColor = Color.Lerp(atmosphereOuterColor_Initial, _OuterColor[materialIndex], time / duration);
 
             time += Time.deltaTime;
             yield return null;
         }
         yield return StartCoroutine(SwitchPlanet(transform.localScale, new Vector3(0, 0, 0), 0.3f));
         planet.Material = materials[material];
-        planet.Displacement = _Displacement;
-        planet.WaterLevel = _WaterLevel;
+        planet.Displacement = _Displacement[materialIndex];
+        planet.WaterLevel = _WaterLevel[materialIndex];
         yield return StartCoroutine(SwitchPlanet(transform.localScale, new Vector3(1, 1, 1), 0.3f));
     }
 
@@ -127,10 +134,4 @@ public class EvolvePlanet : MonoBehaviour
             yield return null;
         }
     }
-
-    //private Color HexToColor(string hex)
-    //{
-    //    ColorUtility.TryParseHtmlString(hex, out Color color);
-    //    return color;
-    //}
 }
