@@ -11,6 +11,8 @@ public class EnableCameraZoom : MonoBehaviour
         {
             cam = GameObject.FindGameObjectWithTag("MainCamera");
             cam.GetComponent<LeanPinchCamera>().enabled = true;
+            cam.GetComponent<LeanPinchCamera>().Zoom = 50;
+
         }
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b8c155e644035435cb6cbc4187cdbbe2
+guid: bf2af7cc71680472ca64b995035a2a0e
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - a Ape Mount
+  - Pangolin
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

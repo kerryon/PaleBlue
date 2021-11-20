@@ -8380,7 +8380,7 @@ MonoBehaviour:
   sharedMaterial: {fileID: 468676000}
   waterLevel: 0
   displace: 1
-  displacement: 0.2
+  displacement: -1
   clampWater: 0
 --- !u!4 &1308742013
 Transform:
@@ -13303,10 +13303,10 @@ MonoBehaviour:
     y: 0.5
     width: 0.5
     height: 0.5
-  blendMode: 0
   renderQueue:
     Group: 2000
     Offset: 0
+  blendMode: 0
   orbitOffset: 0
   orbitSpeed: 1
   lit: 1

@@ -2,6 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using Lean.Common;
 
 public class Difficulty : MonoBehaviour
 {
@@ -20,6 +21,10 @@ public class Difficulty : MonoBehaviour
     public TMP_Text reproductionValueCount;
     public TMP_Text waterStorageValueCount;
 
+    public LeanSpawn waterUseSpawner;
+    public LeanSpawn reproductionSpawner;
+    public LeanSpawn waterStorageSpawner;
+
     public GameObject continueBtn;
 
     private Color32 blue = new Color32(96, 154, 255, 10);
@@ -28,6 +33,8 @@ public class Difficulty : MonoBehaviour
     private int prefab01;
     private int prefab02;
     private int prefab03;
+
+    private bool randomize;
 
     void Start()
     {
@@ -38,24 +45,57 @@ public class Difficulty : MonoBehaviour
         continueBtn.SetActive(false);
     }
 
-    public void ChangeDifficulty(float changeValue)
+    public void ChangeDifficulty()
     {
-        StartCoroutine(DifficultyCounter(changeValue));
+        randomize = false;
+        StartCoroutine(DifficultyCounter());
     }
 
-    private IEnumerator DifficultyCounter(float changeValue)
+    public void ChangeDifficultyRandom()
     {
-        yield return new WaitForEndOfFrame();
-        prefab01 = GameObject.FindGameObjectsWithTag("Prefab1").Length;
-        prefab02 = GameObject.FindGameObjectsWithTag("Prefab2").Length;
-        prefab03 = GameObject.FindGameObjectsWithTag("Prefab3").Length;
+        randomize = true;
+        StartCoroutine(DifficultyCounter());
+    }
+
+    private IEnumerator DifficultyCounter()
+    {
+        if (!randomize)
+        {
+            yield return new WaitForEndOfFrame();
+            prefab01 = GameObject.FindGameObjectsWithTag("Prefab1").Length;
+            prefab02 = GameObject.FindGameObjectsWithTag("Prefab2").Length;
+            prefab03 = GameObject.FindGameObjectsWithTag("Prefab3").Length;
+        }
+        else
+        {
+            prefab01 = Random.Range(0, 10);
+            prefab02 = Random.Range(0, 10);
+            prefab03 = Random.Range(0, 10);
+
+            DestroyAll("Prefab1");
+            DestroyAll("Prefab2");
+            DestroyAll("Prefab3");
+
+            for (int i = 0; i < prefab01; i++)
+            {
+                waterUseSpawner.Spawn();
+            }
+            for (int i = 0; i < prefab02; i++)
+            {
+                reproductionSpawner.Spawn();
+            }
+            for (int i = 0; i < prefab03; i++)
+            {
+                waterStorageSpawner.Spawn();
+            }
+        }
 
         if (!continueBtn.activeSelf)
         {
             continueBtn.SetActive(true);
         }
 
-        value += changeValue;
+        value = (waterUseValue * prefab01) + (reproductionValue * prefab02) + (waterStorageValue * prefab03);
         Variables.Instance.waterUseRate = waterUseValue * prefab01;
         Variables.Instance.reproductionRate = reproductionValue * prefab02;
         Variables.Instance.waterStorageRate = waterStorageValue * prefab03;
@@ -97,5 +137,14 @@ public class Difficulty : MonoBehaviour
         waterUseValueColor.color = Color.Lerp(blue, red, (float)prefab01 / 10);
         reproductionValueColor.color = Color.Lerp(blue, red, (float)prefab02 / 10);
         waterStorageValueColor.color = Color.Lerp(blue, red, (float)prefab03 / 10);
+    }
+
+    void DestroyAll(string tag)
+    {
+        GameObject[] clones = GameObject.FindGameObjectsWithTag(tag);
+        foreach (GameObject clone in clones)
+        {
+            Destroy(clone);
+        }
     }
 }

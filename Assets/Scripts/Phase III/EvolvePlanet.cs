@@ -65,12 +65,12 @@ public class EvolvePlanet : MonoBehaviour
         else if (Variables.Instance.timespan.TotalMinutes > Minutes && Variables.Instance.timespan.TotalMinutes < Minutes * 2 && changeMat)
         {
             changeMat = false;
-            StartCoroutine(ChangeOverTime(0, 1, 10));
+            StartCoroutine(ChangeOverTime(0, 1, 5));
         }
         else if (Variables.Instance.timespan.TotalMinutes > Minutes * 2 && changeNextMat)
         {
             changeNextMat = false;
-            StartCoroutine(ChangeOverTime(1, 2, 10));
+            StartCoroutine(ChangeOverTime(1, 2, 5));
         }
     }
 

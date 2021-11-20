@@ -41,7 +41,7 @@ public class SpherePins : MonoBehaviour
         sheet.Load("history.csv");
         for (int i = 0; i < Variables.Instance.historyCount; i++)
         {
-            if (PinCount == sheet.GetCell<int>(1, i))
+            if (PinCount + 4 == sheet.GetCell<int>(1, i))
             {
                 newObject.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 96, 96, 255);
                 return;

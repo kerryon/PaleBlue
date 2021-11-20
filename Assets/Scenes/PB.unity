@@ -837,7 +837,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.84313726, g: 0.84313726, b: 0.84313726, a: 0.19607843}
+  m_Color: {r: 0.06666667, g: 0.06666667, b: 0.06666667, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1373,9 +1373,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<font=Fonts/Config-Bold><size=180%>12</size></font> <color=#609AFF1D>d</color>
-    <font=Fonts/Config-Bold><size=180%>5</size></font> <color=#609AFF1D>h</color>
-    <font=Fonts/Config-Bold><size=180%>20</size></font> <color=#609AFF1D>min</color>\n<color=#609AFF80>\xFCberlebt</color>"
+  m_text: "<font=Fonts/Config-Bold><size=180%>0</size></font> <color=#609AFF1D>d</color>
+    <font=Fonts/Config-Bold><size=180%>0</size></font> <color=#609AFF1D>h</color>
+    <font=Fonts/Config-Bold><size=180%>0</size></font> <color=#609AFF1D>min</color>\n<color=#609AFF80>\xFCberlebt</color>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -1541,6 +1541,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 022a21c15021b4c7aa9192bff37b5ddb, type: 2}
   - {fileID: 11400000, guid: 7f976af56682d4465b493ff63b194c5d, type: 2}
   - {fileID: 11400000, guid: 1117615ec2fdc4b3e88692195baa4023, type: 2}
+  - {fileID: 11400000, guid: 4f8833b83a40e4b6abb9cc0857f53be0, type: 2}
+  - {fileID: 11400000, guid: fd5cc2ac04a2d4cb3b82e902026d5bf0, type: 2}
+  - {fileID: 11400000, guid: 2225c0f11f4154926bfc70fd8d0cfb8c, type: 2}
+  - {fileID: 11400000, guid: c831010add25548f9a224dae24d4b6bc, type: 2}
 --- !u!114 &836983396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,7 +2072,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   material: {fileID: 2100000, guid: c5cd8d7e4a96a4defa517894250ddd3a, type: 2}
-  canvas: {fileID: 946791251}
 --- !u!1 &969122647
 GameObject:
   m_ObjectHideFlags: 0
@@ -5384,17 +5387,21 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 494204063719278350, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
+      propertyPath: rollWithCamera
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 494204063719278351, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.6763576
+      value: 0.81642103
       objectReference: {fileID: 0}
     - target: {fileID: 494204063719278351, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.5236273
+      value: -0.4086637
       objectReference: {fileID: 0}
     - target: {fileID: 494204063719278351, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.51802975
+      value: 0.40798375
       objectReference: {fileID: 0}
     - target: {fileID: 494204063719278351, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -5410,6 +5417,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 494204064457764246, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
       propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 494204064457764247, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

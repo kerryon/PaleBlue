@@ -20,17 +20,13 @@ public class Creature : MonoBehaviour
 
     IEnumerator SaveAndLoadAvatar()
     {
-        if (Resources.Load<Texture2D>("avatar"))
-        {
-            DrawScript.drawScript.Save("avatar");
-            yield return null;
-        }
-
-        while (!Resources.Load<Texture2D>("avatar"))
-        {
-            DrawScript.drawScript.Save("avatar");
-            yield return null;
-        }
+        //if (Resources.Load<Texture2D>("avatar"))
+        //{
+        //    DrawScript.drawScript.Save("avatar");
+        //    yield return null;
+        //}
+        DrawScript.drawScript.Save("avatar");
+        yield return new WaitForSeconds(1);
         Drawing.SetActive(false);
         SetSprite();
         Props.SetActive(true);

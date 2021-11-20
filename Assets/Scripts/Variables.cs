@@ -78,8 +78,8 @@ public class Variables : MonoBehaviour
     void Update()
     {
         currentDate = DateTime.Now;
-        timespan = currentDate.Subtract(Started);
         //timespan = vergangene Zeit seit Start
+        timespan = currentDate.Subtract(Started);
     }
 
     private void OnApplicationFocus(bool focus)

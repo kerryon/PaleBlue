@@ -57,12 +57,12 @@ public class SetupUI : MonoBehaviour
 
     IEnumerator OpenInterface()
     {
-        if (Variables.Instance.historyCount == 1)
-        {
-            yield return new WaitForSeconds(15);
-        } else
+        if (Variables.Instance.historyCount != 1)
         {
             yield return new WaitForSeconds(1);
+        } else
+        {
+            yield return new WaitForSeconds(15);
         }
         OpenUI();
     }
@@ -76,7 +76,7 @@ public class SetupUI : MonoBehaviour
 
     IEnumerator ShowUI()
     {
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
 
         Instructions_info.gameObject.SetActive(true);
     }

@@ -316,12 +316,12 @@ MonoBehaviour:
   animatorTXT: {fileID: 3435954769828982277}
   animatorInfoPopup: {fileID: 3435954769750189288}
   popUpContent:
-  - {fileID: 11400000, guid: 0499e14baea93456eabeef7c2b0642fe, type: 2}
-  - {fileID: 11400000, guid: 3b02133a191944fe9ae9950ba73181f8, type: 2}
-  - {fileID: 11400000, guid: 68c98ecfc288b4d2abd4e81d51e4d211, type: 2}
-  - {fileID: 11400000, guid: 022a21c15021b4c7aa9192bff37b5ddb, type: 2}
   - {fileID: 11400000, guid: 7f976af56682d4465b493ff63b194c5d, type: 2}
   - {fileID: 11400000, guid: 1117615ec2fdc4b3e88692195baa4023, type: 2}
+  - {fileID: 11400000, guid: 4f8833b83a40e4b6abb9cc0857f53be0, type: 2}
+  - {fileID: 11400000, guid: fd5cc2ac04a2d4cb3b82e902026d5bf0, type: 2}
+  - {fileID: 11400000, guid: 2225c0f11f4154926bfc70fd8d0cfb8c, type: 2}
+  - {fileID: 11400000, guid: c831010add25548f9a224dae24d4b6bc, type: 2}
   description: {fileID: 3435954770094288098}
   FABText: {fileID: 3435954769828982276}
   FABInfoTitle: {fileID: 3435954771391020656}

@@ -60,10 +60,10 @@ public class Intro : MonoBehaviour
 
         if (string.IsNullOrEmpty(name))
         {
-            thirdScreen.transform.GetChild(3).gameObject.SetActive(false);
+            thirdScreen.transform.GetChild(2).gameObject.SetActive(false);
         } else
         {
-            thirdScreen.transform.GetChild(3).gameObject.SetActive(true);
+            thirdScreen.transform.GetChild(2).gameObject.SetActive(true);
         }
     }
 
@@ -83,12 +83,12 @@ public class Intro : MonoBehaviour
         {
             while (!scenesToLoad[i].isDone)
             {
-                float progress = 1f;
-                progress -= Mathf.Clamp01(scenesToLoad[i].progress);
+                float progress = 0f;
+                progress += Mathf.Clamp01(scenesToLoad[i].progress);
                 asteroids = GameObject.FindGameObjectsWithTag("Asteroid");
                 for (int j = 0; j < asteroids.Length; j++)
                 {
-                    asteroids[j].transform.localScale = new Vector3(progress * 0.3f, progress * 0.3f, progress * 0.3f);
+                    asteroids[j].transform.localScale = new Vector3(0.3f + progress, 0.3f + progress, 0.3f + progress);
                 }
                 yield return null;
             }

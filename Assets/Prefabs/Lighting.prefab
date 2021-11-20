@@ -151,9 +151,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 494204063719278336}
-  m_LocalRotation: {x: -0.5236273, y: 0.51802975, z: -0, w: 0.6763576}
-  m_LocalPosition: {x: 10180, y: 10285, z: -1736}
-  m_LocalScale: {x: 2000, y: 2000, z: 2000}
+  m_LocalRotation: {x: 0.022427224, y: -0.4876985, z: -0.0049468507, w: -0.87271005}
+  m_LocalPosition: {x: 3000, y: 3000, z: 1000}
+  m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children:
   - {fileID: 494204064457764246}
   m_Father: {fileID: 494204062674498846}
@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 21e254ab4724da1429576c9e045ce231, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3ffcce23571798443bd79b888ace3403, type: 3}
   m_Color: {r: 1, g: 0.88965523, b: 0, a: 0.734}
   m_FlipX: 0
   m_FlipY: 0
@@ -346,7 +346,6 @@ GameObject:
   m_Component:
   - component: {fileID: 494204064457764246}
   - component: {fileID: 494204064457764244}
-  - component: {fileID: 494204064457764245}
   m_Layer: 2
   m_Name: Overlay
   m_TagString: Untagged
@@ -419,20 +418,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &494204064457764245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 494204064457764247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0963818737679534bbda5173f55fc30c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  layers:
-    serializedVersion: 2
-    m_Bits: 4294967291
-  maxScale: {x: 3, y: 3, z: 1}
-  radius: 1
