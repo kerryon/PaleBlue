@@ -183,12 +183,32 @@ public class Menu : MonoBehaviour
     public void ToggleStatistics()
     {
         statisticsToggle = !statisticsToggle;
+        StartCoroutine(ToggleStatisticsCoroutine());
+    }
+
+    IEnumerator ToggleStatisticsCoroutine()
+    {
+        if (!statisticsToggle)
+        {
+            StatisticsOverlay.GetComponent<Animator>().SetTrigger("StatisticsMenuClose");
+            yield return new WaitForSeconds(0.5f);
+        }
         StatisticsOverlay.SetActive(statisticsToggle);
     }
 
     public void ToggleGoals()
     {
         goalsToggle = !goalsToggle;
+        StartCoroutine(ToggleGoalsCoroutine());
+    }
+
+    IEnumerator ToggleGoalsCoroutine()
+    {
+        if (!goalsToggle)
+        {
+            GoalsOverlay.GetComponent<Animator>().SetTrigger("GoalsMenuClose");
+            yield return new WaitForSeconds(0.5f);
+        }
         GoalsOverlay.SetActive(goalsToggle);
     }
 

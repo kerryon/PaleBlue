@@ -3940,7 +3940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.8301887, g: 0.4627121, b: 0.254539, a: 1}
-  brightness: 0.1
+  brightness: 1
   renderQueue:
     Group: 3000
     Offset: 0
@@ -5085,11 +5085,11 @@ MonoBehaviour:
   position:
     LocalX: 0
     LocalY: 0
-    LocalZ: -10
+    LocalZ: 0
     GlobalX: 0
     GlobalY: 0
     GlobalZ: 0
-  expectedPosition: {x: 0, y: 0, z: -10}
+  expectedPosition: {x: 0, y: 0, z: 0}
   expectedPositionSet: 1
   positionSet: 1
   seed: 0
@@ -5140,7 +5140,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 767714070}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262255123}
@@ -5183,7 +5183,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 768867360}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1262255123}
@@ -7076,7 +7076,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -10}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1056000288
@@ -7384,7 +7384,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157488336}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 80, y: 80, z: 80}
   m_Children:
   - {fileID: 858401604}
@@ -7418,7 +7418,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTexture: {fileID: 2800000, guid: a4a96292a1acf604cb1aa94a20081081, type: 3}
-  strength: 4
+  strength: 3
   speed: 2
   age: 0
 --- !u!114 &1157488341
@@ -7433,11 +7433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e65dd9aac6291fb4eaac97f18bf846f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shallow: {r: 1, g: 0.46176243, b: 0, a: 1}
-  deep: {r: 1, g: 0.15684961, b: 0, a: 1}
+  shallow: {r: 1, g: 0.80006546, b: 0.3537736, a: 1}
+  deep: {r: 0.6603774, g: 0.22679664, b: 0.11525454, a: 1}
   ease: 1
   sharpness: 1
-  scale: 3.5
+  scale: 5
 --- !u!114 &1157488342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7713,9 +7713,9 @@ MonoBehaviour:
   radius: 100
   material: {fileID: 2100000, guid: 8459cb83085646f4c9ddcdca43d26569, type: 2}
   sharedMaterial: {fileID: 169541860}
-  waterLevel: 0.45
+  waterLevel: 0.25
   displace: 1
-  displacement: 2.5
+  displacement: 7
   clampWater: 1
 --- !u!1 &1238494586
 GameObject:
@@ -8896,7 +8896,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1376713603
 Transform:
   m_ObjectHideFlags: 0
@@ -10122,7 +10122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1597171669}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2005586836}
@@ -13011,7 +13011,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1999867105
 Transform:
   m_ObjectHideFlags: 0
@@ -13212,7 +13212,6 @@ GameObject:
   - component: {fileID: 2005233993}
   - component: {fileID: 2005233996}
   - component: {fileID: 2005233995}
-  - component: {fileID: 2005233994}
   m_Layer: 0
   m_Name: Asteroid Belt
   m_TagString: Untagged
@@ -13234,18 +13233,6 @@ Transform:
   m_Father: {fileID: 1238016322}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2005233994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005233992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8f5910ebf0d46489396285e4f3eee509, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &2005233995
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13303,9 +13290,6 @@ MonoBehaviour:
     y: 0.5
     width: 0.5
     height: 0.5
-  renderQueue:
-    Group: 2000
-    Offset: 0
   blendMode: 0
   orbitOffset: 0
   orbitSpeed: 1
@@ -13433,11 +13417,11 @@ MonoBehaviour:
   position:
     LocalX: 0
     LocalY: 0
-    LocalZ: -10
+    LocalZ: 0
     GlobalX: 0
     GlobalY: 0
     GlobalZ: 0
-  expectedPosition: {x: 0, y: 0, z: -10}
+  expectedPosition: {x: 0, y: 0, z: 0}
   expectedPositionSet: 1
   positionSet: 0
   seed: 0
@@ -13522,6 +13506,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planet: {fileID: 1157488336}
   planetMat: {fileID: 2100000, guid: 92b79f7dc869968418e26401e285f9ad, type: 2}
+  planetNewColor: {r: 0.77254903, g: 0.56078434, b: 0.42745098, a: 1}
 --- !u!114 &2005586843
 MonoBehaviour:
   m_ObjectHideFlags: 0

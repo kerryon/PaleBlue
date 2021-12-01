@@ -6,8 +6,10 @@ public class Interface : MonoBehaviour
 {
     public Camera UICamera;
     public TMP_Text text;
+    public GameObject actionMenu;
     private Menu _menu;
     private GameObject buttons;
+    private bool actionToggle = false;
 
     LevelLoader levelLoader;
 
@@ -53,5 +55,21 @@ public class Interface : MonoBehaviour
     public void GoalsToggle()
     {
         _menu.ToggleGoals();
+    }
+
+    public void ActionToggle()
+    {
+        actionToggle = !actionToggle;
+        StartCoroutine(ActionToggleCoroutine());
+    }
+
+    IEnumerator ActionToggleCoroutine()
+    {
+        if (!actionToggle)
+        {
+            actionMenu.GetComponent<Animator>().SetTrigger("ActionMenuClose");
+            yield return new WaitForSeconds(0.5f);
+        }
+        actionMenu.SetActive(actionToggle);
     }
 }

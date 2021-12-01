@@ -53,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 9a176bca3b2e31a4e83fa55f22c580bd, type: 3}
+        m_Texture: {fileID: 2800000, guid: a6fc4e38af28c0845bf9fb52f949f61a, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -125,11 +125,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: cf911b73fd90c54418310e74b7108972, type: 3}
+        m_Texture: {fileID: 2800000, guid: 7120876f5eda7084e9bc64b267e83b85, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 633fa72a22843154d8c21c1d23618a24, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e5933c628fa0df45b584093099deca6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -261,7 +261,7 @@ Material:
     - _WaterBumpStrength: 0.33
     - _WaterColorScale: 6.8
     - _WaterDistortion: 2
-    - _WaterEmission: 0.8
+    - _WaterEmission: 0.75
     - _WaterGradientScale: 6
     - _WaterLevel: 0.538
     - _WaterLevelScale: 0.02

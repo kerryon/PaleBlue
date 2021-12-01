@@ -3,11 +3,15 @@ using UnityEngine;
 
 public class TitleScreen : MonoBehaviour
 {
-    public GameObject UI;
+    public GameObject Buttons;
     private bool isInteractable;
 
     void Start()
     {
+        if (Variables.Instance.historyCount != 10)
+        {
+            Destroy(gameObject);
+        }
         isInteractable = false;
         StartCoroutine(ActivateInteraction());
     }
@@ -25,7 +29,7 @@ public class TitleScreen : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 StartCoroutine(DestroyTitle());
-                UI.SetActive(true);
+                Buttons.SetActive(true);
             }
         }
 
@@ -34,7 +38,7 @@ public class TitleScreen : MonoBehaviour
         {
             StartCoroutine(FadeTitle());
             StartCoroutine(DestroyTitle());
-            UI.SetActive(true);
+            Buttons.SetActive(true);
         }
 #endif
     }

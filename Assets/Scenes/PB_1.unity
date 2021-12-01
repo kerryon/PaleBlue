@@ -712,7 +712,7 @@ MonoBehaviour:
   rimColor: {r: 1, g: 0.45313016, b: 0, a: 0.9843137}
   rimPower: 5
   alphaDensity: 50
-  alphaFade: 2
+  alphaFade: 3
 --- !u!114 &386584917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 256
   format: 5
-  frontPower: 1
+  frontPower: 2
   backPower: 3
   backStrength: 0
   baseStrength: 0
@@ -953,9 +953,6 @@ MonoBehaviour:
     y: 0.5
     width: 0.5
     height: 0.5
-  renderQueue:
-    Group: 2000
-    Offset: 0
   blendMode: 0
   orbitOffset: 0
   orbitSpeed: 0.2
@@ -1609,7 +1606,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseTexture: {fileID: 2800000, guid: a4a96292a1acf604cb1aa94a20081081, type: 3}
-  strength: 2.5
+  strength: 1.5
   speed: 3
   age: 0
 --- !u!114 &794408285
@@ -1646,9 +1643,9 @@ MonoBehaviour:
   radius: 100
   material: {fileID: 2100000, guid: 8459cb83085646f4c9ddcdca43d26569, type: 2}
   sharedMaterial: {fileID: 1934442395}
-  waterLevel: 0.45
+  waterLevel: 0.24
   displace: 1
-  displacement: 2.5
+  displacement: 7
   clampWater: 1
 --- !u!114 &794408287
 MonoBehaviour:
@@ -1666,7 +1663,7 @@ MonoBehaviour:
   prefab: {fileID: 731707672}
   PlanetRadius: 100
   PlanetOrigin: {fileID: 794408281}
-  interval: 1
+  interval: 18
   sprites:
   - {fileID: 21300000, guid: 8e29775b7abe94d82a8d5b9369e9806a, type: 3}
   - {fileID: 21300000, guid: 6e7094ec61da34e1f88aef13724c4bce, type: 3}
@@ -1685,7 +1682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95a7e6fc5af524152a0139869efe4ef0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Minutes: 2
+  Minutes: 30
   additionalAssets:
   - {fileID: 561073877}
   materials:

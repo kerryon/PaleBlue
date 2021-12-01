@@ -245,7 +245,7 @@ Material:
     - _HasNight: 0
     - _HasWater: 1
     - _IceOverWater: 0
-    - _Metallic: 3.7499976
+    - _Metallic: 0.5
     - _Mode: 0
     - _NightOffset: 0
     - _NightSharpness: 1
@@ -261,20 +261,20 @@ Material:
     - _WaterBumpStrength: 0.33
     - _WaterColorScale: 6.8
     - _WaterDistortion: 2
-    - _WaterEmission: 0
+    - _WaterEmission: 0.1
     - _WaterGradientScale: 6
     - _WaterLevel: 0.538
     - _WaterLevelScale: 0.02
-    - _WaterMetallic: 0.2
+    - _WaterMetallic: 0.5
     - _WaterNoiseStrength: 1
     - _WaterNoiseTiling: 1
     - _WaterScale: 10
-    - _WaterSharpness: 30
-    - _WaterSmoothness: 0.9
-    - _WaterTiling: 50
+    - _WaterSharpness: 25
+    - _WaterSmoothness: 0.3
+    - _WaterTiling: 25
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.9607843, b: 0.9607843, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NightDirection: {r: 0, g: 0, b: 1, a: 1}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 1}

@@ -11,12 +11,16 @@ public class PlanetCreator : MonoBehaviour
     private Quaternion cometInitialRotation;
     private Quaternion cometNewRotation;
 
+    private Color planetBaseColor = Color.white;
+    public Color planetNewColor;
+
     SgtPlanet sgtplanet;
 
     void Start()
     {
         cometNewPosition = new Vector3(0, 0, 0);
         cometNewRotation = Quaternion.Euler(0, 0, 0);
+        planetMat.color = planetBaseColor;
     }
 
     void Update()
@@ -28,12 +32,12 @@ public class PlanetCreator : MonoBehaviour
     public void DestroyAsteroid()
     {
         sgtplanet = planet.GetComponent<SgtPlanet>();
-        StartCoroutine(Lerper());
+        StartCoroutine(AsteroidPositionLerper());
         
-        planetMat.SetFloat("_Metallic", planetMat.GetFloat("_Metallic") + 0.05f);
+        planetMat.color = Color.Lerp(planetBaseColor, planetNewColor, Mathf.InverseLerp(70, 40, GameObject.FindGameObjectsWithTag("Asteroid").Length));
     }
 
-    public IEnumerator Lerper()
+    public IEnumerator AsteroidPositionLerper()
     {
         float i = 0f;
         float rate = (1f / 3f) * 1f;

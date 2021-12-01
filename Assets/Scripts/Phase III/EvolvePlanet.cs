@@ -60,7 +60,7 @@ public class EvolvePlanet : MonoBehaviour
     {
         if (Variables.Instance.timespan.TotalMinutes < Minutes)
         {
-            planet.WaterLevel = Mathf.Lerp(0.0f, 0.45f, (float)(Variables.Instance.timespan.TotalSeconds / (Minutes * 60)));
+            planet.WaterLevel = Mathf.Lerp(0.0f, 0.24f, (float)(Variables.Instance.timespan.TotalSeconds / (Minutes * 60)));
         }
         else if (Variables.Instance.timespan.TotalMinutes > Minutes && Variables.Instance.timespan.TotalMinutes < Minutes * 2 && changeMat)
         {

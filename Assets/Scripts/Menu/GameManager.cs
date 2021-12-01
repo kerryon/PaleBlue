@@ -59,7 +59,12 @@ public class GameManager : MonoBehaviour
         {
             SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
             ES3.Save("CLI", 3);
+            ES3.Save("Property_actionHours", 0);
+            ES3.Save("Property_actionCounter", 0);
             ES3.Save("StartedAt", DateTime.Now);
+            Variables.Instance.human = 1000f;
+            Variables.Instance.water = 10000f;
+            Variables.Instance.rain = 300f;
         }
     }
 

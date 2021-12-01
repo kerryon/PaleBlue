@@ -24,7 +24,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AlbedoMapA_Ext_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlbedoMapB:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlbedoMapB_Ext_1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -32,7 +40,15 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _AlbedoMapG_Ext_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _AlbedoMapR:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AlbedoMapR_Ext_1:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -105,7 +121,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapG:
-        m_Texture: {fileID: 2800000, guid: aaab8028a19fde34f85370b30ecc461d, type: 3}
+        m_Texture: {fileID: 2800000, guid: f2105c0ab73fe21408467f7b877af356, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalMapR:
@@ -146,7 +162,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlbedoShift: 0
-    - _BumpScale: 1
+    - _BumpScale: 0.8
     - _DetailFadeRange: 0
     - _DetailFadeRange_Ext_1: 0
     - _DetailNoiseStrength: 0.1
@@ -157,12 +173,12 @@ Material:
     - _DetailScaleB_Ext_1: 0
     - _DetailScaleG: 0.35
     - _DetailScaleG_Ext_1: 1.2
-    - _DetailScaleR: 2.3
-    - _DetailScaleR_Ext_1: 1.3
-    - _DetailTiling: 5
+    - _DetailScaleR: 0.7
+    - _DetailScaleR_Ext_1: 1
+    - _DetailTiling: 15
     - _DetailTilingA: 10
     - _DetailTilingB: 10
-    - _DetailTiling_Ext_1: 40
+    - _DetailTiling_Ext_1: 35
     - _GlossMapScale: 0.15
     - _HasDetail: 1
     - _HasDetailA: 0
