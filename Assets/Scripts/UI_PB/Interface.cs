@@ -18,10 +18,10 @@ public class Interface : MonoBehaviour
         _menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
         buttons = gameObject.transform.GetChild(0).gameObject;
 
-        text.gameObject.SetActive(false);
-
         levelLoader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
         levelLoader.attachCam(UICamera);
+
+        text.gameObject.SetActive(false);
     }
 
     void Update()

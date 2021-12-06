@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1h_Werturteile
   m_EditorClassIdentifier: 
   Name: 
-  actionName: 
-  actionDescription: 
+  actionName: Werturteile
+  actionDescription: 3
   Icon: {fileID: 21300000, guid: 1e5c35babcd8a4e1aa98e8cef8e4d4fe, type: 3}
   NextPie: {fileID: 0}

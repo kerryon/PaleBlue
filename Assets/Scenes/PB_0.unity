@@ -3393,8 +3393,8 @@ GameObject:
   - component: {fileID: 468676000}
   - component: {fileID: 468676004}
   - component: {fileID: 468676003}
-  - component: {fileID: 468676002}
   - component: {fileID: 468676001}
+  - component: {fileID: 468676002}
   m_Layer: 0
   m_Name: Atmosphere
   m_TagString: Untagged
@@ -3448,14 +3448,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5555fd5111f2b74b83ea74d97ffe4ba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: -199765296
-  format: 1
-  sunsetEase: -196952848
-  sunsetStart: 1e-45
-  sunsetEnd: -3.475772e+31
-  sunsetSharpnessR: 1e-45
-  sunsetSharpnessG: -6.1715644e+31
-  sunsetSharpnessB: 1e-45
+  width: 256
+  format: 5
+  sunsetEase: 1
+  sunsetStart: 0.45
+  sunsetEnd: 1
+  sunsetSharpnessR: 3
+  sunsetSharpnessG: 2
+  sunsetSharpnessB: 2
 --- !u!114 &468676003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 1, g: 1, b: 1, a: 1}
-  brightness: 1
+  brightness: 0.7
   renderQueue:
     Group: 3000
     Offset: 0
@@ -3509,7 +3509,7 @@ MonoBehaviour:
   middle: 0.5
   cameraOffset: 0
   lit: 1
-  ambientColor: {r: 0, g: 0, b: 0, a: 0}
+  ambientColor: {r: 0.7830189, g: 0.48580462, b: 0.2474635, a: 1}
   ambientBrightness: 1
   maxLights: 2
   maxSphereShadows: 2
@@ -3809,161 +3809,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &576142994
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 576142995}
-  - component: {fileID: 576143001}
-  - component: {fileID: 576143000}
-  - component: {fileID: 576142999}
-  - component: {fileID: 576142998}
-  - component: {fileID: 576142997}
-  - component: {fileID: 576142996}
-  m_Layer: 0
-  m_Name: Cloudsphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &576142995
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1238016322}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &576142996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f3cc3c7f5e914207b642c01577a0991, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &576142997
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92ede0252ef7e92459ff5df2a16cd28e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  angularVelocity: {x: 0, y: 1, z: 0}
-  relativeTo: 0
---- !u!114 &576142998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31b2b5095fb0ad643bd74a392cbb0e53, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 256
-  format: 5
-  ease: 1
-  sharpness: 1
-  offset: 0
---- !u!114 &576142999
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b05a7c567bcca04dbd0e4f5d8431c39, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 256
-  format: 5
-  sunsetEase: 0
-  sunsetStart: 0.45
-  sunsetEnd: 1
-  sunsetSharpnessR: 2
-  sunsetSharpnessG: 2
-  sunsetSharpnessB: 2
---- !u!114 &576143000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3b425687ca47a94fa965cd8c2067498, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 256
-  format: 5
-  rimEase: 8
-  rimColor: {r: 1, g: 0.45313016, b: 0, a: 0.9843137}
-  rimPower: 5
-  alphaDensity: 50
-  alphaFade: 2
---- !u!114 &576143001
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 576142994}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aacb11b170425fe4cbc5edf718b80ea5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0.8301887, g: 0.4627121, b: 0.254539, a: 1}
-  brightness: 1
-  renderQueue:
-    Group: 3000
-    Offset: 0
-  radius: 148
-  cameraOffset: 0
-  mainTex: {fileID: 8900000, guid: d586e911a4da611458ee6b84965f8c6a, type: 3}
-  depthTex: {fileID: 0}
-  softness: 0
-  lit: 1
-  ambientColor: {r: 0.8584906, g: 0.55822873, b: 0.36850303, a: 1}
-  ambientBrightness: 0.5
-  maxLights: 2
-  maxSphereShadows: 2
-  lightingTex: {fileID: 0}
-  near: 1
-  nearTex: {fileID: 0}
-  nearDistance: 1
-  detail: 1
-  detailTex: {fileID: 2800000, guid: 33108e6ed5e881c4581d9a330b484260, type: 3}
-  detailScale: -3
-  detailTiling: 100
-  mesh: {fileID: 4300002, guid: d3c72eb619c9ab640803adf4c43f367c, type: 3}
-  meshRadius: 1.45
 --- !u!1 &596062667
 GameObject:
   m_ObjectHideFlags: 0
@@ -7644,8 +7489,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 169541855}
-  - {fileID: 576142995}
-  - {fileID: 2005233993}
   m_Father: {fileID: 1999867105}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8896,7 +8739,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1376713603
 Transform:
   m_ObjectHideFlags: 0
@@ -9049,14 +8892,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3773d907a8aeff248b74e03817a05441, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 0
-  format: 0
-  sunsetEase: 0
-  sunsetStart: 0
-  sunsetEnd: -8.034082e+32
-  sunsetSharpnessR: 1e-45
-  sunsetSharpnessG: 0
-  sunsetSharpnessB: 0
+  width: 64
+  format: 5
+  sunsetEase: 1
+  sunsetStart: 0.35
+  sunsetEnd: 0.6
+  sunsetSharpnessR: 2
+  sunsetSharpnessG: 2
+  sunsetSharpnessB: 2
 --- !u!114 &1429476805
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13011,7 +12854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1999867105
 Transform:
   m_ObjectHideFlags: 0
@@ -13201,148 +13044,6 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: 50}
   m_SizeDelta: {x: -100, y: 260}
   m_Pivot: {x: 0, y: 0}
---- !u!1 &2005233992
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2005233993}
-  - component: {fileID: 2005233996}
-  - component: {fileID: 2005233995}
-  m_Layer: 0
-  m_Name: Asteroid Belt
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2005233993
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005233992}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
-  m_Children: []
-  m_Father: {fileID: 1238016322}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2005233995
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005233992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a754a7047d34a84e8746ae2c17cd824, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 256
-  format: 5
-  frontPower: 1
-  backPower: 3
-  backStrength: 0
-  baseStrength: 0
---- !u!114 &2005233996
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005233992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7af3cd0474d391c4ba471df278ca701b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
-  brightness: 1
-  mainTex: {fileID: 2800000, guid: b263b99fba6f51140a171eb5799c86ee, type: 3}
-  layout: 0
-  layoutColumns: 2
-  layoutRows: 2
-  layoutRects:
-  - serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0.5
-    height: 0.5
-  - serializedVersion: 2
-    x: 0.5
-    y: 0
-    width: 0.5
-    height: 0.5
-  - serializedVersion: 2
-    x: 0
-    y: 0.5
-    width: 0.5
-    height: 0.5
-  - serializedVersion: 2
-    x: 0.5
-    y: 0.5
-    width: 0.5
-    height: 0.5
-  blendMode: 0
-  orbitOffset: 0
-  orbitSpeed: 1
-  lit: 1
-  ambientColor: {r: 0.49056602, g: 0.24200131, b: 0, a: 1}
-  ambientBrightness: 1
-  maxLights: 2
-  maxSphereShadows: 2
-  lightingTex: {fileID: 0}
-  powerRgb: 0
-  seed: 0
-  thickness: 75
-  thicknessBias: 1.95
-  innerRadius: 100
-  innerSpeed: 0.12
-  outerRadius: 250
-  outerSpeed: 0.05
-  radiusBias: 2
-  speedSpread: 0
-  asteroidCount: 7000
-  asteroidColors:
-    serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
-    key3: {r: 0, g: 0, b: 0, a: 0}
-    key4: {r: 0, g: 0, b: 0, a: 0}
-    key5: {r: 0, g: 0, b: 0, a: 0}
-    key6: {r: 0, g: 0, b: 0, a: 0}
-    key7: {r: 0, g: 0, b: 0, a: 0}
-    ctime0: 0
-    ctime1: 65535
-    ctime2: 0
-    ctime3: 0
-    ctime4: 0
-    ctime5: 0
-    ctime6: 0
-    ctime7: 0
-    atime0: 0
-    atime1: 65535
-    atime2: 0
-    atime3: 0
-    atime4: 0
-    atime5: 0
-    atime6: 0
-    atime7: 0
-    m_Mode: 0
-    m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  asteroidSpin: 1
-  asteroidRadiusMin: 0.2
-  asteroidRadiusMax: 1.42
-  asteroidRadiusBias: 10
 --- !u!1 &2005586835
 GameObject:
   m_ObjectHideFlags: 0

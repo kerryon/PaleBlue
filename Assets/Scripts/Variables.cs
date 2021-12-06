@@ -14,6 +14,7 @@ public class Variables : MonoBehaviour
 
     [Header("Parameter")]
     public float water;
+    private float maxWater = 10000f;
     public float human;
     public int currentLevelIndex;
 
@@ -53,7 +54,7 @@ public class Variables : MonoBehaviour
 
     [Header("WaterActionAreas")]
     public float w_distribution;
-    public float w_oceanCurrent;
+    public float w_current;
     public float w_contamination;
     public float w_temperature;
     public float w_weatherExtremes;
@@ -71,7 +72,7 @@ public class Variables : MonoBehaviour
 
     //private float timer;
 
-    private void Awake()
+    void Awake()
     {
         if (_instance != null && _instance != this)
         {
@@ -96,50 +97,80 @@ public class Variables : MonoBehaviour
         }
         Started = ES3.Load("StartedAt", currentDate);
 
-        InvokeRepeating(nameof(InitialValueCalculation), 0, 1.0f);
+        InvokeRepeating(nameof(ValueCalculation), 0, 1.0f); //?
     }
 
-    private void InitialValueCalculation()
+    public void ValueCalculation()
     {
-        human += reproductionRate;
-        rain  -= 300f/18000f;
+        float wC = Mathf.InverseLerp(0f, maxWater, water);
+        float hC = Mathf.InverseLerp(0f, water, human);
+        float rC = Mathf.InverseLerp(0f, 300f, rain);
+
+        if (human * waterUseRate < water)
+        {
+            human += Mathf.Pow(human, Mathf.Lerp(0.01f, 0.1f, reproductionRate));
+        }
+        else
+        {
+            human -= Mathf.Pow(human, Mathf.Lerp(0.01f, 0.1f, waterStorageRate));
+        }
+
+        if (rain > 0f)
+        {
+            rain -= 300f / 18000f;
+        }
+        else
+        {
+            rain = 0f;
+        }
 
         s = (int)timespan.TotalDays;
-        e = s * w * Mathf.Lerp(0, 2, Mathf.InverseLerp(0, 10000, water));
-        w = e * c * Mathf.Lerp(0, 2, Mathf.InverseLerp(0, 10000, water));
-        c = w_oceanCurrent + w_contamination;
+        e = s * wC;
+        w = Mathf.Lerp(0f, 1f, Mathf.InverseLerp(0f, 2f, c + wC));
+        c = Mathf.Lerp(0f, 1f, Mathf.InverseLerp(0f, 2f, w_current + w_contamination));
+        
+        h_conflict = wC + hC + w + c    + (h_urbanisation + h_agriculture + h_waterStructure);
+        h_luxury = wC + hC + w + e + c  + (h_industry + h_agriculture);
+        h_industry = wC + hC + s + e;
+        h_agriculture = wC + hC + s + c + (h_industry + h_urbanisation + h_waterStructure);
+        h_waste = hC + w * 2 + e        + (h_industry + h_luxury + h_overfishing);
+        h_urbanisation = hC + e         + (h_industry);
+        h_energy = hC + w + e           + (h_urbanisation + h_industry);
+        h_overfishing = hC + e + c      + (h_industry + h_luxury);
+        h_wastewater = hC + w + e * 2   + (h_industry + h_agriculture);
+        h_waterStructure = s + e        + (h_industry + h_energy);
 
-        h_conflict       = water + human + w + c;
-        h_luxury         = water + human + w + e + c;
-        h_industry       = water + human + s + e;
-        h_agriculture    = water + human + s + c;
-        h_waste          = human + w*2 + e;
-        h_urbanisation   = human + e;
-        h_energy         = human + w + e;
-        h_overfishing    = human + e + c;
-        h_wastewater     = human + w + e*2;
-        h_waterStructure = s + e;
+        w_distribution = h_conflict + h_luxury + h_waterStructure;
+        w_current = w_temperature + w_ice;
+        w_contamination = h_waste + h_wastewater;
+        w_temperature = w_carbonDioxide + w_ice;
+        w_weatherExtremes = h_waterStructure + rC;
+        w_carbonDioxide = h_energy + h_industry;
+        w_fishCount = h_overfishing + h_waste + w_temperature + w_carbonDioxide;
+        w_groundwater = h_urbanisation + h_agriculture + h_waterStructure + w_distribution;
+        w_trees = h_agriculture;
+        w_ice = w_carbonDioxide;
 
-        w_distribution    = 0;
-        w_oceanCurrent    = 0;
-        w_contamination   = 0;
-        w_temperature     = 0;
-        w_weatherExtremes = 0;
-        w_carbonDioxide   = 0;
-        w_fishCount       = 0;
-        w_groundwater     = 0;
-        w_trees           = 0;
-        w_ice             = 0;
+        waterEcology = w_contamination + w_temperature + w_fishCount + w_carbonDioxide;
+        waterQuantity = w_contamination + w_carbonDioxide;
+        waterQuality = w_groundwater + w_distribution + w_trees + w_weatherExtremes;
+        waterSealevel = w_current + w_temperature + w_ice;
 
-        waterEcology  = 0;
-        waterQuantity = 0;
-        waterQuality  = 0;
-        waterSealevel = 0;
+        regenerationRate = Mathf.Lerp(-1f, 2f, Mathf.InverseLerp(0f, 300f, rain)); // s + e + c
 
-        regenerationRate = (int)human * waterUseRate * (s + e + c) * Mathf.Lerp(0, 300, rain);
-        water            += regenerationRate;
-
-        Debug.Log("human = " + (int)human + " // rain = " + rain + " // regenerationsrate = " + regenerationRate + " // " + e + " // " + w + " // " + c); //DEBUG CHECK
+        if (water >= 0f && water <= maxWater)
+        {
+            water += regenerationRate;
+        }
+        else if (water > maxWater)
+        {
+            water = maxWater;
+        }
+        else if (water < 0f)
+        {
+            water = 0f;
+        }
+        //Debug.Log(" | " + " | ");
     }
 
     void Update()
@@ -160,7 +191,7 @@ public class Variables : MonoBehaviour
         //if (timer < 0)
         //{
         //    timer = 1f;
-        //    InitialValueCalculation();
+        //    ValueCalculation();
         //}
     }
 
@@ -170,12 +201,12 @@ public class Variables : MonoBehaviour
         ES3.Save("Property_actionHours", actionHours);
     }
 
-    private void AddValuesAfterExit()
+    private void UpdateValues()
     {
         lastClosed = ES3.Load("LastClosedAt", lastClosed);
         for (int i = 0; i < (int)DateTime.Now.Subtract(lastClosed).TotalSeconds; i++)
         {
-            InitialValueCalculation();
+            ValueCalculation();
         }
     }
 #if UNITY_IOS || UNITY_EDITOR
@@ -183,7 +214,7 @@ public class Variables : MonoBehaviour
     {
         if (focus)
         {
-            AddValuesAfterExit();
+            UpdateValues();
         }
         else
         {
@@ -192,7 +223,7 @@ public class Variables : MonoBehaviour
     }
 #endif
 
-#if UNITY_ANDROID || UNITY_EDITOR
+#if UNITY_ANDROID
     void OnApplicationPause(bool pauseStatus)
     {
         if (pauseStatus)
@@ -201,7 +232,7 @@ public class Variables : MonoBehaviour
         }
         else
         {
-            AddValuesAfterExit();
+            UpdateValues();
         }
     }
 #endif

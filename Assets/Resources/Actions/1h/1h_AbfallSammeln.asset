@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1h_AbfallSammeln
   m_EditorClassIdentifier: 
   Name: 
-  actionName: 
-  actionDescription: 
+  actionName: Abfall
+  actionDescription: 1
   Icon: {fileID: 21300000, guid: 03a0fb878714f457484f45cb36b68a25, type: 3}
   NextPie: {fileID: 0}

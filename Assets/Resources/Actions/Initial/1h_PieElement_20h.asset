@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c272d31963d440b39a0165a169579f8, type: 3}
   m_Name: 1h_PieElement_20h
   m_EditorClassIdentifier: 
-  Name: 4
+  Name: 20h
+  actionName: 
+  actionDescription: 
   Icon: {fileID: 21300000, guid: ef54b2d182d69422da78221420b63c9e, type: 3}
   NextPie: {fileID: 11400000, guid: 7297e740899fd452c8cd815ddff248ec, type: 2}

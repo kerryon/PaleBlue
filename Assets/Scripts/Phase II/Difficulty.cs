@@ -96,9 +96,9 @@ public class Difficulty : MonoBehaviour
         }
 
         value = (waterUseValue * prefab01) + (reproductionValue * prefab02) + (waterStorageValue * prefab03);
-        Variables.Instance.waterUseRate = waterUseValue * prefab01;
-        Variables.Instance.reproductionRate = reproductionValue * prefab02;
-        Variables.Instance.waterStorageRate = waterStorageValue * prefab03;
+        Variables.Instance.waterUseRate = 0.1f * prefab01;
+        Variables.Instance.reproductionRate = 0.1f * prefab02;
+        Variables.Instance.waterStorageRate = 0.1f * prefab03;
 
         if (value < 0)
         {

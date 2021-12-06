@@ -14,7 +14,7 @@ public class AsteroideBeltVanish : MonoBehaviour
     {
         if (asteroides.AsteroidCount > 0)
         {
-            asteroides.AsteroidCount = (int)(7000 - (Variables.Instance.timespan.TotalMinutes * 1000));
+            asteroides.AsteroidCount = (int)(7000 - (Variables.Instance.timespan.TotalSeconds));
         } else
         {
             Destroy(gameObject);
