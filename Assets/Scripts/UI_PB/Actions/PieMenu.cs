@@ -43,7 +43,7 @@ public class PieMenu : MonoBehaviour
 
     public void SelectPie(int index)
     {
-        string path = Path + "/" + Data.Elements[index].Name;
+        string path = Path + "/" + Data.Elements[index].pathName;
         if (Data.Elements[index].NextPie != null)
         {
             var newSubRing = Instantiate(gameObject, transform.parent).GetComponent<PieMenu>();

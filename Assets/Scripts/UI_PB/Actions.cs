@@ -1,11 +1,17 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Actions : MonoBehaviour
 {
     public TMP_Text timeDisplay;
     public GameObject actionPie;
+
     public GameObject infoWrapper;
+    public TMP_Text details;
+    public TMP_Text infoHead;
+    public TMP_Text infoCopy;
+    public Image infoImage;
 
     private readonly int maxHours = 168;
 
@@ -32,7 +38,12 @@ public class Actions : MonoBehaviour
 
     public void OpenActionInfo(int index)
     {
+        PieMenu pm = transform.GetChild(1).GetChild(transform.GetChild(1).childCount - 1).GetComponent<PieMenu>();
         infoWrapper.SetActive(true);
+        details.text = pm.Data.Elements[index].actionName;
+        infoHead.text = pm.Data.Elements[index].actionName;
+        infoCopy.text = pm.Data.Elements[index].actionDescription;
+        infoImage.sprite = pm.Data.Elements[index].Icon;
     }
 
     public void CloseActionInfo()

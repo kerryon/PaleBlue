@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c272d31963d440b39a0165a169579f8, type: 3}
   m_Name: 5h_Wasserverteilung
   m_EditorClassIdentifier: 
-  Name: 
+  index: 24
+  pathName: 
   actionName: Wasserverteilung
   actionDescription: 
   Icon: {fileID: 21300000, guid: 72f2e219c88164b7a8f427565b91bdda, type: 3}
   NextPie: {fileID: 0}
+  topic: 
+  description: 
+  FABText: 
+  FABInfoTitle: 
+  FABInfo: 
+  titleImage: {fileID: 0}

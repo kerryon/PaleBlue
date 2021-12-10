@@ -14,11 +14,15 @@ public class PiePiece : MonoBehaviour
 
     public void GetPiePiece()
     {
-        if (!string.IsNullOrEmpty(GetComponentInParent<PieMenu>().Data.Elements[transform.GetSiblingIndex()].actionName))
+        int num = transform.GetSiblingIndex();
+
+        Variables.Instance.currentActionIndex = GetComponentInParent<PieMenu>().Data.Elements[num].index;
+
+        if (!string.IsNullOrEmpty(GetComponentInParent<PieMenu>().Data.Elements[num].actionName))
         {
-            actionsScript.OpenActionInfo(transform.GetSiblingIndex());
+            actionsScript.OpenActionInfo(num);
         }
 
-        GetComponentInParent<PieMenu>().SelectPie(transform.GetSiblingIndex());
+        GetComponentInParent<PieMenu>().SelectPie(num);
     }
 }

@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c272d31963d440b39a0165a169579f8, type: 3}
   m_Name: 5h_Meeresschutzzone
   m_EditorClassIdentifier: 
-  Name: 
+  index: 22
+  pathName: 
   actionName: Meeresschutzzone einrichten
   actionDescription: 
   Icon: {fileID: 21300000, guid: 410962271029e42609b05607f90d96dd, type: 3}
   NextPie: {fileID: 0}
+  topic: 
+  description: 
+  FABText: 
+  FABInfoTitle: 
+  FABInfo: 
+  titleImage: {fileID: 0}

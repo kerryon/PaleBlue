@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c272d31963d440b39a0165a169579f8, type: 3}
   m_Name: 20h_Erfindungen
   m_EditorClassIdentifier: 
-  Name: 
+  index: 27
+  pathName: 
   actionName: Erfinde etwas
   actionDescription: 
   Icon: {fileID: 21300000, guid: 588c5bd68979f46e79e2762714df9973, type: 3}
   NextPie: {fileID: 0}
+  topic: 
+  description: 
+  FABText: 
+  FABInfoTitle: 
+  FABInfo: 
+  titleImage: {fileID: 0}

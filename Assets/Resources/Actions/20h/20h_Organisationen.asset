@@ -12,8 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c272d31963d440b39a0165a169579f8, type: 3}
   m_Name: 20h_Organisationen
   m_EditorClassIdentifier: 
-  Name: 
+  index: 28
+  pathName: 
   actionName: "Organisation gr\xFCnden"
   actionDescription: 
   Icon: {fileID: 21300000, guid: e7158226b311047bea79d45baee067a2, type: 3}
   NextPie: {fileID: 0}
+  topic: 
+  description: 
+  FABText: 
+  FABInfoTitle: 
+  FABInfo: 
+  titleImage: {fileID: 0}
