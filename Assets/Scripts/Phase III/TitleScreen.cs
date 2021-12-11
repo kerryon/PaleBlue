@@ -3,22 +3,18 @@ using UnityEngine;
 
 public class TitleScreen : MonoBehaviour
 {
-    public GameObject Buttons;
+    public SetupUI UI;
     private bool isInteractable;
 
     void Start()
     {
-        if (Variables.Instance.historyCount != 10)
-        {
-            Destroy(gameObject);
-        }
         isInteractable = false;
         StartCoroutine(ActivateInteraction());
     }
 
     void Update()
     {
-        if (isInteractable == true && Input.touchCount > 0)
+        if (isInteractable && Input.touchCount > 0)
         {
             Touch touch = Input.GetTouch(0);
 
@@ -29,16 +25,16 @@ public class TitleScreen : MonoBehaviour
             if (touch.phase == TouchPhase.Ended)
             {
                 StartCoroutine(DestroyTitle());
-                Buttons.SetActive(true);
+                UI.OpenUI();
             }
         }
 
 #if UNITY_EDITOR
-        if (Input.GetMouseButtonDown(0))
+        if (isInteractable && Input.GetMouseButtonDown(0))
         {
             StartCoroutine(FadeTitle());
             StartCoroutine(DestroyTitle());
-            Buttons.SetActive(true);
+            UI.OpenUI();
         }
 #endif
     }

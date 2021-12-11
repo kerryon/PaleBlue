@@ -14,12 +14,15 @@ public class ActionList : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
     public void OpenAction()
     {
-        GameObject newAction = Instantiate(action[0], transform); //[Variables.Instance.currentActionIndex]
+        transform.parent.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+
+        GameObject newAction = Instantiate(action[Variables.Instance.currentActionIndex - 10], transform); //Index - Vorherige ScriptableObjects
         newAction.GetComponentInChildren<Canvas>().worldCamera = UICam;
+        newAction.name = Variables.Instance.currentActionIndex.ToString();
     }
 }

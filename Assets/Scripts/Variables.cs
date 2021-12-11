@@ -71,6 +71,9 @@ public class Variables : MonoBehaviour
     public DateTime lastClosed;
     DateTime Started;
 
+    public float[] waterValues;
+    private float initialWaterValue = 100000f;
+
     //private float timer;
 
     void Awake()
@@ -98,7 +101,34 @@ public class Variables : MonoBehaviour
         }
         Started = ES3.Load("StartedAt", currentDate);
 
+        SetWaterValues();
         InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
+    }
+
+    public void SetWaterValues()
+    {
+        if (ES3.KeyExists("WV"))
+        {
+            ES3.Load("WV", waterValues);
+        }
+        else
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                waterValues[i] = initialWaterValue;
+            }
+        }
+
+        w_distribution = waterValues[0];
+        w_current = waterValues[1];
+        w_contamination = waterValues[2];
+        w_temperature = waterValues[3];
+        w_weatherExtremes = waterValues[4];
+        w_carbonDioxide = waterValues[5];
+        w_fishCount = waterValues[6];
+        w_groundwater = waterValues[7];
+        w_trees = waterValues[8];
+        w_ice = waterValues[9];
     }
 
     public void ValueCalculation()
@@ -144,37 +174,39 @@ public class Variables : MonoBehaviour
         h_overfishing = Map(hC + e + c, 0f, 9f, 0f, 1f) + ((h_industry + h_luxury) * 0.1f);
         h_wastewater = Map(hC + w + e * 2, 0f, 16f, 0f, 1f) + ((h_industry + h_agriculture) * 0.1f);
         h_waterStructure = Map(s + e, 0f, 14f, 0f, 1f) + ((h_industry + h_energy) * 0.1f);
-        //Grundwerte mit '+=' ?
-        w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, 3f, 0f, 1f);
-        w_current = Map(w_temperature + w_ice, 0f, 2f, 0f, 1f);
-        w_contamination = Map(h_waste + h_wastewater, 0f, 2f, 0f ,1f);
-        w_temperature = Map(w_carbonDioxide + w_ice, 0f, 2f, 0f, 1f);
-        w_weatherExtremes = Map(h_waterStructure + (1 - wC), 0f, 2f, 0f, 1f);
-        w_carbonDioxide = Map(h_energy + h_industry, 0f, 2f, 0f, 1f);
-        w_fishCount = Map(h_overfishing + h_waste + w_temperature + w_carbonDioxide, 0f, 4f, 0f ,1f);
-        w_groundwater = Map(h_urbanisation + h_agriculture + h_waterStructure + w_distribution, 0f, 4f, 0f, 1f);
-        w_trees = Map(h_agriculture + h_urbanisation, 0f, 2f, 0f, 1f);
-        w_ice = Map(w_carbonDioxide + w_temperature, 0f, 2f, 0f, 1f);
+        
+        w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, 3.7f, 1f, -1f);
+        w_current += Map(w_temperature + w_ice, 200000f, 0f, 1f, -1f);
+        w_contamination += Map(h_waste + h_wastewater, 0f, 2.5f, 1f, -1f);
+        w_temperature += Map(w_carbonDioxide + w_ice, 200000f, 0f, 1f, -1f);
+        w_weatherExtremes += Map(h_waterStructure + (1 - wC), 0f, 2.2f, 1f, -1f);
+        w_carbonDioxide += Map(h_energy + h_industry, 0f, 2.2f, 1f, -1f);
+        w_fishCount += Map(h_overfishing + h_waste + Mathf.InverseLerp(100000f, 0f, w_temperature) + Mathf.InverseLerp(100000f, 0f, w_carbonDioxide), 0f, 4.5f, 1f, -1f);
+        w_groundwater += Map(h_urbanisation + h_agriculture + h_waterStructure + Mathf.InverseLerp(100000f, 0f, w_distribution), 0f, 4.6f, 1f, -1f);
+        w_trees += Map(h_agriculture + h_urbanisation, 0f, 2.4f, 1f, -1f);
+        w_ice += Map(w_carbonDioxide + w_temperature, 200000f, 0f, 1f, -1f);
         // Grundwerte beeinflussen?
-        waterEcology = Map(w_contamination + w_temperature + w_fishCount + w_carbonDioxide, 0f, 4f, 0f, 1f);
-        waterQuality = Map(w_contamination + w_carbonDioxide, 0f, 2f, 0f, 1f);
-        waterQuantity = Map(w_groundwater + w_distribution + w_trees + w_weatherExtremes + +(1 - wC), 0f, 5f, 0f, 1f);
-        waterSealevel = Map(w_current + w_temperature + w_ice, 0f, 3f, 0f, 1f);
+        waterEcology = Map(w_contamination + w_temperature + w_fishCount + w_carbonDioxide, 0f, 400000f, 0f, 1f);
+        waterQuality = Map(w_contamination + w_carbonDioxide, 0f, 200000f, 0f, 1f);
+        waterQuantity = Map(w_groundwater + w_distribution + w_trees + w_weatherExtremes + water, 0f, 500000f, 0f, 1f);
+        waterSealevel = Map(w_current + w_temperature + w_ice, 0f, 300000f, 0f, 1f);
 
         regenerationRate = Map(rain, 0f, 300f, -1f, 2f); // s + e + c
 
-        if (water >= 0f && water <= maxWater)
+        if (water > 0f && water < maxWater)
         {
             water += regenerationRate;
         }
-        else if (water > maxWater)
+        else if (water >= maxWater)
         {
             water = maxWater;
         }
-        else if (water < 0f)
+        else if (water <= 0f)
         {
             water = 0f;
         }
+
+        waterValues = new float[] { w_distribution, w_current, w_contamination, w_temperature, w_weatherExtremes, w_carbonDioxide, w_fishCount, w_groundwater, w_trees, w_ice};
         //Debug.Log(" | " + " | ");
     }
 
@@ -276,13 +308,14 @@ public class Variables : MonoBehaviour
         reproductionRate = ES3.Load("Property_reproductionRate", 0.2f);
         waterStorageRate = ES3.Load("Property_storageRate", 0.2f);
         actionHours = ES3.Load("Property_actionHours", 0);
-        actionCount = ES3.Load("Property_actionCounter", 0);
+        actionCount = ES3.Load("Property_actionCounter", 1);
     }
 
     private void SaveAllValues()
     {
         ES3.Save("CLI", currentLevelIndex);
         ES3.Save("HC", historyCount);
+        ES3.Save("WV", waterValues);
         ES3.Save("WATER", water);
         ES3.Save("HUMAN", human);
         ES3.Save("RAIN", rain);
