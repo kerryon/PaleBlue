@@ -36,13 +36,13 @@ public class Statistics : MonoBehaviour
         waterRatio.fillAmount = 1 - _ratio;
         humanRatio.fillAmount = _ratio;
 
-        imgWater[0].fillAmount = 1 - Variables.Instance.waterEcology;
-        imgWater[1].fillAmount = 1 - Variables.Instance.waterQuality;
-        imgWater[2].fillAmount = 1 - Variables.Instance.waterQuantity;
-        imgWater[3].fillAmount = 1 - Variables.Instance.waterSealevel;
+        imgWater[0].fillAmount = Variables.Instance.waterEcology;
+        imgWater[1].fillAmount = Variables.Instance.waterQuality;
+        imgWater[2].fillAmount = Variables.Instance.waterQuantity;
+        imgWater[3].fillAmount = Variables.Instance.waterSealevel;
 
-        imgHuman[0].fillAmount = Mathf.InverseLerp(0, 7, Variables.Instance.s);
-        imgHuman[1].fillAmount = Variables.Instance.e;
+        imgHuman[0].fillAmount = Mathf.InverseLerp(0f, 7f, Variables.Instance.s);
+        imgHuman[1].fillAmount = Mathf.InverseLerp(0f, 8f, Variables.Instance.e);
         imgHuman[2].fillAmount = Variables.Instance.w;
         imgHuman[3].fillAmount = 1 - Variables.Instance.c;
     }

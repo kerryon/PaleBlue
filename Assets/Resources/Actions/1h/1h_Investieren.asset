@@ -17,5 +17,10 @@ MonoBehaviour:
   actionName: Investieren
   actionDescription: 2
   Icon: {fileID: 21300000, guid: e39b68e5765e249fe92d38644080a6b5, type: 3}
-  titleImage: {fileID: 0}
   NextPie: {fileID: 0}
+  topic: 
+  description: 
+  FABText: 
+  FABInfoTitle: 
+  FABInfo: 
+  titleImage: {fileID: 21300000, guid: 507c5b458f93a448f8c6048083d06af8, type: 3}

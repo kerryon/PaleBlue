@@ -231,7 +231,7 @@ Material:
     - _DetailTilingB: 300
     - _DetailTiling_Ext_1: 70
     - _DstBlend: 0
-    - _GlossMapScale: 0.2
+    - _GlossMapScale: 0.55
     - _Glossiness: 0.27
     - _GlossyReflections: 1
     - _HasDetail: 1

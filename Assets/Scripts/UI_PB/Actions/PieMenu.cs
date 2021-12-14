@@ -5,7 +5,6 @@ public class PieMenu : MonoBehaviour
 {
     public Pie Data;
     public PiePiece PiePiecePrefab;
-    public float GapWidthDegree = 1f;
     public Action<string> callback;
     protected PiePiece[] Pieces;
     protected PieMenu Parent;
@@ -29,14 +28,14 @@ public class PieMenu : MonoBehaviour
             Pieces[i].transform.localRotation = Quaternion.identity;
 
             //set cake piece
-            Pieces[i].CakePiece.fillAmount = 1f / Data.Elements.Length - GapWidthDegree / 360f;
+            Pieces[i].CakePiece.fillAmount = 1f / Data.Elements.Length;
             Pieces[i].CakePiece.transform.localPosition = Vector3.zero;
-            Pieces[i].CakePiece.transform.localRotation = Quaternion.Euler(0, 0, -stepLength / 2f + GapWidthDegree / 2f + i * stepLength);
+            Pieces[i].CakePiece.transform.localRotation = Quaternion.Euler(0, 0, -stepLength / 2f + i * stepLength);
 
             //set icon
             Pieces[i].Icon.transform.localPosition = Pieces[i].CakePiece.transform.localPosition + Quaternion.AngleAxis(i * stepLength, Vector3.forward) * Vector3.up * iconDist;
             Pieces[i].Icon.sprite = Data.Elements[i].Icon;
-            Pieces[i].CakePiece.color = new Color32(96, 154, 255, (byte)UnityEngine.Random.Range(0, 200));
+            Pieces[i].CakePiece.color = new Color32(96, 154, 255, (byte)UnityEngine.Random.Range(0, 150));
         }
     }
 

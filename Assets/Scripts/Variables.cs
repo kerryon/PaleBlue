@@ -15,7 +15,6 @@ public class Variables : MonoBehaviour
 
     [Header("Parameter")]
     public float water;
-    private float maxWater = 10000f;
     public float human;
     public int currentLevelIndex;
 
@@ -71,8 +70,10 @@ public class Variables : MonoBehaviour
     public DateTime lastClosed;
     DateTime Started;
 
-    public float[] waterValues;
-    private float initialWaterValue = 100000f;
+    private float[] waterValues = new float[10];
+    private readonly float wv = 100000f;
+    private readonly float maxWater = 10000f;
+    private readonly float maxRain = 300f;
 
     //private float timer;
 
@@ -87,8 +88,8 @@ public class Variables : MonoBehaviour
             _instance = this;
             DontDestroyOnLoad(gameObject);
         }
-
         LoadAllValues();
+        SetWaterValues();
     }
 
     void Start()
@@ -101,21 +102,20 @@ public class Variables : MonoBehaviour
         }
         Started = ES3.Load("StartedAt", currentDate);
 
-        SetWaterValues();
         InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
     }
 
     public void SetWaterValues()
     {
-        if (ES3.KeyExists("WV"))
+        if (ES3.KeyExists("WV") && currentLevelIndex > 3)
         {
-            ES3.Load("WV", waterValues);
+            waterValues = ES3.Load("WV", waterValues);
         }
         else
         {
             for (int i = 0; i < 10; i++)
             {
-                waterValues[i] = initialWaterValue;
+                waterValues[i] = 80000f;
             }
         }
 
@@ -133,9 +133,10 @@ public class Variables : MonoBehaviour
 
     public void ValueCalculation()
     {
+        //Lerp variables for calculations
         float wC = Mathf.InverseLerp(0f, maxWater, water);
         float hC = Mathf.InverseLerp(0f, water, human * waterUseRate);
-        float rC = Mathf.InverseLerp(0f, 300f, rain);
+        float rC = Mathf.Abs(Mathf.LerpUnclamped(1f , 0f, rain / maxRain));
 
         if (human * waterUseRate < water)
         {
@@ -152,7 +153,7 @@ public class Variables : MonoBehaviour
 
         if (rain > 0f)
         {
-            rain -= 300f / 18000f;
+            rain -= maxRain / 18000f;
         }
         else
         {
@@ -161,8 +162,8 @@ public class Variables : MonoBehaviour
 
         s = (int)timespan.TotalDays;
         e = s * wC;
-        w = Mathf.Lerp(0f, 1f, Mathf.InverseLerp(0f, 2f, c + wC));
-        c = Mathf.Lerp(0f, 1f, Mathf.InverseLerp(0f, 2f, w_current + w_contamination));
+        w = Mathf.InverseLerp(0f, 3f, c + (1 - wC) + hC);
+        c = Mathf.InverseLerp(wv*3, 0f, w_current + w_carbonDioxide + w_trees); //irgendwie unabhängiger machen
         
         h_conflict = Map((1 - wC) + hC + w + c, 0f, 4f, 0f, 1f) + ((h_urbanisation + h_agriculture + h_waterStructure) * 0.1f);
         h_luxury = Map((1 - wC) + hC + w + e + c, 0f, 11f, 0f, 1f) + ((h_industry + h_agriculture) * 0.1f);
@@ -176,28 +177,36 @@ public class Variables : MonoBehaviour
         h_waterStructure = Map(s + e, 0f, 14f, 0f, 1f) + ((h_industry + h_energy) * 0.1f);
         
         w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, 3.7f, 1f, -1f);
-        w_current += Map(w_temperature + w_ice, 200000f, 0f, 1f, -1f);
+        w_current += Map(w_temperature + w_ice, wv*2, 0f, 1f, -1f);
         w_contamination += Map(h_waste + h_wastewater, 0f, 2.5f, 1f, -1f);
-        w_temperature += Map(w_carbonDioxide + w_ice, 200000f, 0f, 1f, -1f);
-        w_weatherExtremes += Map(h_waterStructure + (1 - wC), 0f, 2.2f, 1f, -1f);
+        w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 1f, -1f);
+        w_weatherExtremes += Map(h_waterStructure + (1 - wC) + rC, 0f, 4.2f, 1f, -1f);
         w_carbonDioxide += Map(h_energy + h_industry, 0f, 2.2f, 1f, -1f);
-        w_fishCount += Map(h_overfishing + h_waste + Mathf.InverseLerp(100000f, 0f, w_temperature) + Mathf.InverseLerp(100000f, 0f, w_carbonDioxide), 0f, 4.5f, 1f, -1f);
-        w_groundwater += Map(h_urbanisation + h_agriculture + h_waterStructure + Mathf.InverseLerp(100000f, 0f, w_distribution), 0f, 4.6f, 1f, -1f);
+        w_fishCount += Map(h_overfishing + h_waste + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 4.5f, 1f, -1f);
+        w_groundwater += Map(h_urbanisation + h_agriculture + h_waterStructure + Mathf.InverseLerp(wv, 0f, w_distribution), 0f, 4.6f, 1f, -1f);
         w_trees += Map(h_agriculture + h_urbanisation, 0f, 2.4f, 1f, -1f);
-        w_ice += Map(w_carbonDioxide + w_temperature, 200000f, 0f, 1f, -1f);
+        w_ice += Map(w_carbonDioxide + w_temperature, wv*2, 0f, 1f, -1f);
+
+        if (w_distribution >= wv) { w_distribution = wv; } else if (w_distribution <= 0) { w_distribution = 0; }
+        if (w_current >= wv) { w_current = wv; } else if (w_current <= 0) { w_current = 0; }
+        if (w_contamination >= wv) { w_contamination = wv; } else if (w_contamination <= 0) { w_contamination = 0; }
+        if (w_temperature >= wv) { w_temperature = wv; } else if (w_temperature <= 0) { w_temperature = 0; }
+        if (w_weatherExtremes >= wv) { w_weatherExtremes = wv; } else if (w_weatherExtremes <= 0) { w_weatherExtremes = 0; }
+        if (w_carbonDioxide >= wv) { w_carbonDioxide = wv; } else if (w_carbonDioxide <= 0) { w_carbonDioxide = 0; }
+        if (w_fishCount >= wv) { w_fishCount = wv; } else if (w_fishCount <= 0) { w_fishCount = 0; }
+        if (w_groundwater >= wv) { w_groundwater = wv; } else if (w_groundwater <= 0) { w_groundwater = 0; }
+        if (w_trees >= wv) { w_trees = wv; } else if (w_trees <= 0) { w_trees = 0; }
+        if (w_ice >= wv) { w_ice = wv; } else if (w_ice <= 0) { w_ice = 0; }
         // Grundwerte beeinflussen?
-        waterEcology = Map(w_contamination + w_temperature + w_fishCount + w_carbonDioxide, 0f, 400000f, 0f, 1f);
-        waterQuality = Map(w_contamination + w_carbonDioxide, 0f, 200000f, 0f, 1f);
-        waterQuantity = Map(w_groundwater + w_distribution + w_trees + w_weatherExtremes + water, 0f, 500000f, 0f, 1f);
-        waterSealevel = Map(w_current + w_temperature + w_ice, 0f, 300000f, 0f, 1f);
+        waterEcology = Map(w_contamination + w_temperature + w_fishCount + w_carbonDioxide, 0f, wv*4, 0f, 1f);
+        waterQuality = Map(w_contamination + w_carbonDioxide, 0f, wv*2, 0f, 1f);
+        waterQuantity = Map(w_groundwater + w_distribution + w_trees + w_weatherExtremes + water*10, 0f, wv*5, 0f, 1f);
+        waterSealevel = Map(w_current + w_temperature + w_ice, 0f, wv*3, 0f, 1f);
 
-        regenerationRate = Map(rain, 0f, 300f, -1f, 2f); // s + e + c
-
-        if (water > 0f && water < maxWater)
-        {
-            water += regenerationRate;
-        }
-        else if (water >= maxWater)
+        regenerationRate = Map(rain, 0f, maxRain, -1f, 1f) + Map(waterQuality + waterQuantity, 0f, 2f, -0.2f, 0.2f);
+        water += regenerationRate;
+        
+        if (water >= maxWater)
         {
             water = maxWater;
         }
@@ -206,8 +215,7 @@ public class Variables : MonoBehaviour
             water = 0f;
         }
 
-        waterValues = new float[] { w_distribution, w_current, w_contamination, w_temperature, w_weatherExtremes, w_carbonDioxide, w_fishCount, w_groundwater, w_trees, w_ice};
-        //Debug.Log(" | " + " | ");
+        waterValues = new float[] { w_distribution, w_current, w_contamination, w_temperature, w_weatherExtremes, w_carbonDioxide, w_fishCount, w_groundwater, w_trees, w_ice };
     }
 
     private float Map(float input, float oldLow, float oldHigh, float newLow, float newHigh)
@@ -246,6 +254,7 @@ public class Variables : MonoBehaviour
 
     private void UpdateValues()
     {
+        SetWaterValues();
         lastClosed = ES3.Load("LastClosedAt", lastClosed);
         for (int i = 0; i < (int)DateTime.Now.Subtract(lastClosed).TotalSeconds; i++)
         {
@@ -302,7 +311,7 @@ public class Variables : MonoBehaviour
 
             water = maxWater;
             human = 1000f;
-            rain = 300f;
+            rain = maxRain;
         }
         waterUseRate = ES3.Load("Property_waterUseRate", 0.2f);
         reproductionRate = ES3.Load("Property_reproductionRate", 0.2f);

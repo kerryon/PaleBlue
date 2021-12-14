@@ -26,6 +26,7 @@ public class Menu : MonoBehaviour
 
     [Header("Scriptable Objects")]
     public ScriptableObjectContent[] historyContent;
+    public PieElement[] actionContent;
 
     private bool statisticsToggle = false;
     private bool goalsToggle = false;

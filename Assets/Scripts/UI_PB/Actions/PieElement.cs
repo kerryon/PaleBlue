@@ -1,6 +1,6 @@
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "PieElement", menuName = "PieMenu/Element", order = 2)]
+[CreateAssetMenu(fileName = "New PieElement", menuName = "PieMenu/Element", order = 2)]
 public class PieElement : ScriptableObject
 {
     public int index;

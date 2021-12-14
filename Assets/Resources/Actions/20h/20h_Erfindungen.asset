@@ -23,4 +23,4 @@ MonoBehaviour:
   FABText: 
   FABInfoTitle: 
   FABInfo: 
-  titleImage: {fileID: 0}
+  titleImage: {fileID: 21300000, guid: d1ff1209ca6234f03a9149e9fe03d3a5, type: 3}

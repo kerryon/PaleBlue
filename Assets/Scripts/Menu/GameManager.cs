@@ -62,9 +62,6 @@ public class GameManager : MonoBehaviour
             ES3.Save("Property_actionHours", 0);
             ES3.Save("Property_actionCounter", 0);
             ES3.Save("StartedAt", DateTime.Now);
-            Variables.Instance.human = 1000f;
-            Variables.Instance.water = 10000f;
-            Variables.Instance.rain = 300f;
         }
     }
 

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.0021223594, g: 0.009088372, b: 0.010428191, a: 1}
+  m_IndirectSpecularColor: {r: 0.0021534893, g: 0.009776484, b: 0.01112814, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   innerAlphaSharpness: 2.73
   outerColor: {r: 1, g: 0.7735294, b: 0.43382353, a: 1}
   outerEase: 8
-  outerColorSharpness: 1
+  outerColorSharpness: 7
   outerAlphaSharpness: 6.17
 --- !u!114 &1374240861
 MonoBehaviour:
@@ -2015,7 +2015,7 @@ MonoBehaviour:
   outerMesh: {fileID: 4300000, guid: 662157716ef2b6840841e610138115a4, type: 3}
   outerMeshRadius: 1
   outerSoftness: 0
-  height: 0.22
+  height: 0.11
   innerFog: 0
   outerFog: 0
   sky: 1
@@ -3964,8 +3964,8 @@ MonoBehaviour:
   width: 256
   format: 5
   sunsetEase: 3
-  sunsetStart: 0.468
-  sunsetEnd: 0.797
+  sunsetStart: 0.48
+  sunsetEnd: 0.9
   sunsetSharpnessR: 2
   sunsetSharpnessG: 2
   sunsetSharpnessB: 4
@@ -3984,9 +3984,9 @@ MonoBehaviour:
   width: 256
   format: 5
   rimEase: 8
-  rimColor: {r: 0.8349056, g: 0.91589475, b: 1, a: 1}
-  rimPower: 5
-  alphaDensity: 50
+  rimColor: {r: 0.3501691, g: 0.4628204, b: 0.5754717, a: 1}
+  rimPower: 2.2
+  alphaDensity: 5
   alphaFade: 2
 --- !u!114 &2072619570
 MonoBehaviour:
@@ -4001,18 +4001,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   color: {r: 0.9292453, g: 0.97506666, b: 1, a: 0.87058824}
-  brightness: 1.5
+  brightness: 1
   renderQueue:
     Group: 3000
     Offset: 0
-  radius: 1.115
+  radius: 1.09
   cameraOffset: 0
   mainTex: {fileID: 8900000, guid: d586e911a4da611458ee6b84965f8c6a, type: 3}
   depthTex: {fileID: 0}
   softness: 0
   lit: 1
   ambientColor: {r: 0.20741367, g: 0.3347912, b: 0.5566038, a: 1}
-  ambientBrightness: 1
+  ambientBrightness: 0.2
   maxLights: 2
   maxSphereShadows: 2
   lightingTex: {fileID: 0}

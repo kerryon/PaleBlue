@@ -16,6 +16,8 @@ TagManager:
   - Prefab3
   - Statistics
   - Goals
+  - Clouds
+  - Atmosphere
   layers:
   - Default
   - TransparentFX

@@ -14,8 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 10
   pathName: 
-  actionName: Abfall
+  actionName: Abfall sammeln
   actionDescription: 1
   Icon: {fileID: 21300000, guid: 03a0fb878714f457484f45cb36b68a25, type: 3}
-  titleImage: {fileID: 0}
   NextPie: {fileID: 0}
+  topic: 
+  description: 
+  FABText: lorem ipsum fab text
+  FABInfoTitle: 
+  FABInfo: 
+  titleImage: {fileID: 21300000, guid: 4b176554bbe06415abd66e4c713c4c9f, type: 3}

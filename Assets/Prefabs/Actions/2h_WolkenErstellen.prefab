@@ -474,7 +474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &514611656741986
 Transform:
   m_ObjectHideFlags: 0
@@ -737,3 +737,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   EnableDragZoom: {fileID: 5774583373634572311}
+  ShapeDetector: {fileID: 7378882903723414071}
