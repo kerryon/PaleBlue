@@ -9,17 +9,23 @@ public class SpherePins : MonoBehaviour
     public GameObject PlanetOrigin;
 
     [Header("Interval in Minuten")]
-    public int interval = 1;
+    public float interval;
+    private float minutes;
  
     public Sprite[] sprites;
+
+    void Start()
+    {
+        minutes = interval;
+    }
 
     void Update()
     {
         if (PinCount < PinsMax)
         {
-            if (Variables.Instance.timespan.TotalMinutes > interval)
+            if (Variables.Instance.timespan.TotalMinutes > minutes)
             {
-                interval++;
+                minutes += interval;
                 CreatePinPrefab(PinCount);
                 PinCount++;
             }

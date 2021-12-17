@@ -15,7 +15,6 @@ public class EvolvePlanet : MonoBehaviour
     [Header("Wait in Realtime")]
     public int Minutes;
 
-    public GameObject[] additionalAssets;
     public Material[] materials;
 
     private bool changeMat = true;

@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using LylekGames;
 using System.Collections;
 using TMPro;
+using System.IO;
 
 public class Creature : MonoBehaviour
 {
@@ -20,11 +21,6 @@ public class Creature : MonoBehaviour
 
     IEnumerator SaveAndLoadAvatar()
     {
-        //if (Resources.Load<Texture2D>("avatar"))
-        //{
-        //    DrawScript.drawScript.Save("avatar");
-        //    yield return null;
-        //}
         DrawScript.drawScript.Save("avatar");
         yield return new WaitForSeconds(1);
         Drawing.SetActive(false);
@@ -34,8 +30,10 @@ public class Creature : MonoBehaviour
 
     public void SetSprite()
     {
-        SourceImage = Resources.Load<Texture2D>("avatar");
-        MySprite = Sprite.Create(SourceImage, new Rect(0, 0, SourceImage.width, SourceImage.height), new Vector2(0, 0));
+        byte[] bytes = System.IO.File.ReadAllBytes(Path.Combine(Application.persistentDataPath, "avatar.png"));
+        Texture2D tex = new Texture2D(1, 1);
+        tex.LoadImage(bytes);
+        MySprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0, 0));
         Avatar = GameObject.FindGameObjectsWithTag("Avatar");
         for (int i = 0; i < Avatar.Length; i++)
         {

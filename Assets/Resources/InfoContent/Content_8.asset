@@ -17,5 +17,7 @@ MonoBehaviour:
   description: 8
   FABText: 8
   FABInfoTitle: 8
-  FABInfo: 8
+  FABInfo: '8
+
+'
   titleImage: {fileID: 0}

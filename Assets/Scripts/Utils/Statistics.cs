@@ -29,8 +29,8 @@ public class Statistics : MonoBehaviour
 
     void Update()
     {
-        waterDisplay.text = (int)Variables.Instance.water + "\n<font=fonts/Config-Light><size=40%>Nutzbares Wasser</size></font>";
-        humanDisplay.text = (int)Variables.Instance.human + "\n<font=fonts/Config-Light><size=40%>Individuen</size></font>";
+        waterDisplay.text = Variables.Instance.water.ToString("n0").Replace(",", ".") + "\n<font=fonts/Config-Light><size=40%>Nutzbares Wasser</size></font>";
+        humanDisplay.text = Variables.Instance.human.ToString("n0").Replace(",", ".") + "\n<font=fonts/Config-Light><size=40%>Individuen</size></font>";
 
         _ratio = Variables.Instance.waterUseRate * Variables.Instance.human / Variables.Instance.water;
         waterRatio.fillAmount = 1 - _ratio;

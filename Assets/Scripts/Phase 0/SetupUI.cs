@@ -59,7 +59,7 @@ public class SetupUI : MonoBehaviour
     {
         if (Variables.Instance.historyCount != 1)
         {
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
             OpenUI();
         }
     }
@@ -73,7 +73,7 @@ public class SetupUI : MonoBehaviour
 
     IEnumerator ShowUI()
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         Instructions_info.SetActive(true);
     }
 

@@ -5,6 +5,9 @@ public class EvolveUI : MonoBehaviour
 {
     public Camera UICamera;
     LevelLoader levelLoader;
+    public GameObject EnableZoomDrag;
+
+    private bool cloudNeedsCreation;
 
     void Awake()
     {
@@ -16,15 +19,7 @@ public class EvolveUI : MonoBehaviour
 
     void Start()
     {
-        if (Variables.Instance.currentLevelIndex >= 3)
-        {
-            StartCoroutine(OpenInterface());
-        }
-    }
-
-    IEnumerator OpenInterface()
-    {
-        yield return new WaitForSeconds(7);
+        cloudNeedsCreation = ES3.Load("CloudNeedsCreation", true);
         OpenUI();
     }
 
@@ -32,12 +27,23 @@ public class EvolveUI : MonoBehaviour
     {
         levelLoader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
         levelLoader.attachCam(UICamera);
-        StartCoroutine(ShowUI());
+
+        if (cloudNeedsCreation)
+        {
+            StartCoroutine(ShowUI());
+        }
+        else
+        {
+            EnableZoomDrag.SetActive(true);
+        }
     }
 
-    IEnumerator ShowUI()
+    private IEnumerator ShowUI()
     {
-        yield return new WaitForSeconds(3);
+        cloudNeedsCreation = false;
+        ES3.Save("CloudNeedsCreation", cloudNeedsCreation);
+
+        yield return new WaitForSeconds(1);
 
         transform.GetChild(0).gameObject.SetActive(true);
     }

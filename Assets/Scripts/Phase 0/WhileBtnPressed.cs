@@ -9,11 +9,13 @@ public class WhileBtnPressed : MonoBehaviour, IPointerUpHandler
     private SgtPlanet planetDisplacement;
     bool isAdding = false;
     bool isRemoving = false;
+    private float initialDisplacement;
 
     void Start()
     {
         planetDisplacement = planet.GetComponent<SgtPlanet>();
-        planetDisplacement.Displacement = -1;
+        initialDisplacement = planetDisplacement.Displacement;
+
     }
 
     void Update()
@@ -21,13 +23,13 @@ public class WhileBtnPressed : MonoBehaviour, IPointerUpHandler
         if (isAdding)
         {
             planet.GetComponent<LeanManualRescale>().AddScaleA(0.1f);
-            planetDisplacement.Displacement = Map(planet.transform.localScale.x, 10, 150, -0.3f, 0.22f);
+            planetDisplacement.Displacement = Map(planet.transform.localScale.x, 10, 150, initialDisplacement, 0.22f);
             return;
         }
         if (isRemoving)
         {
             planet.GetComponent<LeanManualRescale>().AddScaleA(-0.1f);
-            planetDisplacement.Displacement = Map(planet.transform.localScale.x, 10, 150, -0.3f, 0.22f);
+            planetDisplacement.Displacement = Map(planet.transform.localScale.x, 10, 150, initialDisplacement, 0.22f);
             return;
         }
     }

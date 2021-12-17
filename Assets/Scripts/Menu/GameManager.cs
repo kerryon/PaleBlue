@@ -14,9 +14,9 @@ public class GameManager : MonoBehaviour
     public GameObject newGame;
     public GameObject confirmGame;
 
-    float fade = 0f;
-    float duration = 7.0f;
-    float startTime;
+    private float fade = 0f;
+    private readonly float duration = 7.0f;
+    private float startTime;
     private int currentLevelIndex;
 
     void Start()
@@ -28,13 +28,6 @@ public class GameManager : MonoBehaviour
         currentLevelIndex = ES3.Load("CLI", 3);
 
         startTime = Time.time;
-    }
-
-    void Update()
-    {
-        float t = (Time.time - startTime) / duration;
-        fade = Mathf.SmoothStep(0.7f, 3f, t);
-        introMat.SetFloat("_WobbleThreshold", fade);
 
         if (currentLevelIndex <= 3)
         {
@@ -48,6 +41,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+        float t = (Time.time - startTime) / duration;
+        fade = Mathf.SmoothStep(0.7f, 3f, t);
+        introMat.SetFloat("_WobbleThreshold", fade);
+    }
+
     public void NewGame()
     {
         if (currentLevelIndex > 3)
@@ -57,11 +57,7 @@ public class GameManager : MonoBehaviour
             StartCoroutine(ConfirmationTimer());
         } else
         {
-            SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
-            ES3.Save("CLI", 3);
-            ES3.Save("Property_actionHours", 0);
-            ES3.Save("Property_actionCounter", 0);
-            ES3.Save("StartedAt", DateTime.Now);
+            SaveStartValues();
         }
     }
 
@@ -74,8 +70,18 @@ public class GameManager : MonoBehaviour
 
     public void ConfirmNewGame()
     {
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        SaveStartValues();
+    }
+
+    private void SaveStartValues()
+    {
         ES3.Save("CLI", 3);
+        ES3.Save("Property_actionHours", 0);
+        ES3.Save("Property_actionCounter", 0);
+        ES3.Save("StartedAt", DateTime.Now);
+        ES3.DeleteFile("history.csv");
+        ES3.Save("CloudNeedsCreation", true);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
     }
 
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();

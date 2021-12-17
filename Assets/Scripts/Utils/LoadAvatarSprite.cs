@@ -1,15 +1,17 @@
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LoadAvatarSprite : MonoBehaviour
 {
-    private Texture2D SourceImage;
     private Sprite MySprite;
 
     void Start()
     {
-        SourceImage = Resources.Load<Texture2D>("avatar");
-        MySprite = Sprite.Create(SourceImage, new Rect(0, 0, SourceImage.width, SourceImage.height), new Vector2(0, 0));
+        byte[] bytes = System.IO.File.ReadAllBytes(Path.Combine(Application.persistentDataPath, "avatar.png"));
+        Texture2D tex = new Texture2D(1, 1);
+        tex.LoadImage(bytes);
+        MySprite = Sprite.Create(tex, new Rect(0, 0, tex.width, tex.height), new Vector2(0, 0));
         gameObject.GetComponent<Image>().sprite = MySprite;
     }
 }
