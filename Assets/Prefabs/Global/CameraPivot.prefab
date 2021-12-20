@@ -222,13 +222,13 @@ MonoBehaviour:
   pitch: 0
   pitchSensitivity: 0.25
   pitchClamp: 1
-  pitchMin: -45
-  pitchMax: 45
+  pitchMin: -60
+  pitchMax: 60
   yaw: 0
   yawSensitivity: 0.25
   yawClamp: 1
-  yawMin: -45
-  yawMax: 45
+  yawMin: -60
+  yawMax: 60
   currentPitch: 0
   currentYaw: 0
 --- !u!1 &8019689084518906498

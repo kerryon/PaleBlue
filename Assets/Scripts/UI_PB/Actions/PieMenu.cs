@@ -35,7 +35,7 @@ public class PieMenu : MonoBehaviour
             //set icon
             Pieces[i].Icon.transform.localPosition = Pieces[i].CakePiece.transform.localPosition + Quaternion.AngleAxis(i * stepLength, Vector3.forward) * Vector3.up * iconDist;
             Pieces[i].Icon.sprite = Data.Elements[i].Icon;
-            Pieces[i].CakePiece.color = new Color32(96, 154, 255, (byte)UnityEngine.Random.Range(0, 150));
+            Pieces[i].CakePiece.color = new Color32(96, 154, 255, (byte)(200/(i+2))); //UnityEngine.Random.Range(0, 150)
         }
     }
 

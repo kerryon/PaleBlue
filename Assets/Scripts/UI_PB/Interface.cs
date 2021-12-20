@@ -19,7 +19,7 @@ public class Interface : MonoBehaviour
         buttons = gameObject.transform.GetChild(0).gameObject;
 
         levelLoader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
-        levelLoader.attachCam(UICamera);
+        levelLoader.AttachCam(UICamera);
 
         text.gameObject.SetActive(false);
 

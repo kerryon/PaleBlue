@@ -76,8 +76,8 @@ public class Intro : MonoBehaviour
 
     IEnumerator LoadingScreen()
     {
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Single));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(3, LoadSceneMode.Additive)); // lädt erste Welt in Haupszene
+        scenesToLoad.Add(SceneManager.LoadSceneAsync(3, LoadSceneMode.Single));
+        scenesToLoad.Add(SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive)); // lädt erste Welt in Haupszene
 
         for (int i=0; i<scenesToLoad.Count; i++)
         {

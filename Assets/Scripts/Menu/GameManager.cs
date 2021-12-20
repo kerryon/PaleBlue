@@ -21,15 +21,15 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        currentLevelIndex = ES3.Load("CLI", 4);
+
         infoWindow.SetActive(false);
         confirmGame.SetActive(false);
         introMat.SetFloat("_WobbleThreshold", fade);
 
-        currentLevelIndex = ES3.Load("CLI", 3);
-
         startTime = Time.time;
 
-        if (currentLevelIndex <= 3)
+        if (currentLevelIndex < 4)
         {
             continueButton.interactable = false;
             continueButton.GetComponentInChildren<TMP_Text>().color = new Color32(0, 0, 0, 70);
@@ -50,7 +50,7 @@ public class GameManager : MonoBehaviour
 
     public void NewGame()
     {
-        if (currentLevelIndex > 3)
+        if (currentLevelIndex > 4)
         {
             newGame.SetActive(false);
             confirmGame.SetActive(true);
@@ -75,13 +75,20 @@ public class GameManager : MonoBehaviour
 
     private void SaveStartValues()
     {
-        ES3.Save("CLI", 3);
+        if (GameObject.Find("Variables"))
+        {
+            Variables.Instance.currentLevelIndex = 4;
+            Variables.Instance.actionHours = 0;
+            Variables.Instance.actionCount = 0;
+        }
+
+        ES3.Save("CLI", 4);
         ES3.Save("Property_actionHours", 0);
         ES3.Save("Property_actionCounter", 0);
         ES3.Save("StartedAt", DateTime.Now);
         ES3.DeleteFile("history.csv");
         ES3.Save("CloudNeedsCreation", true);
-        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
 
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
@@ -93,7 +100,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator LoadCurrentScene()
     {
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(2, LoadSceneMode.Single));
+        ES3.Save("LastClosedAt", DateTime.Now);
+
+        scenesToLoad.Add(SceneManager.LoadSceneAsync(3, LoadSceneMode.Single));
         scenesToLoad.Add(SceneManager.LoadSceneAsync(currentLevelIndex, LoadSceneMode.Additive));
         continueButton.transform.parent.gameObject.SetActive(false);
 

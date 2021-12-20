@@ -162,7 +162,7 @@ public class Menu : MonoBehaviour
     {
         transition.SetTrigger("LevelLoadStart");
         yield return new WaitForSeconds(1);
-        SceneManager.LoadSceneAsync(0, LoadSceneMode.Single);
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
     }
 
     public void ToggleTextbox()

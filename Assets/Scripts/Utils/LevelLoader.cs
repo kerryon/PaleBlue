@@ -15,13 +15,12 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLvl()
     {
-        StartCoroutine(LoadLvl(Variables.Instance.currentLevelIndex));
-        LevelCounter();
+        StartCoroutine(LoadLevel(Variables.Instance.currentLevelIndex));
     }
 
     List<AsyncOperation> scenesToChange = new List<AsyncOperation>();
 
-    IEnumerator LoadLvl(int levelIndex)
+    IEnumerator LoadLevel(int levelIndex)
     {
         transition.SetTrigger("LevelLoadStart");
 
@@ -40,19 +39,6 @@ public class LevelLoader : MonoBehaviour
 
         yield return new WaitForSeconds(1);
 
-        transition.SetTrigger("LevelLoadEnd");
-    }
-
-    public void attachCam(Camera newUICam)
-    {
-        var cameraData = mainCamera.GetUniversalAdditionalCameraData();
-        cameraData.cameraStack.Clear();
-        cameraData.cameraStack.Add(newUICam);
-        cameraData.cameraStack.Add(menuCamera);
-    }
-
-    public void LevelCounter()
-    {
         if (Variables.Instance.currentLevelIndex < SceneManager.sceneCountInBuildSettings - 1)
         {
             Variables.Instance.currentLevelIndex++;
@@ -61,5 +47,15 @@ public class LevelLoader : MonoBehaviour
         {
             Variables.Instance.currentLevelIndex = SceneManager.sceneCountInBuildSettings - 1;
         }
+
+        transition.SetTrigger("LevelLoadEnd");
+    }
+
+    public void AttachCam(Camera newUICam)
+    {
+        var cameraData = mainCamera.GetUniversalAdditionalCameraData();
+        cameraData.cameraStack.Clear();
+        cameraData.cameraStack.Add(newUICam);
+        cameraData.cameraStack.Add(menuCamera);
     }
 }

@@ -26,7 +26,7 @@ public class EvolveUI : MonoBehaviour
     public void OpenUI()
     {
         levelLoader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
-        levelLoader.attachCam(UICamera);
+        levelLoader.AttachCam(UICamera);
 
         if (cloudNeedsCreation)
         {

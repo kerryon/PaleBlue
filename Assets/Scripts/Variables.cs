@@ -69,6 +69,7 @@ public class Variables : MonoBehaviour
     DateTime Started;
 
     private float[] values = new float[20];
+    private bool valuesSet = false;
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
     private readonly float maxWater = 10000f;
@@ -88,12 +89,11 @@ public class Variables : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
         LoadAllValues();
-        SetValues();
     }
 
     void Start()
     {
-        if (currentLevelIndex <= 3)
+        if (currentLevelIndex <= 4)
         {
             currentDate = DateTime.Now;
             ES3.Save("StartedAt", currentDate);
@@ -101,11 +101,16 @@ public class Variables : MonoBehaviour
         Started = ES3.Load("StartedAt", currentDate);
 
         InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
+
+        if (currentLevelIndex > 6)
+        {
+            UpdateValues();
+        }
     }
 
     public void SetValues()
     {
-        if (currentLevelIndex >= 6)
+        if (ES3.KeyExists("VALUES") && currentLevelIndex > 6)
         {
             values = ES3.Load("VALUES", values);
         }
@@ -116,6 +121,7 @@ public class Variables : MonoBehaviour
                 values[i] = 20000f;
                 values[i + 10] = 80000f;
             }
+            rain = maxRain;
         }
 
         h_conflict = values[0];
@@ -143,6 +149,12 @@ public class Variables : MonoBehaviour
 
     public void ValueCalculation()
     {
+        if (!valuesSet)
+        {
+            SetValues();
+            valuesSet = true;
+        }
+
         // Lerp variables for calculations
         float wC = Mathf.InverseLerp(0f, maxWater, water);
         float hC = Mathf.InverseLerp(0f, water, human * waterUseRate);
@@ -273,8 +285,9 @@ public class Variables : MonoBehaviour
 
     private void UpdateValues()
     {
-        lastClosed = ES3.Load("LastClosedAt", lastClosed);
-        for (int i = 0; i < (int)DateTime.Now.Subtract(lastClosed).TotalSeconds; i++)
+        lastClosed = ES3.Load("LastClosedAt", currentDate);
+        int sec = (int)DateTime.Now.Subtract(lastClosed).TotalSeconds;
+        for (int i = 0; i < sec; i++)
         {
             ValueCalculation();
         }
@@ -315,8 +328,8 @@ public class Variables : MonoBehaviour
 
     private void LoadAllValues()
     {
-        currentLevelIndex = ES3.Load("CLI", 3);
-        if (currentLevelIndex > 3)
+        currentLevelIndex = ES3.Load("CLI", 4);
+        if (currentLevelIndex > 4)
         {
             historyCount = ES3.Load("HC", 1);
 

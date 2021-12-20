@@ -67,7 +67,7 @@ public class SetupUI : MonoBehaviour
     public void OpenUI()
     {
         levelLoader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
-        levelLoader.attachCam(UICamera);
+        levelLoader.AttachCam(UICamera);
         StartCoroutine(ShowUI());
     }
 

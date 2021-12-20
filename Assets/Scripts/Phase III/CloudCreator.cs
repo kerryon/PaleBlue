@@ -5,10 +5,25 @@ using System.Collections;
 public class CloudCreator : MonoBehaviour
 {
     private SgtCloudsphere cloudsphere;
+    private bool cloudNeedsCreation;
+    private Color cloudColor;
 
     void Start()
     {
+        cloudNeedsCreation = ES3.Load("CloudNeedsCreation", true);
+
         cloudsphere = gameObject.GetComponent<SgtCloudsphere>();
+        cloudColor = cloudsphere.Color;
+        if (cloudNeedsCreation)
+        {
+            cloudColor.a = 0f;
+            cloudsphere.Color = cloudColor;
+        }
+        else
+        {
+            cloudColor.a = 1f;
+            cloudsphere.Color = cloudColor;
+        }
     }
 
     public void CreateCloud()
