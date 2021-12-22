@@ -14,7 +14,7 @@ public class Init : MonoBehaviour
 
         if (currentLevelIndex <= 4)
         {
-            SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+            Invoke(nameof(LoadInitial), 1f);
         }
         else if (currentLevelIndex > 4)
         {
@@ -27,10 +27,16 @@ public class Init : MonoBehaviour
         lens.transform.localPosition = new Vector3(0, Mathf.PingPong(Time.time*3, 50), 0);
     }
 
+    private void LoadInitial()
+    {
+        SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+    }
+
     List<AsyncOperation> scenesToLoad = new List<AsyncOperation>();
 
     IEnumerator LoadScenes()
     {
+        yield return new WaitForSeconds(1f);
         scenesToLoad.Add(SceneManager.LoadSceneAsync(3, LoadSceneMode.Single));
         scenesToLoad.Add(SceneManager.LoadSceneAsync(currentLevelIndex, LoadSceneMode.Additive));
         for (int i = 0; i < scenesToLoad.Count; i++)

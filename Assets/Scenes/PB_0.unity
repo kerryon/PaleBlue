@@ -4050,7 +4050,7 @@ GameObject:
   - component: {fileID: 596062669}
   - component: {fileID: 596062670}
   m_Layer: 0
-  m_Name: Corona
+  m_Name: Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6352,6 +6352,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1652009190}
   nextPhase: {fileID: 1262255122}
+  planetMat: {fileID: 0}
 --- !u!1 &888182356
 GameObject:
   m_ObjectHideFlags: 0
@@ -8242,6 +8243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1746041905}
   nextPhase: {fileID: 1999867104}
+  planetMat: {fileID: 0}
 --- !u!1 &1263160249
 GameObject:
   m_ObjectHideFlags: 0
@@ -9285,6 +9287,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1621674898}
   nextPhase: {fileID: 876042317}
+  planetMat: {fileID: 2100000, guid: 92b79f7dc869968418e26401e285f9ad, type: 2}
 --- !u!1 &1406898478
 GameObject:
   m_ObjectHideFlags: 0
@@ -13404,6 +13407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UI: {fileID: 1937513507}
   nextPhase: {fileID: 0}
+  planetMat: {fileID: 0}
 --- !u!1 &2002570762
 GameObject:
   m_ObjectHideFlags: 0

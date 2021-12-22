@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-
     private bool toggleBool = false;
     public GameObject menuBtn;
     public GameObject menuScreen;
@@ -128,8 +127,16 @@ public class Menu : MonoBehaviour
             {
                 Image titleImage = Levels.transform.GetChild(i + 2).GetComponent<Image>();
                 TMP_Text title = Levels.transform.GetChild(i + 2).GetChild(0).GetComponent<TMP_Text>();
-                titleImage.sprite = historyContent[sheet.GetCell<int>(1, i)].titleImage;
-                title.text = historyContent[sheet.GetCell<int>(1, i)].topic;
+                if (sheet.GetCell<int>(1, i) < historyContent.Length)
+                {
+                    titleImage.sprite = historyContent[sheet.GetCell<int>(1, i)].titleImage;
+                    title.text = historyContent[sheet.GetCell<int>(1, i)].topic;
+                }
+                else
+                {
+                    titleImage.sprite = actionContent[sheet.GetCell<int>(1, i) - historyContent.Length].titleImage;
+                    title.text = actionContent[sheet.GetCell<int>(1, i) - historyContent.Length].topic;
+                }
             }
             historyLoaded = true;
         }

@@ -545,7 +545,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mesh: {fileID: 4300002, guid: 2c8c3514f9fa3b944b134875a9c44736, type: 3}
-  resolution: 1024
+  resolution: 512
   interval: -1
   fadeOuter: 1
   warpOuter: 0.3

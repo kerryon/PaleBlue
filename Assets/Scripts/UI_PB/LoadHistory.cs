@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class LoadHistory : MonoBehaviour
 {
-    public Menu menu;
+    public Menu _menu;
 
     void OnEnable()
     {
-        menu.LoadHistory();
+        _menu.LoadHistory();
     }
 }

@@ -5,8 +5,9 @@ public class UIInitiate : MonoBehaviour
 {
     public GameObject UI;
     public GameObject nextPhase;
+    public Material planetMat;
 
-    Menu menu;
+    Menu _menu;
 
     void Awake()
     {
@@ -18,7 +19,11 @@ public class UIInitiate : MonoBehaviour
 
     void Start()
     {
-        menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
+        _menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
+        if (planetMat)
+        {
+            planetMat.color = Color.white;
+        }
     }
 
     public void NextPhase()
@@ -34,7 +39,7 @@ public class UIInitiate : MonoBehaviour
         Camera.main.GetComponent<Animator>().SetTrigger("PhaseTransition");
 
         yield return new WaitForSeconds(0.5f);
-        menu.AppendHistory(Variables.Instance.historyCount);
+        _menu.AppendHistory(Variables.Instance.historyCount);
         gameObject.SetActive(false);
         nextPhase.SetActive(true);
     }

@@ -66,7 +66,7 @@ public class Variables : MonoBehaviour
     public DateTime currentDate;
     public TimeSpan timespan;
     public DateTime lastClosed;
-    DateTime Started;
+    public DateTime Started;
 
     private float[] values = new float[20];
     private bool valuesSet = false;
@@ -332,7 +332,6 @@ public class Variables : MonoBehaviour
         if (currentLevelIndex > 4)
         {
             historyCount = ES3.Load("HC", 1);
-
             water = ES3.Load("WATER", maxWater);
             human = ES3.Load("HUMAN", 1000f);
             rain = ES3.Load("RAIN", 300f);
@@ -340,14 +339,13 @@ public class Variables : MonoBehaviour
         else
         {
             historyCount = 1;
-
             water = maxWater;
             human = 1000f;
             rain = maxRain;
         }
-        waterUseRate = ES3.Load("Property_waterUseRate", 0.2f);
-        reproductionRate = ES3.Load("Property_reproductionRate", 0.2f);
-        waterStorageRate = ES3.Load("Property_storageRate", 0.2f);
+        waterUseRate = ES3.Load("Property_waterUseRate", 0.4f);
+        reproductionRate = ES3.Load("Property_reproductionRate", 0.4f);
+        waterStorageRate = ES3.Load("Property_storageRate", 0.4f);
         actionHours = ES3.Load("Property_actionHours", 0);
         actionCount = ES3.Load("Property_actionCounter", 1);
     }

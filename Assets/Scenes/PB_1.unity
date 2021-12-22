@@ -1665,11 +1665,11 @@ MonoBehaviour:
   PlanetOrigin: {fileID: 794408281}
   interval: 18
   sprites:
-  - {fileID: 21300000, guid: 8e29775b7abe94d82a8d5b9369e9806a, type: 3}
-  - {fileID: 21300000, guid: 6e7094ec61da34e1f88aef13724c4bce, type: 3}
-  - {fileID: 21300000, guid: e47e0c748661d4bdda0446f16cbd1138, type: 3}
-  - {fileID: 21300000, guid: 6827def2f17e041fb80ff030e1b65a03, type: 3}
-  - {fileID: 21300000, guid: 45351595bf6e44f9a8e11d643b254f51, type: 3}
+  - {fileID: 21300000, guid: 38021453a34764e2480e43fc0a53f258, type: 3}
+  - {fileID: 21300000, guid: 6b0c3808c58a04c3480b687444e1c5f8, type: 3}
+  - {fileID: 21300000, guid: af1ee9dc1ddfc40c686acceb1675ad83, type: 3}
+  - {fileID: 21300000, guid: 8199cb6afb3fe45219263441190dfc7a, type: 3}
+  - {fileID: 21300000, guid: 6f23ebf3524684deabf54f9c5246dd92, type: 3}
 --- !u!114 &794408288
 MonoBehaviour:
   m_ObjectHideFlags: 0

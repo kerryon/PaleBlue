@@ -274,7 +274,7 @@ Material:
     - _WaterTiling: 25
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8028758, g: 0.61934644, b: 0.50379086, a: 1}
+    - _Color: {r: 0.78771245, g: 0.59006536, b: 0.4656209, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NightDirection: {r: 0, g: 0, b: 1, a: 1}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 1}

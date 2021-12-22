@@ -77,12 +77,15 @@ public class GameManager : MonoBehaviour
     {
         if (GameObject.Find("Variables"))
         {
+            Variables.Instance.Started = DateTime.Now;
             Variables.Instance.currentLevelIndex = 4;
             Variables.Instance.actionHours = 0;
             Variables.Instance.actionCount = 0;
+            Variables.Instance.historyCount = 0;
         }
 
         ES3.Save("CLI", 4);
+        ES3.Save("HC", 0);
         ES3.Save("Property_actionHours", 0);
         ES3.Save("Property_actionCounter", 0);
         ES3.Save("StartedAt", DateTime.Now);

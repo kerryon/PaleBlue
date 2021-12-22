@@ -263,6 +263,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4523886658137676380}
+  - component: {fileID: 4881123360119864572}
   m_Layer: 5
   m_Name: 2h_Grundwasser
   m_TagString: Untagged
@@ -285,3 +286,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4881123360119864572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826737926500229006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52144db69db584b7bb30ee578716342c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

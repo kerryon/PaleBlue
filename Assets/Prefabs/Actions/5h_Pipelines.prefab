@@ -109,6 +109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8271133196266021330}
+  - component: {fileID: 4016130870752752162}
   m_Layer: 5
   m_Name: 5h_Pipelines
   m_TagString: Untagged
@@ -131,6 +132,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4016130870752752162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025641620209431878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5038b25e65b104da09ba1b8e36212c89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4846116649985151418
 GameObject:
   m_ObjectHideFlags: 0

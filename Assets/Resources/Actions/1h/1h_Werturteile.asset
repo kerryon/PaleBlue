@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c272d31963d440b39a0165a169579f8, type: 3}
   m_Name: 1h_Werturteile
   m_EditorClassIdentifier: 
-  index: 12
+  index: 24
   pathName: 
   actionName: Werturteile
   actionDescription: 3

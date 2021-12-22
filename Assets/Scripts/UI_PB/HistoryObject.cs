@@ -17,6 +17,13 @@ public class HistoryObject : MonoBehaviour
         sheet.Load("history.csv");
         int value = sheet.GetCell<int>(1, transform.GetSiblingIndex() - 2);
 
-        text.text = "<font=Fonts/Config-Bold>" + _menu.historyContent[value].FABInfoTitle.Replace(";", "\n") + "</font>" + "\n\n" + _menu.historyContent[value].FABInfo.Replace(";", "\n");
+        if (value < _menu.historyContent.Length)
+        {
+            text.text = "<font=Fonts/Config-Bold>" + _menu.historyContent[value].FABInfoTitle.Replace(";", "\n") + "</font>" + "\n\n" + _menu.historyContent[value].FABInfo.Replace(";", "\n");
+        }
+        else
+        {
+            text.text = "<font=Fonts/Config-Bold>" + _menu.actionContent[value - _menu.historyContent.Length].FABInfoTitle.Replace(";", "\n") + "</font>" + "\n\n" + _menu.actionContent[value - _menu.historyContent.Length].FABInfo.Replace(";", "\n");
+        }
     }
 }
