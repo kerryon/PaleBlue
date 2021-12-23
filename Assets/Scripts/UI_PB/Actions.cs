@@ -17,7 +17,7 @@ public class Actions : MonoBehaviour
 
     void Update()
     {
-        timeDisplay.text = "Verfügbare Zeit\n<font=Fonts/Config-Bold><size=180%>" + Variables.Instance.actionHours + " h</size></font>\n<color=#609AFF1D>von restlichen " + (maxHours - (int)Variables.Instance.timespan.TotalHours) + " h</color>";
+        timeDisplay.text = "verfügbare Zeit\n<font=Fonts/Config-Bold><size=200%>" + Variables.Instance.actionHours + " h</size></font>\n<color=#609AFF1D>von restlichen " + (maxHours - (int)Variables.Instance.timespan.TotalHours) + " h</color>";
     }
 
     void OnEnable()

@@ -1092,7 +1092,7 @@ GameObject:
   - component: {fileID: 135403478}
   - component: {fileID: 135403477}
   m_Layer: 5
-  m_Name: sixer
+  m_Name: plasticbottle_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1198,7 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6039216, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4709,7 +4709,7 @@ GameObject:
   - component: {fileID: 1313295771}
   - component: {fileID: 1313295774}
   m_Layer: 5
-  m_Name: plasticbottle
+  m_Name: plasticbottle_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4775,7 +4775,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6039216, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -6199,7 +6199,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "Du erh\xE4ltst nun einen eignenen kleinen Planeten. Unterst\xFCtze ihn
-    auf seiner Reise.\n\n\u2014\nWelchen Namen soll dein Himmelsk\xF6rper tragen?"
+    auf seiner Reise.\n\n...\nWelchen Namen soll dein Himmelsk\xF6rper tragen?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -6665,7 +6665,7 @@ GameObject:
   - component: {fileID: 2136291584}
   - component: {fileID: 2136291585}
   m_Layer: 5
-  m_Name: plasticcup
+  m_Name: plasticbottle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6704,7 +6704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.3764706, g: 0.6039216, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

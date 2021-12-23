@@ -66,17 +66,30 @@ public class Interface : MonoBehaviour
 
     public void ActionToggle()
     {
-        actionToggle = !actionToggle;
         StartCoroutine(ActionToggleCoroutine());
     }
 
     IEnumerator ActionToggleCoroutine()
     {
-        if (!actionToggle)
+        Transform actionPieWrapper = actionMenu.transform.GetChild(1);
+        if (actionPieWrapper.childCount > 1)
         {
-            actionMenu.GetComponent<Animator>().SetTrigger("ActionMenuClose");
-            yield return new WaitForSeconds(0.5f);
+            actionPieWrapper.GetChild(0).gameObject.SetActive(true);
+            for (int i = 1; i < actionPieWrapper.childCount; i++)
+            {
+                Destroy(actionPieWrapper.GetChild(i).gameObject);
+            }
         }
-        actionMenu.SetActive(actionToggle);
+        else
+        {
+            actionToggle = !actionToggle;
+
+            if (!actionToggle)
+            {
+                actionMenu.GetComponent<Animator>().SetTrigger("ActionMenuClose");
+                yield return new WaitForSeconds(0.5f);
+            }
+            actionMenu.SetActive(actionToggle);
+        }
     }
 }

@@ -75,9 +75,13 @@ public class Variables : MonoBehaviour
     private readonly float maxWater = 10000f;
     private readonly float maxRain = 300f;
 
-    //private float timer;
+    private float wC;
+    private float hC;
+    private float rC;
 
-    void Awake()
+//private float timer;
+
+void Awake()
     {
         if (_instance != null && _instance != this)
         {
@@ -156,9 +160,9 @@ public class Variables : MonoBehaviour
         }
 
         // Lerp variables for calculations
-        float wC = Mathf.InverseLerp(0f, maxWater, water);
-        float hC = Mathf.InverseLerp(0f, water, human * waterUseRate);
-        float rC = Mathf.Abs(Mathf.LerpUnclamped(1f , 0f, rain / maxRain));
+        wC = Mathf.InverseLerp(0f, maxWater, water);
+        hC = Mathf.InverseLerp(0f, water, human * waterUseRate);
+        rC = Mathf.Abs(Mathf.LerpUnclamped(1f , 0f, rain / maxRain));
 
         if (human * waterUseRate < water)
         {
