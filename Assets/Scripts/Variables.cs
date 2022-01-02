@@ -8,7 +8,7 @@ public class Variables : MonoBehaviour
     public static Variables Instance { get { return _instance; } }
 
     [Header("Utillity")]
-    public int historyCount;
+    public int historyCount; // min = 1
     public int actionHours;
     public int actionCount;
     public int currentActionIndex;
@@ -214,7 +214,7 @@ void Awake()
         if (h_waterStructure >= hv) { h_waterStructure = hv; } else if (h_waterStructure <= 0) { h_waterStructure = 0; }
 
         w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -1f);
-        w_current += Map(w_temperature + w_ice, wv*2, 0f, 1f, -2f);
+        w_current += Map(w_temperature + w_ice, wv*2, 0f, 1f, -1f);
         w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -1f);
         w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 1f, -2f);
         w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -1f);

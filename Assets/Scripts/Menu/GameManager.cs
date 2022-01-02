@@ -81,7 +81,7 @@ public class GameManager : MonoBehaviour
             Variables.Instance.currentLevelIndex = 4;
             Variables.Instance.actionHours = 0;
             Variables.Instance.actionCount = 0;
-            Variables.Instance.historyCount = 0;
+            Variables.Instance.historyCount = 1;
         }
 
         ES3.Save("CLI", 4);

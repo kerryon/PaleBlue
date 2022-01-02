@@ -32,7 +32,4 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/PB_initial_assets.unity
     guid: 3ea91e4bc3592459480a04fd4b016801
-  - enabled: 0
-    path: Assets/Scenes/PB_terrain_test.unity
-    guid: 51c7508e23fdb43deb63ace3200fc812
   m_configObjects: {}

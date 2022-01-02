@@ -7,11 +7,10 @@ public class Notifications : MonoBehaviour
 {
     private void Start()
     {
-        RequestAuthorization();
-
+        StartCoroutine(RequestAuthorization());
         var timeTrigger = new iOSNotificationTimeIntervalTrigger()
         {
-            TimeInterval = new TimeSpan(1, 0, 0),
+            TimeInterval = new TimeSpan(12, 0, 0),
             Repeats = false
         };
 
@@ -48,11 +47,6 @@ public class Notifications : MonoBehaviour
             res += "\n deviceToken:  " + req.DeviceToken;
             Debug.Log(res);
         }
-    }
-
-    private void Update()
-    {
-        
     }
 
     private void OnApplicationPause(bool pause)

@@ -1520,6 +1520,34 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: -761.5708
       objectReference: {fileID: 0}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 448191504}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FadeOutPopup
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PopUp, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3435954771201851137, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3435954771311265893, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_SizeDelta.y
       value: 2798.9
@@ -3654,7 +3682,7 @@ GameObject:
   - component: {fileID: 1668687967}
   - component: {fileID: 1668687966}
   m_Layer: 0
-  m_Name: Orbit
+  m_Name: MoonOrbit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4111,6 +4139,10 @@ PrefabInstance:
       propertyPath: popup
       value: 
       objectReference: {fileID: 448191504}
+    - target: {fileID: 3322066973999582883, guid: 94b47a9e4ef79457eb52dd9ec7f9f767, type: 3}
+      propertyPath: maxPins
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3322066973999582883, guid: 94b47a9e4ef79457eb52dd9ec7f9f767, type: 3}
       propertyPath: onClick.Array.size
       value: 1
@@ -5193,9 +5225,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sharpnessR: 1
-  sharpnessG: 1
-  sharpnessB: 1
-  radiusMax: 15
+  sharpnessG: 2
+  sharpnessB: 2
+  radiusMax: 20
   startCalled: 0
 --- !u!114 &361609907177462598
 MonoBehaviour:

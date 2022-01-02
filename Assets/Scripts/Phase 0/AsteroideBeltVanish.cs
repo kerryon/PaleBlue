@@ -4,6 +4,7 @@ using SpaceGraphicsToolkit;
 public class AsteroideBeltVanish : MonoBehaviour
 {
     private SgtBeltSimple asteroides;
+    private readonly int initialAsteroidCount = 7000;
 
     void Start()
     {
@@ -12,13 +13,14 @@ public class AsteroideBeltVanish : MonoBehaviour
 
     void Update()
     {
-        if (asteroides.AsteroidCount > 0)
+        if (asteroides.AsteroidCount > 0 && Variables.Instance.timespan.TotalSeconds < initialAsteroidCount)
         {
-            asteroides.AsteroidCount = (int)(7000 - Variables.Instance.timespan.TotalSeconds);
+            asteroides.AsteroidCount = (int)(initialAsteroidCount - Variables.Instance.timespan.TotalSeconds);
         }
         else
         {
             Destroy(gameObject);
         }
+        
     }
 }

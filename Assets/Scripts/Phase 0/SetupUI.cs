@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using Lean.Touch;
 
 public class SetupUI : MonoBehaviour
 {
@@ -53,6 +54,18 @@ public class SetupUI : MonoBehaviour
         {
             iMax = Instructions_max.GetComponent<FAB>();
         }
+
+        if (!Phase4.activeSelf)
+        {
+            LeanTouch.Instance.UseTouch = false;
+            LeanTouch.Instance.UseMouse = false;
+        }
+    }
+
+    public void EnableTouch()
+    {
+        LeanTouch.Instance.UseTouch = true;
+        LeanTouch.Instance.UseMouse = true;
     }
 
     IEnumerator OpenInterface()
@@ -161,7 +174,7 @@ public class SetupUI : MonoBehaviour
             isShown = false;
         }
 
-        if (planet.transform.position.y < -220 && planet.transform.position.y > -240 && !isShown)
+        if (planet.transform.position.y < -220 && planet.transform.position.y > -260 && !isShown)
         {
             habitableZone.SetTrigger("zoneEntered");
 
@@ -186,7 +199,7 @@ public class SetupUI : MonoBehaviour
             isShown = true;
         }
 
-        if (planet.transform.position.y < -240 && isShown)
+        if (planet.transform.position.y < -260 && isShown)
         {
             habitableZone.SetTrigger("zoneExit");
 
