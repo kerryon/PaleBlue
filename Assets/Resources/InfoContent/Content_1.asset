@@ -13,31 +13,22 @@ MonoBehaviour:
   m_Name: Content_1
   m_EditorClassIdentifier: 
   index: 1
-  topic: 1
-  description: "<size=130%><line-height=60%><font=\"Fonts/Config-Bold\">Atmosph\xE4re;
-    \u2014;</font></line-height></size> Consetetur sadipscing elitr, sed diam nonumy
-    eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-    At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren."
+  topic: Position im Sonnensystem
+  description: 1
   FABText: 1
-  FABInfoTitle: 1
-  FABInfo: <font="Fonts/Config-Bold">Lorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</font>;Stet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.   <link="https://de.wikipedia.org/wiki/Link">;<style=Link>Klick
-    hier</style></link>
-  titleImage: {fileID: 21300000, guid: 950ea18cd8a4740cebc3e5cd130198b3, type: 3}
+  FABInfoTitle: Ein Sonnensystem braucht Planeten
+  FABInfo: "<font=\"Fonts/Config-Bold\">Die Erde ist gerade weit genug von der Sonne
+    entfernt, um die \u201Crichtige\u201D Menge an Sonnenenergie abzubekommen.</font>\n\nDie
+    Sonnenenergie ist mit Abstand  die wichtigste Energiequelle f\xFCr die Erde.
+    Sie entsteht, da die Sonne mit ihrer Masse eine derartige Anziehungskraft entwickelt,
+    dass die Absto\xDFungskr\xE4fte der Kerne der Wasserstoffatome (die zu drei Vierteln
+    die Sonnenmasse ausmachen) \xFCberwunden werden und die Kerne verschmelzen; die
+    entstehenden Atome sind aber nicht stabil und geben Energie ab, wodurch sie zu
+    stabilen Heliumatomen werden. Pro Sekunde \u201Cverbrennt\u201D die Sonne auf
+    diese Art 637 Millionen Tonnen Wasserstoff, dabei entstehen 632 Millionen Tonnen
+    Helium und 385 Milliarden Milliarden Megawatt. Die Position der Erde - etwa 150
+    Millionen Kilometer von der Sonne entfernt - f\xFChrt dazu, dass die ankommende
+    Sonnenstrahlung energiereich genug ist, um f\xFCr das Leben notwendige Reaktionen
+    anzutreiben, aber nicht so stark, dass alles Wasser verdampfen w\xFCrde.\n\n<link=\"https://www.oekosystem-erde.de/html/erde_leben.html\"><style=Link>Alle
+    Infos und mehr hier</style></link>"
+  titleImage: {fileID: 21300000, guid: 6ce272c323f3d41789d42098168e94d7, type: 3}

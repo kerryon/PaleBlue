@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2h_Nutzvieh
   m_EditorClassIdentifier: 
   index: 28
-  pathName: 
+  pathName: 2
   actionName: Nutzvieh
   actionDescription: 
   Icon: {fileID: 21300000, guid: 10771a0b07be94784b029b8c0964b24c, type: 3}

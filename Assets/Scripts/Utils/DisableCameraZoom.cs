@@ -1,18 +1,26 @@
 using UnityEngine;
 using Lean.Touch;
+using System.Collections;
 
 public class DisableCameraZoom : MonoBehaviour
 {
     private Camera cam;
-    private LeanPinchCamera pitchCam;
+    private LeanPinchCamera pinchCam;
 
     void Start()
     {
         if (gameObject.activeSelf)
         {
-            cam = Camera.main;
-            pitchCam = cam.GetComponent<LeanPinchCamera>();
-            pitchCam.enabled = false;
+            StartCoroutine(DisableZoom());
         }
+    }
+
+    IEnumerator DisableZoom()
+    {
+        cam = Camera.main;
+        pinchCam = cam.GetComponent<LeanPinchCamera>();
+        pinchCam.Zoom = 50;
+        yield return new WaitForSeconds(1);
+        pinchCam.enabled = false;
     }
 }

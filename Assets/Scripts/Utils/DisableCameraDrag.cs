@@ -17,7 +17,7 @@ public class DisableCameraDrag : MonoBehaviour
             yaw.Yaw = 0;
             cam.transform.rotation = new Quaternion(0, 0, 0, 0);
             cam.GetComponent<LeanMultiUpdate>().enabled = false;
-            Camera.main.fieldOfView = 50;
+
         }
     }
 }

@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using Lean.Gui;
 using UnityEngine;
 
 public class ActionList : MonoBehaviour
@@ -19,12 +22,38 @@ public class ActionList : MonoBehaviour
 
     public void OpenAction()
     {
-        transform.parent.gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        GameObject buttons = transform.parent.gameObject.transform.GetChild(0).gameObject;
+        buttons.SetActive(false);
+        int num = Variables.Instance.currentActionIndex - _menu.historyContent.Length;
 
-        GameObject newAction = Instantiate(action[Variables.Instance.currentActionIndex - _menu.historyContent.Length], transform); //Index - Vorherige ScriptableObjects
+        if (!string.IsNullOrEmpty(_menu.actionContent[num].pathName))
+        {
+            int cost = Convert.ToInt32(_menu.actionContent[num].pathName);
+            if ((Variables.Instance.actionHours - cost) >= 0)
+            {
+                Variables.Instance.actionHours -= cost;
+            }
+            else
+            {
+                buttons.SetActive(true);
+                StartCoroutine(ToggleNotification());
+                return;
+            }
+        }
+
+        GameObject newAction = Instantiate(action[num], transform); //Index - Vorherige ScriptableObjects
         newAction.GetComponentInChildren<Canvas>().worldCamera = UICam;
         newAction.name = Variables.Instance.currentActionIndex.ToString();
-
+ 
         _menu.AppendHistory(Variables.Instance.currentActionIndex);
+    }
+
+    IEnumerator ToggleNotification()
+    {
+        GameObject notification = transform.GetChild(0).gameObject;
+        notification.SetActive(true);
+        transform.GetChild(0).gameObject.GetComponent<LeanPulse>().Pulse();
+        yield return new WaitForSeconds(6);
+        notification.SetActive(false);
     }
 }

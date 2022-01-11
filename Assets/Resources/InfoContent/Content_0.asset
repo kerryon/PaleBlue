@@ -13,9 +13,26 @@ MonoBehaviour:
   m_Name: Content_0
   m_EditorClassIdentifier: 
   index: 0
-  topic: 0
+  topic: "Planetengr\xF6\xDFe"
   description: 0
   FABText: 0
-  FABInfoTitle: 0
-  FABInfo: 0
-  titleImage: {fileID: 21300000, guid: 4b176554bbe06415abd66e4c713c4c9f, type: 3}
+  FABInfoTitle: "Die Gr\xF6\xDFe macht's aus"
+  FABInfo: "<font=\"Fonts/Config-Bold\">Die Gr\xF6\xDFe der Erde h\xE4lt nicht nur
+    die Atmosph\xE4re fest, sondern hat noch eine zweite Wirkung: Die Erde k\xFChlt
+    im Inneren kaum aus - dadurch bleibt der Antrieb der Plattentektonik erhalten.
+    </font>\n\nF\xFCr den W\xE4rmehaushalt der Erde ist die Energie im Erdinneren
+    im Vergleich zur Sonnenstrahlung kaum von Bedeutung, sie sch\xFCtzt das Leben
+    aber auf eine andere, doppelte Weise: Erstens sorgt das Einschmelzen von Gestein
+    im Erdinneren immer wieder daf\xFCr, dass das im Gestein gebundene Wasser und
+    der Kohlenstoff freigesetzt werden, ohne dieses Recycling g\xE4be es vermutlich
+    l\xE4ngst kein Wasser und keinen Kohlenstoff mehr in der Atmosph\xE4re, und auch
+    kein Leben auf der Erde. Und zweitens sind Konvektionsbewegungen im fl\xFCssigen
+    \xE4u\xDFeren Teil des Erdkerns wahrscheinlich die Ursache f\xFCr die Erzeugung
+    des Erdmagnetfelds; dieses Erdmagnetfeld sch\xFCtzt die Erde vor den Sonnenwinden.
+    Sonnenwinde bestehen zum gr\xF6\xDFten Teil aus Wasserstoffkernen, die elektrisch
+    geladen sind und daher durch das Magnetfeld zum gr\xF6\xDFten Teil um die Erde
+    herumgelenkt werden. Im hohen Norden kann man diese Sonnenwinde manchmal sehen:
+    Ein kleiner Teil der Partikel gelangt, den Feldlinien folgend, in die Polarregion
+    und erzeugt dort durch Wechselwirkung mit Luftteilchen die spektakul\xE4ren Polarlichter.\n\n<link=\"https://www.oekosystem-erde.de/html/erde_leben.html\"><style=Link>Alle
+    Infos und mehr hier</style></link>"
+  titleImage: {fileID: 21300000, guid: 93850ac392957478d909bbbd8eb1c2b6, type: 3}

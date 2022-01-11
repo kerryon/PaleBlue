@@ -115,84 +115,89 @@ public class ConsequencePins : MonoBehaviour
                     case 0:
                         if (GameObject.FindGameObjectWithTag("Pin0"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin0"));
+                            DestroyPinPrefab("Pin0");
                         }
                         break;
                     case 1:
                         if (GameObject.FindGameObjectWithTag("Pin1"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin1"));
+                            DestroyPinPrefab("Pin1");
                         }
                         if (GameObject.FindGameObjectWithTag("Pin11"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin11"));
+                            DestroyPinPrefab("Pin11");
                         }
                         break;
                     case 2:
                         if (GameObject.FindGameObjectWithTag("Pin2"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin2"));
+                            DestroyPinPrefab("Pin2");
                         }
                         break;
                     case 3:
                         if (GameObject.FindGameObjectWithTag("Pin2"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin2"));
+                            DestroyPinPrefab("Pin2");
                         }
                         break;
                     case 4:
                         if (GameObject.FindGameObjectWithTag("Pin3"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin3"));
+                            DestroyPinPrefab("Pin3");
                         }
                         break;
                     case 5:
                         if (GameObject.FindGameObjectWithTag("Pin4"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin4"));
+                            DestroyPinPrefab("Pin4");
                         }
                         if (GameObject.FindGameObjectWithTag("Pin11"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin11"));
+                            DestroyPinPrefab("Pin11");
                         }
                         break;
                     case 6:
                         if (GameObject.FindGameObjectWithTag("Pin5"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin5"));
+                            DestroyPinPrefab("Pin5");
                         }
                         if (GameObject.FindGameObjectWithTag("Pin10"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin10"));
+                            DestroyPinPrefab("Pin10");
                         }
                         break;
                     case 7:
                         if (GameObject.FindGameObjectWithTag("Pin6"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin6"));
+                            DestroyPinPrefab("Pin6");
                         }
                         break;
                     case 8:
                         if (GameObject.FindGameObjectWithTag("Pin7"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin7"));
+                            DestroyPinPrefab("Pin7");
                         }
                         break;
                     case 9:
                         if (GameObject.FindGameObjectWithTag("Pin8"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin8"));
+                            DestroyPinPrefab("Pin8");
                         }
                         break;
                     case 10:
                         if (GameObject.FindGameObjectWithTag("Pin9"))
                         {
-                            Destroy(GameObject.FindGameObjectWithTag("Pin9"));
+                            DestroyPinPrefab("Pin9");
                         }
                         break;
                 }
             }
         } 
+    }
+
+    public void DestroyPinPrefab(string pin)
+    {
+        Destroy(GameObject.FindGameObjectWithTag(pin));
     }
 
     public void CreatePinPrefab(int pin)

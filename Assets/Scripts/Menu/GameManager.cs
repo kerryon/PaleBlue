@@ -75,13 +75,17 @@ public class GameManager : MonoBehaviour
 
     private void SaveStartValues()
     {
-        if (GameObject.Find("Variables"))
+        if (GameObject.FindGameObjectWithTag("Variables"))
         {
             Variables.Instance.Started = DateTime.Now;
+            Variables.Instance.lastClosed = DateTime.Now;
             Variables.Instance.currentLevelIndex = 4;
             Variables.Instance.actionHours = 0;
             Variables.Instance.actionCount = 0;
             Variables.Instance.historyCount = 1;
+            Variables.Instance.waterUseRate = 0.4f;
+            Variables.Instance.waterStorageRate = 0.5f;
+            Variables.Instance.reproductionRate = 0.3f;
         }
 
         ES3.Save("CLI", 4);

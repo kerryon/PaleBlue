@@ -188,7 +188,7 @@ void Awake()
 
         s = (float)timespan.TotalDays;
         e = s * wC;
-        w = Mathf.InverseLerp(0f, 3f, c + (1 - wC) + hC);
+        w = Mathf.InverseLerp(0f, 3f, c * 0.5f + (1 - wC) * 0.5f + hC * 2f);
         c = Mathf.InverseLerp(wv*3, 0f, w_current + w_carbonDioxide + w_trees);
         
         h_conflict += Map((1 - wC) + hC + w + c, 0f, 4f, 0f, 1f) + Mathf.InverseLerp(0f, hv*3, h_urbanisation + h_agriculture + h_waterStructure);
@@ -214,7 +214,7 @@ void Awake()
         if (h_waterStructure >= hv) { h_waterStructure = hv; } else if (h_waterStructure <= 0) { h_waterStructure = 0; }
 
         w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -1f);
-        w_current += Map(w_temperature + w_ice, wv*2, 0f, 1f, -1f);
+        w_current += Map(w_temperature + w_ice, wv*2, 0f, 1f, -2f);
         w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -1f);
         w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 1f, -2f);
         w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -1f);
@@ -368,6 +368,7 @@ void Awake()
         ES3.Save("Property_reproductionRate", reproductionRate);
         ES3.Save("Property_storageRate", waterStorageRate);
         ES3.Save("Property_actionCounter", actionCount);
+        ES3.Save("Property_actionHours", actionHours);
         ES3.Save("LastClosedAt", DateTime.Now);
     }
 }

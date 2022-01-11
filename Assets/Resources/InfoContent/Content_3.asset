@@ -13,9 +13,24 @@ MonoBehaviour:
   m_Name: Content_3
   m_EditorClassIdentifier: 
   index: 3
-  topic: 3
+  topic: Monde
   description: 3
   FABText: 3
-  FABInfoTitle: 3
-  FABInfo: 3
-  titleImage: {fileID: 21300000, guid: 8262a2457f4f34626a5c32609ca5d408, type: 3}
+  FABInfoTitle: Der Mond beeinflusst die Meere mehr als den Menschen
+  FABInfo: "<font=\"Fonts/Config-Bold\">Die Gezeiten sind eine unstrittige Fernwirkung
+    des Mondes. Sie gehen im Wesentlichen auf seine Gravitationskraft zur\xFCck.
+    Diese Kraft h\xE4ngt einerseits von der Masse ab, wesentlich st\xE4rker jedoch
+    von der Entfernung: Je n\xE4her der Mond der Erde ist, desto st\xE4rker ist sie.
+    Alles, was sich auf der mondzugewandten Seite unseres Planeten befindet, wird
+    besonders stark zu ihm hingezogen. Und zwar nicht nur das Wasser.</font>\n\nDie
+    ganze Erdkruste w\xF6lbt sich um rund 30 Zentimeter zu dem Himmelsk\xF6rper hin.
+    Allerdings sind die Gesteine relativ starr und machen die von der Anziehungskraft
+    erzwungene Bewegung nicht so gut mit wie das leicht verformbare Wasser. Das kommt
+    dem Mond noch etwas n\xE4her: Es entsteht ein Flutberg.\n\nDie gegen\xFCberliegende
+    Seite der Erde ist weiter vom Mond entfernt, folglich ist die Gravitationskraft
+    geringer. Dort dominiert eine andere Gr\xF6\xDFe, die Tr\xE4gheit. Die Erdkruste
+    und das Wasser auf der abgewandten Seite \u201Estr\xE4uben\u201C sich gegen die
+    Bewegung in Richtung Mond, es entsteht ein zweiter Flutberg. Der ist den Gesetzen
+    der Mechanik zufolge sieben Prozent niedriger als die Beule auf der mondnahen
+    Seite.\n\n<link=\"https://www.tagesspiegel.de/wissen/gezeiten-der-mond-beeinflusst-diemeere-mehr-als-denmenschen/4677492.html\"><style=Link>Quelle</style></link>"
+  titleImage: {fileID: 21300000, guid: 2a6d1679de42849768aec84b3d6534c4, type: 3}

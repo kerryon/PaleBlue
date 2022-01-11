@@ -30,6 +30,7 @@ TagManager:
   - Pin9
   - Pin10
   - Pin11
+  - Variables
   layers:
   - Default
   - TransparentFX

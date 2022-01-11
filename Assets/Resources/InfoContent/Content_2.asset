@@ -13,9 +13,37 @@ MonoBehaviour:
   m_Name: Content_2
   m_EditorClassIdentifier: 
   index: 2
-  topic: 2
+  topic: Meteoriten und Wasser
   description: 2
   FABText: 2
-  FABInfoTitle: 2
-  FABInfo: 2
-  titleImage: {fileID: 21300000, guid: 0cd7001500d1e4e67809712b5cd073e7, type: 3}
+  FABInfoTitle: Kometen sind [eventuell] Leben
+  FABInfo: "<font=\"Fonts/Config-Bold\">Etwa zwei Drittel der Erde sind mit Wasser
+    bedeckt \u2013 ein Alleinstellungsmerkmal: Die Erde ist der einzige Planet im
+    Sonnensystem, auf dem es fl\xFCssiges Wasser gibt. Im Wasser entstand das Leben,
+    und auch f\xFCr uns Menschen ist Wasser lebenswichtig. Doch woher kommt das Wasser
+    auf der Erde eigentlich?</font>\n\nWissenschaftler vermuten, dass das Wasser
+    von Kometen stammt. Diese Klumpen aus Eis und Staub bildeten sich urspr\xFCnglich
+    am Rand des Sonnensystems. Manche gerieten aber auch auf Bahnen ins Innere des
+    Sonnensystems und wurden Bestandteil der frisch entstehenden Planeten.\n\nAnfangs
+    waren die jungen Planeten sehr hei\xDF \u2013 so hei\xDF, dass das Gestein schmolz
+    und eine fl\xFCssige Kugel formte. Und das Eis der Kometen schmolz nicht nur,
+    sondern verdampfte sogar. Weil der Wasserdampf viel leichter war als das geschmolzene
+    Gestein, blubberte er nach oben Richtung Oberfl\xE4che. Dort entwich er durch
+    Vulkane in die Atmosph\xE4re.\n\nAls sich die Erde dann langsam abk\xFChlte,
+    wurde der Dampf wieder zu fl\xFCssigem Wasser. Anschaulicher gesagt: Es begann,
+    zu regnen. Diese ersten Regeng\xFCsse m\xFCssen st\xE4rker als jedes Gewitter
+    gewesen sein, das wir uns heute vorstellen k\xF6nnen. Und es muss sehr lange
+    geregnet haben \u2013 mehrere zehntausende Jahre. Gro\xDFe Teile der jungen Erdoberfl\xE4che
+    wurden \xFCberflutet \u2013 an manchen Stellen bis zu zehn Kilometer hoch. So
+    entstanden die Ozeane.\n\nUnd was ist mit dem Wasser auf den anderen Planeten
+    passiert? Warum gibt es dort keine Ozeane? Merkur hat nicht gen\xFCgend Schwerkraft,
+    um \xFCberhaupt eine Atmosph\xE4re festzuhalten \u2013 der Wasserdampf entwich
+    wie alle Gase einfach ins Weltall. Das gleiche ist auch auf dem Mond passiert.
+    Auf der Venus ist die Sonneneinstrahlung so stark, dass das Wasser ebenfalls
+    ins All hinaus verdampft wurde. Auf dem Mars ist es dagegen zu kalt, dort werden
+    jedoch gro\xDFe Eisvorkommen unter der Oberfl\xE4che vermutet. Und die Gasplaneten
+    haben keine feste Oberfl\xE4che, auf der sich Meere bilden k\xF6nnten. Auf dem
+    Jupitermond Europa vermutet man einen Ozean aus Wasser, doch die Oberfl\xE4che
+    ist gefroren. So bleibt die Erde der einzige Himmelsk\xF6rper im Sonnensystem
+    mit Meeren.\n\n<link=\"https://www.planet-schule.de/mm/die-erde/Barrierefrei/pages/Wie_kam_das_Wasser_auf_die_Erde.html\"><style=Link>Quelle</style></link>"
+  titleImage: {fileID: 21300000, guid: 2b9699e02393547aea5469c41dadd096, type: 3}

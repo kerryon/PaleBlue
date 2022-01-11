@@ -8,11 +8,6 @@ public class Goals : MonoBehaviour
     public GameObject prefabWrapper;
     public ScriptableObjectGoals[] _goals;
 
-    void Start()
-    {
-        
-    }
-
     public void CreateGoals(int goalCount)
     {
         for (int i = 0; i < goalCount; i++)
@@ -35,10 +30,5 @@ public class Goals : MonoBehaviour
         {
             Destroy(prefabWrapper.transform.GetChild(i).gameObject);
         }
-    }
-
-    void Update()
-    {
-        
     }
 }

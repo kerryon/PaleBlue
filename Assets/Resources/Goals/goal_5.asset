@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e6d217d0924b433fa3a13550d743269, type: 3}
   m_Name: goal_5
   m_EditorClassIdentifier: 
-  description: Goal 5
+  description: "Bring das Grundwasser zur\xFCck auf das Anfangsniveau."

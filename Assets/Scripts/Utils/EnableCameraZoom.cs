@@ -1,3 +1,4 @@
+using System.Collections;
 using Lean.Touch;
 using UnityEngine;
 
@@ -9,10 +10,14 @@ public class EnableCameraZoom : MonoBehaviour
     {
         if (gameObject.activeSelf)
         {
-            cam = GameObject.FindGameObjectWithTag("MainCamera");
-            cam.GetComponent<LeanPinchCamera>().enabled = true;
-            cam.GetComponent<LeanPinchCamera>().Zoom = 50;
-
+            StartCoroutine(EnableZoom());
         }
+    }
+
+    IEnumerator EnableZoom()
+    {
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
+        yield return new WaitForSeconds(1.1f);
+        cam.GetComponent<LeanPinchCamera>().enabled = true;
     }
 }

@@ -13,14 +13,23 @@ MonoBehaviour:
   m_Name: 2h_Wolken
   m_EditorClassIdentifier: 
   index: 30
-  pathName: 
+  pathName: 2
   actionName: Wolken erstellen
   actionDescription: action description
   Icon: {fileID: 21300000, guid: 66e5b77ce3edf497bb7df72e5b8902cd, type: 3}
   NextPie: {fileID: 0}
-  topic: topic
-  description: description
-  FABText: FAB Text
+  topic: Wolken und Niederschlag
+  description: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
+    Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
+    Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
+    setzen sie das Wasser schnell um."
+  FABText: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
+    Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
+    Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
+    setzen sie das Wasser schnell um."
   FABInfoTitle: FAB Info Title
-  FABInfo: FAB Info
+  FABInfo: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
+    Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
+    Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
+    setzen sie das Wasser schnell um."
   titleImage: {fileID: 21300000, guid: f15dbf758fc6e4a8684129d9d2c0d333, type: 3}

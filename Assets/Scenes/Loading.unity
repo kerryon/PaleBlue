@@ -771,12 +771,12 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   useTouch: 1
-  useHover: 1
+  useHover: 0
   useMouse: 1
   useSimulator: 1
   recordFingers: 1
   recordThreshold: 5
-  recordLimit: 10
+  recordLimit: 1
 --- !u!4 &53174960
 Transform:
   m_ObjectHideFlags: 0
@@ -806,7 +806,7 @@ MonoBehaviour:
   pinchTwistKey: 306
   movePivotKey: 308
   multiDragKey: 308
-  fingerTexture: {fileID: 2800000, guid: 25c48be3a87ea0f489a6d41c9c9a2194, type: 3}
+  fingerTexture: {fileID: 2800000, guid: e42de95b260004f51a6e1088089bf413, type: 3}
 --- !u!1 &102011645
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,8 +1801,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<font=Fonts/Config-Bold><size=150%>wirklich \xFCberspringen?</size></font>\n\nm\xF6chtest
-    du den Creator \xFCberspringen und das Spiel direkt mit Standard Einstellungen
+  m_text: "<font=Fonts/Config-Bold><size=150%>Kreation \xFCberspringen</size></font>\n\nm\xF6chtest
+    du die Erstellung eines Planeten \xFCberspringen und direkt mit Standard Einstellungen
     starten?"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -3121,7 +3121,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35.55
+  m_fontSize: 33.55
   m_fontSizeBase: 18
   m_fontWeight: 400
   m_enableAutoSizing: 1

@@ -110,7 +110,7 @@ public class Intro : MonoBehaviour
             DeleteThis.GetComponent<RectTransform>().localScale = new Vector3(Mathf.MoveTowards(0, 1, i), Mathf.MoveTowards(0, 1, i), 0);
             yield return null;
         }
-        DeleteThis.gameObject.SetActive(false);
+        Destroy(DeleteThis);
 
         if (EverythingDeleted == 3)
         {

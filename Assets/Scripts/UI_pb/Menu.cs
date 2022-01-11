@@ -56,7 +56,6 @@ public class Menu : MonoBehaviour
             AppendHistory(0);
         }
         NameDisplay.GetComponent<TMP_Text>().text = (string)ES3.Load("NAME");
-        LifeNameDisplay.GetComponent<TMP_Text>().text = (string)ES3.Load("LIFE");
     }
 
     IEnumerator ShowMenuButton()
@@ -190,6 +189,7 @@ public class Menu : MonoBehaviour
 
     public void ToggleStatistics()
     {
+        LifeNameDisplay.GetComponent<TMP_Text>().text = (string)ES3.Load("LIFE");
         statisticsToggle = !statisticsToggle;
         StartCoroutine(ToggleStatisticsCoroutine());
     }

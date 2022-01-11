@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2h_Forschen
   m_EditorClassIdentifier: 
   index: 26
-  pathName: 
+  pathName: 2
   actionName: Forschen
   actionDescription: 
   Icon: {fileID: 21300000, guid: a481a31b089a3481b88b807c11960d2a, type: 3}

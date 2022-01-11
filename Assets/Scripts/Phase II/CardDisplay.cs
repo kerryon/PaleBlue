@@ -26,7 +26,10 @@ public class CardDisplay : MonoBehaviour
     {
         planetTitle.text = (string)ES3.Load("NAME");
         creatureTitle.text = (string)ES3.Load("LIFE");
-        creatureCopy.text = CardDescription[0].description;
+        if (Variables.Instance.waterUseRate + Variables.Instance.waterStorageRate + Variables.Instance.reproductionRate < 0.4f) //erweitern
+        {
+            creatureCopy.text = CardDescription[0].description;
+        }
 
         for (float i = 0; i <= Variables.Instance.waterUseRate; i += 0.1f)
         {

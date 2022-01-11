@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 2h_Wasseraufbereitung
   m_EditorClassIdentifier: 
   index: 29
-  pathName: 
+  pathName: 2
   actionName: Wasseraufbereitung und Abwasser
   actionDescription: 
   Icon: {fileID: 21300000, guid: 29085d286f4cb4420b114c6e0d21ed1b, type: 3}

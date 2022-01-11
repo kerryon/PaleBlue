@@ -1162,7 +1162,7 @@ GameObject:
   - component: {fileID: 338748306}
   - component: {fileID: 338748307}
   m_Layer: 7
-  m_Name: Card Background
+  m_Name: Card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3046,6 +3046,8 @@ MonoBehaviour:
   creatureCopy: {fileID: 350046795}
   CardDescription:
   - {fileID: 11400000, guid: eb889e08a7f314e06bb6967885455a0f, type: 2}
+  - {fileID: 11400000, guid: 75eef859448c146d5b5ff37a6171e40a, type: 2}
+  - {fileID: 11400000, guid: 15ea59ff0e67c48ff9d16c936d0dea46, type: 2}
 --- !u!1 &897272847
 GameObject:
   m_ObjectHideFlags: 0

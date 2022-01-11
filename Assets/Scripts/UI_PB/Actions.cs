@@ -40,7 +40,7 @@ public class Actions : MonoBehaviour
     {
         PieMenu pm = transform.GetChild(1).GetChild(transform.GetChild(1).childCount - 1).GetComponent<PieMenu>();
         infoWrapper.SetActive(true);
-        details.text = pm.Data.Elements[index].actionName + "\n<font=Fonts/Config-Text><size=60%>" + pm.Data.Elements[index].FABText + "</size></font>";
+        details.text = "<size=180%>" + pm.Data.Elements[index].actionName + "</size>\n\n<font=Fonts/Config-Text><line-indent=10%><line-height=120%>" + pm.Data.Elements[index].FABText + "</font>";
         infoHead.text = pm.Data.Elements[index].actionName;
         infoCopy.text = pm.Data.Elements[index].actionDescription;
         infoImage.sprite = pm.Data.Elements[index].titleImage;

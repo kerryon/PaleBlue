@@ -8,13 +8,31 @@ public class Notifications : MonoBehaviour
     private void Start()
     {
         StartCoroutine(RequestAuthorization());
+
         var timeTrigger = new iOSNotificationTimeIntervalTrigger()
         {
             TimeInterval = new TimeSpan(12, 0, 0),
             Repeats = false
         };
 
-        var notification = new iOSNotification()
+        var calendarTriggerMid = new iOSNotificationCalendarTrigger()
+        {
+            Day = 4,
+            Hour = 18,
+            Minute = 0,
+            Repeats = false
+        };
+
+        var calendarTriggerEnd = new iOSNotificationCalendarTrigger()
+        {
+            Day = 7,
+            Hour = 23,
+            Minute = 59,
+            Repeats = false
+        };
+
+
+        var notificationInterval = new iOSNotification()
         {
             Identifier = "_notification_01",
             Title = "Es tut sich was ...",
@@ -27,7 +45,35 @@ public class Notifications : MonoBehaviour
             Trigger = timeTrigger,
         };
 
-        iOSNotificationCenter.ScheduleNotification(notification);
+        var notificationMid = new iOSNotification()
+        {
+            Identifier = "_notification_02",
+            Title = "Es tut sich was ...",
+            Body = "Die hälfte der Spielzeit ist um, jede deiner Entscheidungen zählt.",
+            //Subtitle = "Es passiert etwas ...",
+            ShowInForeground = false,
+            ForegroundPresentationOption = (PresentationOption.Alert | PresentationOption.Sound),
+            CategoryIdentifier = "category_a",
+            ThreadIdentifier = "thread1",
+            Trigger = calendarTriggerMid,
+        };
+
+        var notificationEnd = new iOSNotification()
+        {
+            Identifier = "_notification_03",
+            Title = "Die Zeit ist um.",
+            Body = "Du hast es geschafft. Sieh dir dein Ergebnis an.",
+            //Subtitle = "Es passiert etwas ...",
+            ShowInForeground = false,
+            ForegroundPresentationOption = (PresentationOption.Alert | PresentationOption.Sound),
+            CategoryIdentifier = "category_a",
+            ThreadIdentifier = "thread1",
+            Trigger = calendarTriggerEnd,
+        };
+
+        iOSNotificationCenter.ScheduleNotification(notificationInterval);
+        iOSNotificationCenter.ScheduleNotification(notificationMid);
+        iOSNotificationCenter.ScheduleNotification(notificationEnd);
     }
 
     IEnumerator RequestAuthorization()

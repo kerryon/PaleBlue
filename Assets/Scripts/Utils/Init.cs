@@ -24,7 +24,7 @@ public class Init : MonoBehaviour
 
     void Update()
     {
-        lens.transform.localPosition = new Vector3(0, Mathf.PingPong(Time.time*3, 50), 0);
+        lens.transform.localPosition = new Vector3(0, Mathf.PingPong(Time.time*3, 30), 0);
     }
 
     private void LoadInitial()
@@ -43,7 +43,7 @@ public class Init : MonoBehaviour
         {
             while (!scenesToLoad[i].isDone)
             {
-                float t = Mathf.Lerp(100f, 120f, scenesToLoad[i].progress);
+                float t = Mathf.Lerp(120f, 140f, scenesToLoad[i].progress);
                 lens.transform.localScale = new Vector3(t, t, t);
                 yield return null;
             }

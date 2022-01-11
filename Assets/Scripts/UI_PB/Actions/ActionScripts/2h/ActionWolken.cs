@@ -43,6 +43,6 @@ public class ActionWolken : MonoBehaviour
             sec -= Time.deltaTime;
             yield return null;
         }
-        Destroy(gameObject);
+        Destroy(gameObject, 1.2f);
     }
 }

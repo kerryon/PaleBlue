@@ -26,29 +26,6 @@ public class Interface : MonoBehaviour
         Invoke(nameof(EnableButtons), 5f);
     }
 
-    void Update()
-    {
-        //if (!buttons.activeInHierarchy)
-        //{
-        //    if (Input.touchCount > 0)
-        //    {
-        //        Touch touch = Input.GetTouch(0);
-
-        //        if (touch.phase == TouchPhase.Ended) //oder .Moved???
-        //        {
-        //            buttons.SetActive(true);
-        //        }
-        //    }
-        //}
-
-//#if UNITY_EDITOR
-//        if (Input.GetMouseButtonDown(0))
-//        {
-//            buttons.SetActive(true);
-//        }
-//#endif
-    }
-
     private void EnableButtons()
     {
         buttons.SetActive(true);

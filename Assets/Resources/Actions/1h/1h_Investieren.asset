@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 1h_Investieren
   m_EditorClassIdentifier: 
   index: 23
-  pathName: 
+  pathName: 1
   actionName: Investieren
   actionDescription: 2
   Icon: {fileID: 21300000, guid: e39b68e5765e249fe92d38644080a6b5, type: 3}
