@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 3
   topic: Monde
-  description: 3
-  FABText: 3
+  description: 
+  FABText: 
   FABInfoTitle: Der Mond beeinflusst die Meere mehr als den Menschen
   FABInfo: "<font=\"Fonts/Config-Bold\">Die Gezeiten sind eine unstrittige Fernwirkung
     des Mondes. Sie gehen im Wesentlichen auf seine Gravitationskraft zur\xFCck.

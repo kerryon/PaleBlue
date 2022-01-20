@@ -18,7 +18,7 @@ MonoBehaviour:
   actionDescription: 1
   Icon: {fileID: 21300000, guid: 03a0fb878714f457484f45cb36b68a25, type: 3}
   NextPie: {fileID: 0}
-  topic: 
+  topic: "Der M\xFCll und das Meer"
   description: 
   FABText: lorem ipsum fab text
   FABInfoTitle: 

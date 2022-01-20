@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 1
   topic: Position im Sonnensystem
-  description: 1
-  FABText: 1
+  description: 
+  FABText: 
   FABInfoTitle: Ein Sonnensystem braucht Planeten
   FABInfo: "<font=\"Fonts/Config-Bold\">Die Erde ist gerade weit genug von der Sonne
     entfernt, um die \u201Crichtige\u201D Menge an Sonnenenergie abzubekommen.</font>\n\nDie

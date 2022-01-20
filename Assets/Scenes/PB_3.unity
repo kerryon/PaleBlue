@@ -177,6 +177,79 @@ MonoBehaviour:
     Target: {fileID: 969823248}
     Value: {x: 90, y: 90}
     Ease: 100
+--- !u!1 &118505665
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 118505666}
+  - component: {fileID: 118505667}
+  m_Layer: 0
+  m_Name: RandomEvent
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &118505666
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118505665}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &118505667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118505665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7df5062cdbed047aa988b71acb91b0d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0.24497665
+      outSlope: 0.24497665
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.10782865
+    - serializedVersion: 3
+      time: 1
+      value: 5.000111
+      inSlope: 10.755068
+      outSlope: 10.755068
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.022597373
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  events:
+  - {fileID: 888148793225417633, guid: ebe7eb0682f50445081fcc4de73ed765, type: 3}
+  - {fileID: 3486912863552198892, guid: dbef8105129704c31ae8d3e02b7141d7, type: 3}
+  - {fileID: 333784409346950181, guid: 64b103d680cc24bc0a4a565321d4cb2a, type: 3}
+  - {fileID: 2658468889396287704, guid: 8e82342de31484cfb8646872db5178e8, type: 3}
+  - {fileID: 6820674436296242177, guid: 2d01397e201694c54ab11a25cd15a7a3, type: 3}
 --- !u!1 &134845561
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,11 +728,11 @@ MonoBehaviour:
   mesh: {fileID: 4300002, guid: 0eba857bb8ab78c4d98d653565fd1902, type: 3}
   meshCollider: {fileID: 0}
   radius: 100
-  material: {fileID: 2100000, guid: 6fb0937606c3643d286ce7c3f464d742, type: 2}
+  material: {fileID: 2100000, guid: 1e48404a44c9a499ca101e4e1030b673, type: 2}
   sharedMaterial: {fileID: 423592942}
-  waterLevel: 0.2
+  waterLevel: 0.15
   displace: 1
-  displacement: 13
+  displacement: 6
   clampWater: 1
 --- !u!1 &218874537
 GameObject:
@@ -5841,10 +5914,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f2e5335b07476244862effadc97d649, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mesh: {fileID: 4300002, guid: d3c72eb619c9ab640803adf4c43f367c, type: 3}
+  mesh: {fileID: 4300002, guid: 2c8c3514f9fa3b944b134875a9c44736, type: 3}
   meshCollider: {fileID: 0}
   radius: 15
-  material: {fileID: 2100000, guid: 14a35224a9fe4e54996616e698d08cfe, type: 2}
+  material: {fileID: 2100000, guid: f4899b205ae274245a64ab27cd5b476e, type: 2}
   sharedMaterial: {fileID: 0}
   waterLevel: 0
   displace: 1

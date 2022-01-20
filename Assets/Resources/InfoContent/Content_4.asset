@@ -14,8 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 4
   topic: "Abk\xFChlung"
-  description: 4
-  FABText: 4
-  FABInfoTitle: 4
-  FABInfo: 4
+  description: "<font=\"Fonts/Config-Bold\">Abk\xFChlung</font>\nUnmittelbar nach
+    Entstehung gab es nur eine brodelnde Oberfl\xE4che aus gl\xFChend hei\xDFem,
+    z\xE4hfl\xFCssigem Magma. Bis heute ist sie nur eine hauchd\xFCnne Schicht, die
+    auf einem z\xE4hfl\xFCssigen, hei\xDFen Erdinneren schwimmt."
+  FABText: 
+  FABInfoTitle: "Der Planet k\xFChlt ab"
+  FABInfo: "<font=\"Fonts/Config-Bold\">Wir w\xFCrden die Erde unmittelbar nach ihrer
+    Entstehung nicht wiedererkennen. Sie war ein \xE4u\xDFerst ungem\xFCtlicher Planet:
+    Es gab weder Kontinente noch Ozeane, sondern eine brodelnde Oberfl\xE4che aus
+    gl\xFChend hei\xDFem, z\xE4hfl\xFCssigem Magma.</font>\n\nVor gut 4,5 Milliarden
+    Jahren verdichteten sich Kometen, Asteroiden, Gas und Staub zu unserem Planeten.
+    Die eigene Schwerkraft presste diese Einzelteile zusammen, so dass sie einem
+    starken Druck ausgesetzt waren. Am h\xF6chsten war dieser Druck nat\xFCrlich
+    im Erdkern, auf dem das Gewicht der gesamten \xE4u\xDFeren Schichten lastete.
+    Als Folge des hohen Drucks wurde das Gestein stark aufgeheizt und geschmolzen.
+    Nach au\xDFen wurden der Druck und damit auch die Temperatur weniger. Trotzdem
+    blieb die Erdoberfl\xE4che noch mehrere hundert Millionen Jahre lang sehr hei\xDF
+    und konnte sich nicht abk\xFChlen und verfestigen.\n\nUm den Grund hierf\xFCr
+    zu verstehen, mussten die Wissenschaftler den Mond anschauen: Uralte Mondkrater
+    aus der Entstehungszeit des Sonnensystems verraten uns, dass der Mond in seinen
+    jungen Jahren von zahlreichen Meteoriten getroffen wurde. Man geht deshalb davon
+    aus, dass auch die Erde zur gleichen Zeit einem regelrechten Gesteinsbombardement
+    aus dem All ausgesetzt war. Die Brocken st\xFCrzten mit hoher Geschwindigkeit
+    auf die Erde \u2013 und entsprechend heftig waren die Einschl\xE4ge: Schon Brocken
+    von einigen hundert Tonnen konnten locker eine Explosion von der St\xE4rke einer
+    Atombombe verursachen.\n\nSo wurde die Erdoberfl\xE4che noch lange Zeit weiter
+    aufgeheizt, immer wieder aufgew\xFChlt und blieb so fl\xFCssig. Erst als nach
+    einigen hundert Millionen Jahren die Einschl\xE4ge allm\xE4hlich nachlie\xDFen,
+    sanken die Temperaturen an der Erdoberfl\xE4che. Das Gestein konnte langsam erstarren
+    und eine Erdkruste bilden, die im Laufe weiterer Jahrmillionen immer dicker wurde.
+    Doch bis heute ist sie nur eine hauchd\xFCnne Schicht, die auf einem z\xE4hfl\xFCssigen,
+    hei\xDFen Erdinneren schwimmt.\n\n<link=\"https://www.planet-schule.de/mm/die-erde/Barrierefrei/pages/Die_Anfaenge_der_Erde.html\"><style=Link>Quelle</style></link>"
   titleImage: {fileID: 21300000, guid: 10c7dfc0144c140eab3b9eb485ea53dc, type: 3}

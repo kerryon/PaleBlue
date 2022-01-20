@@ -95,6 +95,8 @@ public class GameManager : MonoBehaviour
         ES3.Save("StartedAt", DateTime.Now);
         ES3.DeleteFile("history.csv");
         ES3.Save("CloudNeedsCreation", true);
+        ES3.DeleteKey("randomEventTimer");
+        ES3.DeleteKey("randomEventSurvived");
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
 

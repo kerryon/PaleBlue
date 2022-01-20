@@ -416,25 +416,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<font=\"Fonts/Config-Bold\">Lorem ipsum dolor sit amet, consetetur sadipscing
-    elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-    erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</font>\n\nStet
-    clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod
-    tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At
-    vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-    no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit
-    amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam
-    et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-    sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur
-    sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-    dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-    nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-    voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-    kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. \n\n<link=\"https://de.wikipedia.org/wiki/Link\"><u>Klick
+  m_text: "<font=\"Fonts/Config-Bold\">Jetzt ist es an der Zeit zu warten und ab
+    und zu zu schauen, wie sich dein Planet entwickelt.</font>\n\nHier stehen n\xFCtzliche
+    Informationen zum Gameplay und zum Verlauf des Spiels. \n\n<link=\"https://de.wikipedia.org/wiki/Link\"><u>Klick
     hier</u></link>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -1282,7 +1266,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b04bfea9417114ff8821876ac92f3a91, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47bcd2212bf1b4d6194bef1390d19b74, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1553,20 +1537,20 @@ MonoBehaviour:
   Minutes: 30
   materials:
   - {fileID: 2100000, guid: 8459cb83085646f4c9ddcdca43d26569, type: 2}
-  - {fileID: 2100000, guid: c8d62ea77b149aa488b232315c19d910, type: 2}
   - {fileID: 2100000, guid: 6fb0937606c3643d286ce7c3f464d742, type: 2}
+  - {fileID: 2100000, guid: 1e48404a44c9a499ca101e4e1030b673, type: 2}
   _Displacement:
-  - 6
   - 12
+  - 6
   _WaterLevel:
   - 0.17
-  - 0.17
+  - 0.15
   _Shallow:
   - {r: 0.8235294, g: 0.8745098, b: 1, a: 1}
-  - {r: 0.8235294, g: 0.8745098, b: 1, a: 1}
+  - {r: 0.6401299, g: 0.74136704, b: 0.990566, a: 1}
   _Deep:
   - {r: 0.35686275, g: 0.47843137, b: 0.7921569, a: 1}
-  - {r: 0.35686275, g: 0.47843137, b: 0.7921569, a: 1}
+  - {r: 0.2688679, g: 0.47305793, b: 1, a: 1}
   _Sharpness:
   - 1
   - 2
@@ -2693,7 +2677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit ament consectour
+  m_text: Der Planet braucht Zeit.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 027aa439dcd7e4d3f960e74f16c86095, type: 2}
   m_sharedMaterial: {fileID: -5528352581523629363, guid: 027aa439dcd7e4d3f960e74f16c86095, type: 2}
@@ -3374,7 +3358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435954769318952150, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2306.22
+      value: 142.4
       objectReference: {fileID: 0}
     - target: {fileID: 3435954769318952150, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -3382,7 +3366,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435954769318952150, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -392.68
+      value: -321.34
       objectReference: {fileID: 0}
     - target: {fileID: 3435954769362881783, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_Camera
@@ -3498,7 +3482,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435954771311265893, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 2798.9
+      value: 563.74
       objectReference: {fileID: 0}
     - target: {fileID: 3435954771391020658, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3514,7 +3498,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3435954771391020658, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 142.68
+      value: 71.34
       objectReference: {fileID: 0}
     - target: {fileID: 3435954771391020658, guid: 5a7039a2d6f2a477f9456f8054d16f0c, type: 3}
       propertyPath: m_AnchoredPosition.x

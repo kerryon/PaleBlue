@@ -14,8 +14,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 7
   topic: Feuer
-  description: 7
-  FABText: 7
-  FABInfoTitle: 7
-  FABInfo: 7
+  description: "<font=\"Fonts/Config-Bold\">Feuer</font>\nAlles Leben entwickelte
+    sich in Abh\xE4ngigkeit vom Urelement Feuer. Und Feuer pr\xE4gte auch die kulturelle
+    Entwicklung der Menschen."
+  FABText: 
+  FABInfoTitle: "Achtung hei\xDF"
+  FABInfo: "<font=\"Fonts/Config-Bold\">Alles Leben entwickelte sich in Abh\xE4ngigkeit
+    vom Urelement Feuer. Und Feuer pr\xE4gte auch die kulturelle Entwicklung der
+    Menschen.</font>\n\nDie fr\xFChen Menschen mussten mit der Urgewalt Feuer leben.
+    F\xFCr unsere Vorfahren waren Buschbr\xE4nde in der afrikanischen Savanne ein
+    gewohntes Bild. Sie lernten aber auch, dass Feuer nicht nur den Tod bringen.
+    Nach Br\xE4nden spross aus der Asche stets auch neues Leben.\n\nFeuer sorgten
+    f\xFCr Erneuerung in der Natur. Die Asche verbrannter Gr\xE4ser und B\xE4ume
+    ist guter D\xFCnger. Und frische, neue Gr\xE4ser locken wieder Tiere an, wovon
+    die jagenden Urmenschen dann profitierten.\n\nAu\xDFerdem brannte so ein Feuer
+    auch das Dickicht nieder, die Menschen konnten gr\xF6\xDFere Bereiche \xFCberblicken
+    und nicht so leicht von Raubtieren \xFCberrascht werden.\n\nSchlie\xDFlich schafften
+    es die Urmenschen auch, Feuer gezielt f\xFCr ihre Zwecke zu nutzen. Arch\xE4ologen
+    fanden Beweise daf\xFCr, dass Fr\xFChmenschen in S\xFCdafrika bereits vor 1,5
+    Millionen Jahren Feuerstellen in ihren H\xF6hlen besa\xDFen.\n\nDas Feuer w\xE4rmte,
+    spendete Licht und erlaubte, das erbeutete Fleisch besser aufzubereiten. Denn
+    gebratenes Fleisch ist f\xFCr Menschen erstens meist schmackhafter, zweitens
+    einfacher zu kauen und drittens auch besser zu verdauen. Zudem t\xF6tet das Erhitzen
+    Krankheitserreger ab.\n\nEiner Theorie zufolge war die hohe N\xE4hrstoffzufuhr
+    aus gebratenem Fleisch ein wichtiger Faktor bei der Evolution des modernen Menschen
+    hin zu einem gr\xF6\xDFeren Gehirn. Sicher ist: Die Beherrschung des Feuers erlaubte
+    es den Menschen, auch in k\xE4ltere Regionen auszuwandern. So eroberte sich der
+    Mensch ausgehend von Afrika den Erdball.\n\nSp\xE4ter lernten die Menschen, mithilfe
+    von Feuer Metalle zu bearbeiten und Waffen, stabile Alltagsgegenst\xE4nde und
+    Werkzeuge herzustellen. Die Sonne, Blitze und Feuer hatten so gro\xDFen Einfluss
+    auf die Kultur der fr\xFChen Menschen, dass sie auch einen festen Platz in vielen
+    Religionen der Menschheit haben.\n\n<link=\"https://www.planet-wissen.de/natur/naturgewalten/waldbraende/pwiefeuerunddiekulturgeschichtedermenschen100.html\"><style=Link>Julia
+    Gro\xDF \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: a7bc86baad67e4d4bb47ec1e3dbbb1e9, type: 3}

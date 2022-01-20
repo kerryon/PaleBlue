@@ -7,7 +7,7 @@ public class PinPrefab : MonoBehaviour
     public PopUp popup;
     public UnityEvent[] onClick;
     [Header("Color after selection")]
-    public Color selectedColor = new Color32(255, 96, 96, 255);
+    public Color selectedColor = new Color32(255, 96, 96, 255); //red
     [Header("Max Pins")]
     public int maxPins;
 

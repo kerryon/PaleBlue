@@ -18,7 +18,7 @@ MonoBehaviour:
   actionDescription: 
   Icon: {fileID: 21300000, guid: 741345a2c987d494fbd734f7b8c1a4c7, type: 3}
   NextPie: {fileID: 0}
-  topic: 
+  topic: "Aufkl\xE4rung schaffen!"
   description: 
   FABText: 
   FABInfoTitle: 

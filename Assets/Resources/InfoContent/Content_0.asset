@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   topic: "Planetengr\xF6\xDFe"
-  description: 0
-  FABText: 0
+  description: 
+  FABText: 
   FABInfoTitle: "Die Gr\xF6\xDFe macht's aus"
   FABInfo: "<font=\"Fonts/Config-Bold\">Die Gr\xF6\xDFe der Erde h\xE4lt nicht nur
     die Atmosph\xE4re fest, sondern hat noch eine zweite Wirkung: Die Erde k\xFChlt

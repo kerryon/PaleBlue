@@ -14,8 +14,53 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 6
   topic: Leben
-  description: 6
-  FABText: 6
-  FABInfoTitle: 6
-  FABInfo: 6
+  description: "<font=\"Fonts/Config-Bold\">Leben</font>\nWie und wann Leben auf
+    der Erde begonnen hat, wissen wir nicht genau. Forscher nehmen an, dass der Beginn
+    vor etwa 3,5 Milliarden Jahren in der Tiefsee zu suchen ist. Anderen Theorien
+    zufolge k\xF6nnten aber auch Kometeneinschl\xE4ge Leben auf die Erde gebracht
+    haben."
+  FABText: 
+  FABInfoTitle: Es lebt!
+  FABInfo: "<font=\"Fonts/Config-Bold\">Wie und wann Leben auf der Erde begonnen
+    hat, wissen wir nicht genau. Forscher nehmen an, dass der Beginn vor etwa 3,5
+    Milliarden Jahren in der Tiefsee zu suchen ist. Anderen Theorien zufolge k\xF6nnten
+    aber auch Kometeneinschl\xE4ge Leben auf die Erde gebracht haben.</font>\n\n<font=\"Fonts/Config-Bold\">Theorie
+    1: Am Anfang war der Ur-Ozean</font>\n\nDie Erde vor vier Milliarden Jahren:
+    Vulkane schleudern giftige Gase und Gesteinsbrocken in die noch d\xFCnne Atmosph\xE4re.
+    Hin und wieder schlagen Asteroiden ein, die das Ozeanwasser zum Kochen bringen.
+    Auch in der Tiefe des Urmeeres bietet sich ein aufgew\xFChltes Bild: aus bizarren
+    Schloten, sogenannten \"Schwarzen Rauchern\", str\xF6mt eine hei\xDFe Fl\xFCssigkeit.\n\nSie
+    enth\xE4lt Gase und Minerale, ein Chemiecocktail, aus dem mit der Zeit erst einfache
+    dann immer komplexere organische Verbindungen entstehen. Lebende Zellen bilden
+    sich, die sich fortbewegen und vermehren.\n\nDas st\xE4rkste Indiz f\xFCr die
+    Theorie, dass Leben in der Tiefsee in der N\xE4he von hei\xDFen Quellen entstanden
+    ist, sind Archaebakterien. Sie sind die \xE4ltesten Lebensformen, die wir heute
+    kennen. Alle Arten kommen nur in sehr unwirtlichen Biotopen wie im Sickerwasser
+    von Kohlenhalden, in Geysiren oder eben in der Tiefsee vor.\n\n<font=\"Fonts/Config-Bold\">Theorie
+    2: Die \"Ursuppe\"</font>\n\nDie \"Ursuppen-Theorie\" z\xE4hlt zu den bekanntesten
+    Szenarien der Entstehung von Leben auf der Erde. 1953 verbl\xFCfft der junge
+    Chemie-Student Stanley Lloyd Miller die Fachwelt mit einem einfachen Experiment.\n\nIn
+    einem Glaskolben bringt er Wasser zum Sieden \u2013 der brodelnde Urozean im
+    Miniformat. Der Dampf vermengt sich mit Methan, Ammoniak und Wasserstoff, einer
+    Mischung, wie sie mit den Vulkanschwaden der Urzeit \xFCber die Erde gewabert
+    ist.\n\nDas Gemisch str\xF6mt durch einen Kolben, in dem Elektroden Funken erzeugen.
+    Die sollen Gewitter der Uratmosph\xE4re simulieren. Die elektrische Energie regt
+    das Gasgemisch zu Reaktionen an, aus denen unter anderem Aminos\xE4uren, die
+    Grundbausteine des Lebens, entstehen.\n\nEinerseits war dieses genial einfache
+    Experiment ein entscheidender Fortschritt, doch damit stand Miller erst an der
+    Schwelle des Lebens. Das R\xE4tsel, wie sich aus den Aminos\xE4uren im n\xE4chsten
+    Akt Biozellen entwickelt haben k\xF6nnten, bleibt bis heute ungel\xF6st.\n\n<font=\"Fonts/Config-Bold\">Theorie
+    3: Kometen als Lebensspender</font>\n\nDie \"Panspermie-Theorie\" geht davon
+    aus, dass Leben nicht spontan auf der Erde entstanden, sondern aus dem All zu
+    uns gelangt ist. Kometen k\xF6nnten ein ideales Transportmittel f\xFCr bakterielles
+    Leben gewesen sein. Der Kometenkern besteht zum gro\xDFen Teil aus Eis. Damit
+    k\xF6nnten widerstandsf\xE4hige Bakteriensporen konserviert und gesch\xFCtzt
+    vor kosmischer Strahlung die Erde erreicht und sie mit Leben \"infiziert\" haben.\n\nKommende
+    Weltraummissionen, die das Innere von Kometen untersuchen, sollen kl\xE4ren,
+    ob an der Theorie was dran ist. Im Kometenkern vermuten Wissenschaftler Materie
+    aus der Entstehungszeit des Sonnensystems und der Erde und somit Hinweise auf
+    fr\xFChe Lebensformen.\n\nAllerdings beantwortet auch dieser Ansatz nicht die
+    Frage, wie Leben prinzipiell entstanden ist, sondern verlagert lediglich den
+    Schauplatz des Lebens-Ursprungs ins All.\n\n<link=\"https://www.planet-wissen.de/natur/forschung/entstehung_des_lebens/index.html\"><style=Link>Harald
+    Brenner \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 16d6072efb1904171924cc00d2880f23, type: 3}

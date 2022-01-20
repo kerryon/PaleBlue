@@ -11,7 +11,7 @@ public class ConsequencePins : MonoBehaviour
     public Sprite[] sprites;
 
     private float[] waterSystem;
-    private readonly float wv = 50000f;
+    private readonly float minValue = 50000f;
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class ConsequencePins : MonoBehaviour
 
         for (int i = 0; i < waterSystem.Length; i++)
         {
-            if (waterSystem[i] < wv)
+            if (waterSystem[i] < minValue)
             {
                 switch(i)
                 {
@@ -123,19 +123,19 @@ public class ConsequencePins : MonoBehaviour
                         {
                             DestroyPinPrefab("Pin1");
                         }
-                        if (GameObject.FindGameObjectWithTag("Pin11"))
+                        if (GameObject.FindGameObjectWithTag("Pin11") && Variables.Instance.w_weatherExtremes > minValue)
                         {
                             DestroyPinPrefab("Pin11");
                         }
                         break;
                     case 2:
-                        if (GameObject.FindGameObjectWithTag("Pin2"))
+                        if (GameObject.FindGameObjectWithTag("Pin2") && Variables.Instance.w_current > minValue)
                         {
                             DestroyPinPrefab("Pin2");
                         }
                         break;
                     case 3:
-                        if (GameObject.FindGameObjectWithTag("Pin2"))
+                        if (GameObject.FindGameObjectWithTag("Pin2") && Variables.Instance.w_temperature > minValue)
                         {
                             DestroyPinPrefab("Pin2");
                         }
@@ -151,7 +151,7 @@ public class ConsequencePins : MonoBehaviour
                         {
                             DestroyPinPrefab("Pin4");
                         }
-                        if (GameObject.FindGameObjectWithTag("Pin11"))
+                        if (GameObject.FindGameObjectWithTag("Pin11") && Variables.Instance.w_trees > minValue)
                         {
                             DestroyPinPrefab("Pin11");
                         }
@@ -204,22 +204,21 @@ public class ConsequencePins : MonoBehaviour
     {
         Vector3 onPlanet = Random.onUnitSphere * PlanetRadius;
         prefab.GetComponentInChildren<SpriteRenderer>().sprite = sprites[pin];
-        GameObject newObject = Instantiate(prefab, onPlanet, Quaternion.identity);
+        GameObject newObject = Instantiate(prefab, onPlanet, Quaternion.identity, gameObject.transform);
         newObject.SetActive(true);
         newObject.name = pin.ToString();
         newObject.tag = "Pin" + pin;
         newObject.transform.LookAt(PlanetOrigin.transform.position);
         newObject.transform.rotation = newObject.transform.rotation * Quaternion.Euler(-90, 0, 0);
-        newObject.transform.parent = gameObject.transform;
 
         var sheet = new ES3Spreadsheet();
         sheet.Load("history.csv");
         for (int i = 0; i < Variables.Instance.historyCount; i++)
         {
-            if ((pin + 11) == sheet.GetCell<int>(1, i))
+            if ((pin + 10) == sheet.GetCell<int>(1, i))
             {
-                newObject.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 96, 96, 255);
-                return;
+                newObject.GetComponentInChildren<SpriteRenderer>().color = new Color32(255, 96, 96, 255); //red
+                break;
             }
         }
     }

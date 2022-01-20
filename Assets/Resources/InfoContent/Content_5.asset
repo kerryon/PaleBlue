@@ -14,8 +14,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 5
   topic: "Atmosph\xE4re"
-  description: 5
-  FABText: 5
-  FABInfoTitle: 5
-  FABInfo: 5
+  description: "<font=\"Fonts/Config-Bold\">Atmosph\xE4re</font>\nDie Erdatmosph\xE4re,
+    wie wir sie heute kennen, gab es so nicht immer. Seit der Entstehung der Erde
+    vor 4,6 Milliarden Jahren gab es mehrere Entwicklungsschritte."
+  FABText: 
+  FABInfoTitle: "eine Atmosph\xE4re bildet sich"
+  FABInfo: "<font=\"Fonts/Config-Bold\">Die Erdatmosph\xE4re, wie wir sie heute kennen,
+    gab es so nicht immer. Seit der Entstehung der Erde vor 4,6 Milliarden Jahren
+    gab es mehrere Entwicklungsschritte.</font>\n\nVor 4,6 Milliarden Jahren ballt
+    sich aus einer kosmischen Wolke aus Gas und Staub ein neuer Planet zusammen:
+    die Erde. Ihre Masse h\xE4lt die kosmischen Gase, die sie umgeben, durch Gravitation
+    fest. So bildet sich eine Uratmosph\xE4re aus Wasserstoff und Helium.\n\nAllerdings
+    reicht die Anziehungskraft der frischgebackenen Erde noch nicht aus. Die Uratmosph\xE4re
+    kann dem Ansturm der Sonnenwinde aus dem All nicht standhalten und wird einfach
+    in die Weite des Weltalls geblasen.\n\nVor 4,4 Milliarden Jahren wird die junge
+    Erde von den Vorg\xE4ngen in ihrem Inneren sowie durch zahlreiche Meteoriten,
+    die permanent auf ihr einschlagen, sehr hei\xDF und weitgehend in z\xE4hfl\xFCssigem
+    Zustand gehalten. So k\xF6nnen sich die einzelnen Elemente, aus denen die Erde
+    besteht, nach ihrem Gewicht auftrennen und der heutige Schalenaufbau der Erde
+    entsteht \u2013 vom festen inneren Kern bis zur \xE4u\xDFeren Erdkruste.\n\nAb
+    jetzt bildet sich eine neue Atmosph\xE4re, deren Gasbestandteile dieses Mal nicht
+    von au\xDFen \u2013 vom Weltall \u2013 kommen, sondern durch Ausgasungen \u2013
+    vor allem durch Vulkanismus \u2013 vom Inneren der Erde.\n\nDie Erdatmosph\xE4re
+    enth\xE4lt jetzt haupts\xE4chlich Kohlendioxid; hinzu kommen noch Stickstoff,
+    Methan, Ammoniak, Schwefelwasserstoff und: Wasserdampf. Dieser kondensiert an
+    Staub- und Ascheteilchen und so prasseln pausenlos Regenschauer auf die Erde.\n\nF\xFCr
+    die Ausbildung von Ozeanen ist es zun\xE4chst aber noch zu hei\xDF. Das Wasser
+    verdampft sofort wieder, wenn es auf die Erdoberfl\xE4che trifft.\n\nVor 2,5
+    Milliarden Jahrenentsteht sozusagen als Abfallprodukt bei der Photosynthese Sauerstoff,
+    der sich zun\xE4chst im Wasser der Ozeane anreichert. Als das Wasser mit Sauerstoff
+    \"ges\xE4ttigt\" ist, entweicht dieses neue \"Abgas\" dann schlie\xDFlich in
+    die Erdatmosph\xE4re. Jetzt kann sich an Land Leben entwickeln, das Sauerstoff
+    atmet.\n\nDie in der Stratosph\xE4re bereits gebildete Ozonschicht absorbiert
+    die sch\xE4dliche ultraviolette (UV) Strahlung der Sonne und sch\xFCtzt das Leben
+    auf der Erde, so dass es sich ungehindert ausbreiten kann.\n\nDie Lebewesen,
+    die Sauerstoff einatmen, atmen Kohlendioxid aus. Das Kohlendioxid wird von den
+    Pflanzen aufgenommen, die dann ihrerseits Sauerstoff in die Atmosph\xE4re abgeben.\n\nVor
+    500 Millionen Jahren erreicht der Sauerstoffgehalt allm\xE4hlich den Volumenanteil,
+    den er auch heute noch in der Atmosph\xE4re hat. Auch die Ozonschicht in der
+    Stratosph\xE4re ist ann\xE4hernd so ausgepr\xE4gt wie heute.\n\nVor etwa 200
+    Millionen Jahren ist die Zusammensetzung der Luft dann so, wie wir sie heute
+    kennen: 78 Prozent Stickstoff, 21 Prozent Sauerstoff, etwas weniger als ein Prozent
+    Argon \u2013 der Rest Spurengase, die zwar nur einen winzigen Anteil am Gesamtvolumen
+    einnehmen, von denen aber einige, wie zum Beispiel das Kohlendioxid und das Methan,
+    f\xFCr unser Klima von gr\xF6\xDFter Bedeutung sind.\n\n<link=\"https://www.planet-wissen.de/natur/klima/erdatmosphaere/pwiedieevolutiondererdatmosphaere100.html\"><style=Link>Susanne
+    Decker \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 2c57c8894ee7d4653af96a6ee51e996c, type: 3}

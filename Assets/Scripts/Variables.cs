@@ -8,7 +8,7 @@ public class Variables : MonoBehaviour
     public static Variables Instance { get { return _instance; } }
 
     [Header("Utillity")]
-    public int historyCount; // min = 1
+    public int historyCount; // lowest = 1
     public int actionHours;
     public int actionCount;
     public int currentActionIndex;
@@ -72,8 +72,8 @@ public class Variables : MonoBehaviour
     private bool valuesSet = false;
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
-    private readonly float maxWater = 10000f;
     private readonly float maxRain = 300f;
+    private float maxWater = 10000f; //muss von Spielern erhöht werden
 
     private float wC;
     private float hC;
@@ -126,6 +126,8 @@ void Awake()
                 values[i + 10] = 80000f;
             }
             rain = maxRain;
+            human = 1000f;
+            water = maxWater;
         }
 
         h_conflict = values[0];
@@ -352,6 +354,7 @@ void Awake()
         waterStorageRate = ES3.Load("Property_storageRate", 0.4f);
         actionHours = ES3.Load("Property_actionHours", 0);
         actionCount = ES3.Load("Property_actionCounter", 1);
+        maxWater = ES3.Load("Property_maxWater", maxWater);
     }
 
     private void SaveAllValues()
@@ -364,6 +367,7 @@ void Awake()
         ES3.Save("WATER", water);
         ES3.Save("HUMAN", human);
         ES3.Save("RAIN", rain);
+        ES3.Save("Property_maxWater", maxWater);
         ES3.Save("Property_waterUseRate", waterUseRate);
         ES3.Save("Property_reproductionRate", reproductionRate);
         ES3.Save("Property_storageRate", waterStorageRate);

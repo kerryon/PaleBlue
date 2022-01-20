@@ -14,10 +14,44 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 8
   topic: Intelligentes Leben
-  description: 8
-  FABText: 8
-  FABInfoTitle: 8
-  FABInfo: '8
-
-'
+  description: "<font=\"Fonts/Config-Bold\">Intelligentes Leben</font>\nDer Mensch
+    gilt als das kl\xFCgste Lebewesen auf Erden. Ein m\xF6glicher Grund ist die Gr\xF6\xDFe
+    unseres Gehirns: Es ist neunmal gr\xF6\xDFer als das vergleichbarer S\xE4ugetiere."
+  FABText: 
+  FABInfoTitle: Mit Stock und Stein
+  FABInfo: "<font=\"Fonts/Config-Bold\">Der Mensch gilt als das kl\xFCgste Lebewesen
+    auf Erden. Ein m\xF6glicher Grund ist die Gr\xF6\xDFe unseres Gehirns: Es ist
+    neunmal gr\xF6\xDFer als das vergleichbarer S\xE4ugetiere.</font>\n\n<font=\"Fonts/Config-Bold\">Theorie:
+    Kleinerer Darm, gr\xF6\xDFeres Gehirn</font>\n\nEvolution\xE4r betrachtet haben
+    wir Menschen eine Art mentaler Mobilmachung hinter uns. Wissenschaftler haben
+    aus Sch\xE4delfunden der vergangenen drei bis vier Millionen Jahre errechnet,
+    dass sich Masse und Volumen unseres Gehirns seit den Urzeiten vervierfacht haben
+    \u2013 mit eindeutigen Auswirkungen auf unsere Intelligenzleistung.\n\nAnthropologen
+    gehen davon aus, dass aufgrund rascher Klima\xE4nderungen flexiblere Verhaltensweisen
+    n\xF6tig wurden. Der Mensch musste schnell Standorte wechseln und jagen, um sich
+    zu versorgen.\n\nIhre Theorie: Das energiehaltigere Fleisch im Zusammenhang mit
+    dem Kochen, das gewisserma\xDFen einen Teil des Verdauungsprozesses auslagert,
+    habe eine Verkleinerung des Darms erm\xF6glicht und so eine Voraussetzung f\xFCr
+    die Volumenzunahme des Gehirns geschaffen.\n\nEine gr\xF6\xDFere Gehirn- oder
+    Intelligenzentwicklung erfordert mehr Energie, und die sei dank eines kleineren
+    Darms pl\xF6tzlich verf\xFCgbar gewesen. Denken statt verdauen.\n\n<font=\"Fonts/Config-Bold\">Theorien:
+    Tratsch, Gruppendynamik und sexuelle Selektion</font>\n\nWas noch k\xF6nnte unser
+    Hirn in den vergangenen Jahrtausenden auf Hochtouren gebracht haben? Die Theorien
+    dazu sind enorm vielseitig. So vermuten einige Forscher, dass mit einer gr\xF6\xDFeren
+    Hirnrinde die soziale Komplexit\xE4t der fr\xFChen Gesellschaften gestiegen ist.
+    Intrigen, B\xFCndnisse und anspruchsvollere Partnerwahl stimulierten wom\xF6glich
+    das geistige Wettr\xFCsten.\n\nTratsch, Gruppenbindung und Potenz-Demonstrationen
+    waren wohl die Triebkraft f\xFCr die Entwicklung der Sprachf\xE4higkeiten. Laut
+    anderer Forscher ebenfalls wichtig f\xFCr die Intelligenzentwicklung: die sexuelle
+    Selektion.\n\nDemnach m\xFCssen Frauen mehr in die Fortpflanzung investieren,
+    weil sie nur wenige Eizellen produzieren und sich daher seltener paaren. Im Lauf
+    der Evolution seien sie w\xE4hlerischer geworden.\n\nNicht nur Eigenschaften
+    des Mannes \u2013 wie Gr\xF6\xDFe, Kraft und Sch\xF6nheit \u2013 wurden f\xFCr
+    den Nachwuchs der Frau wichtig, sondern auch die geistigen F\xE4higkeiten. Intelligentes
+    Verhalten ist im \xDCberlebenskampf von Vorteil. Deshalb suchten sich Frauen
+    vermutlich vermehrt intelligente Fortpflanzungspartner.\n\nEndg\xFCltig bewiesen
+    ist keine dieser Theorien, endg\xFCltig widerlegt jedoch ebenfalls nicht. Insofern
+    wird munter weiter \xFCberlegt und diskutiert \u2013 die Wissenschaftler sch\xF6pfen
+    die M\xF6glichkeiten ihres Geistes wahrlich aus.\n\n<link=\"https://www.planet-wissen.de/gesellschaft/lernen/intelligenz/pwiewarumsindwirklug100.html\"><style=Link>Jochen
+    Zielke und Alina Schadwinkel \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 9f90a4d284fd242338d37951de940f11, type: 3}

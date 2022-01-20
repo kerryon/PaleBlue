@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 2
   topic: Meteoriten und Wasser
-  description: 2
-  FABText: 2
+  description: 
+  FABText: 
   FABInfoTitle: Kometen sind [eventuell] Leben
   FABInfo: "<font=\"Fonts/Config-Bold\">Etwa zwei Drittel der Erde sind mit Wasser
     bedeckt \u2013 ein Alleinstellungsmerkmal: Die Erde ist der einzige Planet im
