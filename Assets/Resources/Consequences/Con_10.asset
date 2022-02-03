@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: Starkregen/Fluten
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "Starke Regenf\xE4lle und die Flut"
   FABInfo: 
   titleImage: {fileID: 21300000, guid: 6e8281b6e25d9461a893fbfc69841cd2, type: 3}

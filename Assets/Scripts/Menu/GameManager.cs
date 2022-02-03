@@ -86,15 +86,21 @@ public class GameManager : MonoBehaviour
             Variables.Instance.waterUseRate = 0.4f;
             Variables.Instance.waterStorageRate = 0.5f;
             Variables.Instance.reproductionRate = 0.3f;
+            Variables.Instance.water = 10000f;
+            Variables.Instance.human = 1000f;
         }
 
         ES3.Save("CLI", 4);
-        ES3.Save("HC", 0);
+        ES3.Save("HC", 1);
+        ES3.Save("WATER", 10000f);
+        ES3.Save("HUMAN", 1000f);
+        ES3.Save("RAIN", 300f);
         ES3.Save("Property_actionHours", 0);
         ES3.Save("Property_actionCounter", 0);
         ES3.Save("StartedAt", DateTime.Now);
         ES3.DeleteFile("history.csv");
         ES3.Save("CloudNeedsCreation", true);
+        ES3.DeleteKey("VALUES");
         ES3.DeleteKey("randomEventTimer");
         ES3.DeleteKey("randomEventSurvived");
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);

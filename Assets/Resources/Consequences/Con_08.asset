@@ -20,6 +20,6 @@ MonoBehaviour:
     Pandemien'
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: Wasserverschmutzung hat Folgen
   FABInfo: 
   titleImage: {fileID: 21300000, guid: e4d8482529c924b73ac6fc88ee658fc3, type: 3}

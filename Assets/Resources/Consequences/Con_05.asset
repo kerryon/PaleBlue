@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: "D\xFCrre"
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "D\xFCrren"
   FABInfo: 
   titleImage: {fileID: 21300000, guid: a51222284737b41e68dacba652298d67, type: 3}

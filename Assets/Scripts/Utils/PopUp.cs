@@ -26,6 +26,11 @@ public class PopUp : MonoBehaviour
     {
         gameObject.SetActive(false);
         animatorPopup = gameObject.GetComponent<Animator>();
+
+        if (GetComponent<Canvas>().worldCamera == null)
+        {
+            GetComponent<Canvas>().worldCamera = GameObject.FindWithTag("UICamera").GetComponent<Camera>();
+        }
     }
 
     public void PopupTriggerTouched()

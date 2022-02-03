@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: Kriege
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "Wenn die Grundbed\xFCrfnisse fehlen"
   FABInfo: 
   titleImage: {fileID: 21300000, guid: 91b466a2ad9f248ea89c6d72f70e738a, type: 3}

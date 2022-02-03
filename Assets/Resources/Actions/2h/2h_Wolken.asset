@@ -23,11 +23,8 @@ MonoBehaviour:
     Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
     Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
     setzen sie das Wasser schnell um."
-  FABText: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
-    Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
-    Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
-    setzen sie das Wasser schnell um."
-  FABInfoTitle: FAB Info Title
+  FABText: 
+  FABInfoTitle: Wolken und Niederschlag
   FABInfo: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
     Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
     Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch

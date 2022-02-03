@@ -41,7 +41,7 @@ public class PinPrefab : MonoBehaviour
             }
         }
 
-        if (transform.GetChild(0).GetComponent<SpriteRenderer>().color != selectedColor)
+        if (transform.GetChild(0).GetComponent<SpriteRenderer>().color != selectedColor && popup.popUpContent[num].index <= Variables.Instance.historyCount)
         {
             PinSelected(num);
         }

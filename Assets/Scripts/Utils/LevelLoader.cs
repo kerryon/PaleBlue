@@ -15,7 +15,9 @@ public class LevelLoader : MonoBehaviour
 
     public void LoadNextLvl()
     {
-        StartCoroutine(LoadLevel(Variables.Instance.currentLevelIndex));
+        if (Variables.Instance.currentLevelIndex <= 7) {
+            StartCoroutine(LoadLevel(Variables.Instance.currentLevelIndex));
+        }
     }
 
     List<AsyncOperation> scenesToChange = new List<AsyncOperation>();

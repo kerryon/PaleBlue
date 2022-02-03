@@ -71,13 +71,13 @@ public class Intro : MonoBehaviour
 
     public void StartGame()
     {
-        StartCoroutine(LoadingScreen());
+        StartCoroutine(LoadingScreen(4));
     }
 
-    IEnumerator LoadingScreen()
+    IEnumerator LoadingScreen(int scene)
     {
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(3, LoadSceneMode.Single));
-        scenesToLoad.Add(SceneManager.LoadSceneAsync(4, LoadSceneMode.Additive)); // lädt erste Welt in Haupszene
+        scenesToLoad.Add(SceneManager.LoadSceneAsync(3, LoadSceneMode.Single)); //Hauptszene
+        scenesToLoad.Add(SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive)); // lädt Index Welt in Haupszene
 
         for (int i=0; i<scenesToLoad.Count; i++)
         {
@@ -116,5 +116,14 @@ public class Intro : MonoBehaviour
         {
             secondScreen.transform.GetChild(1).gameObject.SetActive(true);
         }
+    }
+
+    public void SkipCreationSetDefault()
+    {
+        ES3.Save("NAME", "Planet");
+        ES3.Save("LIFE", "Leben");
+        ES3.Save("CLI", 7);
+
+        StartCoroutine(LoadingScreen(7));
     }
 }

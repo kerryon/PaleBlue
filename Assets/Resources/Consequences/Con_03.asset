@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: "Klimaver\xE4nderung"
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "Das Klima ver\xE4ndert sich"
   FABInfo: 
   titleImage: {fileID: 21300000, guid: 4fb7e829e98574251aa363371167b949, type: 3}

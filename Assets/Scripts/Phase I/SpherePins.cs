@@ -36,12 +36,11 @@ public class SpherePins : MonoBehaviour
     {
         Vector3 onPlanet = Random.onUnitSphere * PlanetRadius;
         prefab.GetComponentInChildren<SpriteRenderer>().sprite = sprites[pinCount];
-        GameObject newObject = Instantiate(prefab, onPlanet, Quaternion.identity);
+        GameObject newObject = Instantiate(prefab, onPlanet, Quaternion.identity, gameObject.transform);
         newObject.SetActive(true);
         newObject.name = pinCount.ToString();
         newObject.transform.LookAt(PlanetOrigin.transform.position);
         newObject.transform.rotation = newObject.transform.rotation * Quaternion.Euler(-90, 0, 0);
-        newObject.transform.parent = gameObject.transform;
 
         var sheet = new ES3Spreadsheet();
         sheet.Load("history.csv");

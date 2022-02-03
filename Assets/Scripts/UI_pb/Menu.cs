@@ -48,9 +48,9 @@ public class Menu : MonoBehaviour
     void Start()
     {
         StartCoroutine(ShowMenuButton());
-        if (Variables.Instance.historyCount == 1)
+        if (Variables.Instance.historyCount == 1 || !ES3.FileExists("history.csv"))
         {
-            CreateHistory();
+            CreateHistory(1);
         } else
         {
             AppendHistory(0);
@@ -64,11 +64,11 @@ public class Menu : MonoBehaviour
         menuBtn.SetActive(true);
     }
 
-    public void CreateHistory()
+    public void CreateHistory(int entries)
     {
         var sheet = new ES3Spreadsheet();
 
-        for (int row = 0; row < Variables.Instance.historyCount; row++)
+        for (int row = 0; row < entries; row++)
         {
             sheet.SetCell(0, row, row);
             sheet.SetCell(1, row, 0);
@@ -77,7 +77,7 @@ public class Menu : MonoBehaviour
         sheet.Save("history.csv");
 
         GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
-        newHistoryObject.name = "History" + 0;
+        newHistoryObject.name = "H_" + 0;
         newHistoryObject.SetActive(true);
 
         menuScreen.SetActive(false);
@@ -87,24 +87,24 @@ public class Menu : MonoBehaviour
     {
         var sheet = new ES3Spreadsheet();
 
-        if (Levels.transform.childCount == 2)
+        if (Levels.transform.childCount == 2) // append existing entries at Start
         {
             sheet.Load("history.csv");
 
             for (int i = 0; i < Variables.Instance.historyCount; i++)
             {
                 GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
-                newHistoryObject.name = "History" + i;
+                newHistoryObject.name = "H_" + i;
                 newHistoryObject.SetActive(true);
             }
         }
-        else
+        else // append new entry
         {
             sheet.SetCell(0, 0, Variables.Instance.historyCount);
             sheet.SetCell(1, 0, ScriptableObjectValue);
 
             GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
-            newHistoryObject.name = "History" + Variables.Instance.historyCount;
+            newHistoryObject.name = "H_" + Variables.Instance.historyCount;
             newHistoryObject.SetActive(true);
 
             sheet.Save("history.csv", true);

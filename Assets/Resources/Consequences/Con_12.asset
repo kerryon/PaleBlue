@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: Desertifizierung
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "W\xFCsten breiten sich aus"
   FABInfo: 
   titleImage: {fileID: 21300000, guid: fc125df3624e041d5b363586bf4ef9f5, type: 3}

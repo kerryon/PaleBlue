@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: Wassermangel
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: Wenn das Wasser fehlt
   FABInfo: 
   titleImage: {fileID: 21300000, guid: a7d302bf5e4b84d399dad73090d4eb69, type: 3}

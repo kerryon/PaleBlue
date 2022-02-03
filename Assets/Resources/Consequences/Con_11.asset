@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: Polarkappenschmelze
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: Das Eis schmilzt
   FABInfo: 
   titleImage: {fileID: 21300000, guid: bc0b91402ac114da9a84832ba19a422a, type: 3}

@@ -18,8 +18,13 @@ public class CardCapture : MonoBehaviour
 
     private IEnumerator CaptureThenProceed()
     {
-        yield return StartCoroutine(CaptureThis());
+        yield return StartCoroutine(CaptureThis("StatCard.png"));
         yield return StartCoroutine(LoadNextLevel());
+    }
+
+    public void CaptureResult()
+    {
+        StartCoroutine(CaptureThis("EndCard.png"));
     }
 
     private IEnumerator LoadNextLevel()
@@ -28,13 +33,13 @@ public class CardCapture : MonoBehaviour
         yield return null;
     }
 
-    private IEnumerator CaptureThis()
+    private IEnumerator CaptureThis(string cardName)
     {
         yield return new WaitForSeconds(0.5f);
-        CaptureTransparentScreenshot(captureCam, 1080, 1920);
+        CaptureTransparentScreenshot(captureCam, 1080, 1920, cardName);
     }
 
-    public static void CaptureTransparentScreenshot(Camera cam, int width, int height)
+    public static void CaptureTransparentScreenshot(Camera cam, int width, int height, string cardName)
     {
         // This is slower, but seems more reliable.
         var bak_cam_targetTexture = cam.targetTexture;
@@ -82,8 +87,8 @@ public class CardCapture : MonoBehaviour
                 tex_transparent.SetPixel(x, y, color);
             }
         }
-        ES3.SaveImage(tex_transparent, "StatCard.png");
-        NativeGallery.SaveImageToGallery(tex_transparent, "PaleBlue", "StatCard", null);
+        ES3.SaveImage(tex_transparent, cardName);
+        NativeGallery.SaveImageToGallery(tex_transparent, "PaleBlue", cardName, null);
 
         cam.clearFlags = bak_cam_clearFlags;
         cam.targetTexture = bak_cam_targetTexture;

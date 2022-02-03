@@ -8,16 +8,15 @@ public class DissolveIntro : MonoBehaviour
     float fade = -0.9f;
     float multiplier = 0.001f;
 
-    void Awake()
-    {
-        material.SetFloat("_EllipseSize", fade);
-    }
-
     void Start()
     {
         if (Variables.Instance.currentLevelIndex > 4)
         {
             Destroy(gameObject);
+        }
+        else
+        {
+            material.SetFloat("_EllipseSize", fade);
         }
     }
 

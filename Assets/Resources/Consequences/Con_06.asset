@@ -16,6 +16,6 @@ MonoBehaviour:
   topic: "Terraforming/K\xFCstenerosion"
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "Die Oberfl\xE4chen und K\xFCsten ver\xE4ndern sich"
   FABInfo: 
   titleImage: {fileID: 21300000, guid: 86f620f52108a48caa95ec1b1a6daa57, type: 3}

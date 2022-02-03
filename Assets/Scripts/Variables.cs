@@ -70,6 +70,7 @@ public class Variables : MonoBehaviour
 
     private float[] values = new float[20];
     private bool valuesSet = false;
+    private bool gameOver = false;
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
     private readonly float maxRain = 300f;
@@ -161,6 +162,13 @@ void Awake()
             valuesSet = true;
         }
 
+        if (timespan.TotalDays >= 7 && gameOver == false)
+        {
+            gameOver = true;
+            ES3.Save("GameOver", true);
+            GameOver();
+        }
+
         // Lerp variables for calculations
         wC = Mathf.InverseLerp(0f, maxWater, water);
         hC = Mathf.InverseLerp(0f, water, human * waterUseRate);
@@ -168,20 +176,25 @@ void Awake()
 
         if (human * waterUseRate < water)
         {
-            human += Mathf.Pow(human, Mathf.Lerp(0.01f, 0.05f, reproductionRate));
+            human += Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, reproductionRate));
         }
         else if (human * waterUseRate > water && human > 0)
         {
-            human -= Mathf.Pow(human, Mathf.Lerp(0.01f, 0.05f, waterStorageRate));
+            human -= Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, waterStorageRate));
         }
         else
         {
             human = 0f;
+            if (gameOver == false) {
+                gameOver = true;
+                ES3.Save("GameOver", true);
+                GameOver();
+            }
         }
 
         if (rain > 0f)
         {
-            rain -= maxRain / 18000f;
+            rain -= maxRain / 25200f; // von 300 auf 0 in 7 Stunden
         }
         else
         {
@@ -190,7 +203,7 @@ void Awake()
 
         s = (float)timespan.TotalDays;
         e = s * wC;
-        w = Mathf.InverseLerp(0f, 3f, c * 0.5f + (1 - wC) * 0.5f + hC * 2f);
+        w = Mathf.InverseLerp(0f, 7f, c * 0.5f + (1 - wC) * 0.5f + hC * 2f + Map(waterQuality + waterQuantity + waterEcology + waterSealevel, 0f, 4f, 0f, 4f));
         c = Mathf.InverseLerp(wv*3, 0f, w_current + w_carbonDioxide + w_trees);
         
         h_conflict += Map((1 - wC) + hC + w + c, 0f, 4f, 0f, 1f) + Mathf.InverseLerp(0f, hv*3, h_urbanisation + h_agriculture + h_waterStructure);
@@ -216,15 +229,15 @@ void Awake()
         if (h_waterStructure >= hv) { h_waterStructure = hv; } else if (h_waterStructure <= 0) { h_waterStructure = 0; }
 
         w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -1f);
-        w_current += Map(w_temperature + w_ice, wv*2, 0f, 1f, -2f);
+        w_current += Map(w_temperature + w_ice + w_weatherExtremes, wv*3, 0f, 2f, -1f);
         w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -1f);
-        w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 1f, -2f);
+        w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 2f, -1f);
         w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -1f);
         w_carbonDioxide += Map(h_energy + h_industry, 0f, hv*2, 1f, -1f);
         w_fishCount += Map(Mathf.InverseLerp(0f ,hv, h_overfishing) + Mathf.InverseLerp(0f, hv, h_waste) + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 4f, 1f, -1f);
         w_groundwater += Map(Mathf.InverseLerp(0f, hv, h_urbanisation) + Mathf.InverseLerp(0f, hv, h_agriculture) + Mathf.InverseLerp(0f, hv, h_waterStructure) + Mathf.InverseLerp(wv, 0f, w_distribution), 0f, 4f, 1f, -1f);
         w_trees += Map(h_agriculture + h_urbanisation, 0f, hv*2, 1f, -1f);
-        w_ice += Map(w_carbonDioxide + w_temperature, wv*2, 0f, 1f, -2f);
+        w_ice += Map(w_carbonDioxide + w_temperature, wv*2, 0f, 2f, -1f);
 
         if (w_distribution >= wv) { w_distribution = wv; } else if (w_distribution <= 0) { w_distribution = 0; }
         if (w_current >= wv) { w_current = wv; } else if (w_current <= 0) { w_current = 0; }
@@ -242,7 +255,7 @@ void Awake()
         waterQuantity = Map(w_groundwater + w_distribution + w_trees + w_weatherExtremes + water*10, 0f, wv*5, 0f, 1f);
         waterSealevel = Map(w_current + w_temperature + w_ice, 0f, wv*3, 0f, 1f);
 
-        regenerationRate = Map(rain, 0f, maxRain, -1f, 1f) + Map(waterQuality + waterQuantity, 0f, 2f, -0.2f, 0.2f);
+        regenerationRate = Map(rain, 0f, maxRain, -1f, 1f) + Map(waterQuality + waterQuantity + waterEcology, 0f, 3f, -0.2f, 0.2f);
         water += regenerationRate;
         
         if (water >= maxWater)
@@ -355,11 +368,13 @@ void Awake()
         actionHours = ES3.Load("Property_actionHours", 0);
         actionCount = ES3.Load("Property_actionCounter", 1);
         maxWater = ES3.Load("Property_maxWater", maxWater);
+
+        gameOver = ES3.Load("GameOver", gameOver);
     }
 
     private void SaveAllValues()
     {
-        values = new float[] { h_conflict, h_luxury, h_industry, h_agriculture, h_wasteWater, h_urbanisation, h_energy, h_overfishing, h_wasteWater, h_waterStructure, w_distribution, w_current, w_contamination, w_temperature, w_weatherExtremes, w_carbonDioxide, w_fishCount, w_groundwater, w_trees, w_ice };
+        values = new float[] { h_conflict, h_luxury, h_industry, h_agriculture, h_waste, h_urbanisation, h_energy, h_overfishing, h_wasteWater, h_waterStructure, w_distribution, w_current, w_contamination, w_temperature, w_weatherExtremes, w_carbonDioxide, w_fishCount, w_groundwater, w_trees, w_ice };
 
         ES3.Save("CLI", currentLevelIndex);
         ES3.Save("HC", historyCount);
@@ -374,5 +389,14 @@ void Awake()
         ES3.Save("Property_actionCounter", actionCount);
         ES3.Save("Property_actionHours", actionHours);
         ES3.Save("LastClosedAt", DateTime.Now);
+
+        ES3.Save("GameOver", gameOver);
+    }
+
+    public void GameOver()
+    {
+        CancelInvoke();
+
+        GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>().LoadNextLvl();
     }
 }

@@ -18,6 +18,6 @@ MonoBehaviour:
     Nahrungsknappheit'
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: Die Nahrung wird knapp
   FABInfo: 
   titleImage: {fileID: 21300000, guid: 37ec2a17ca1f74b2a88a7f07f9abfa30, type: 3}

@@ -15,11 +15,6 @@ public class ActionList : MonoBehaviour
         _menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
     }
 
-    void Update()
-    {
-
-    }
-
     public void OpenAction()
     {
         GameObject buttons = transform.parent.gameObject.transform.GetChild(0).gameObject;
@@ -53,7 +48,7 @@ public class ActionList : MonoBehaviour
         GameObject notification = transform.GetChild(0).gameObject;
         notification.SetActive(true);
         transform.GetChild(0).gameObject.GetComponent<LeanPulse>().Pulse();
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(7);
         notification.SetActive(false);
     }
 }

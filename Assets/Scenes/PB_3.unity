@@ -201,12 +201,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 118505665}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_Father: {fileID: 1671120118}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &118505667
 MonoBehaviour:
@@ -656,6 +656,8 @@ GameObject:
   - component: {fileID: 178146881}
   - component: {fileID: 178146880}
   - component: {fileID: 178146879}
+  - component: {fileID: 178146882}
+  - component: {fileID: 178146883}
   m_Layer: 0
   m_Name: Planet
   m_TagString: Untagged
@@ -734,6 +736,32 @@ MonoBehaviour:
   displace: 1
   displacement: 6
   clampWater: 1
+--- !u!114 &178146882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178146877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e137e036649024350a1de009f1246dac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mat:
+  - {fileID: 2100000, guid: 1e48404a44c9a499ca101e4e1030b673, type: 2}
+--- !u!114 &178146883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178146877}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5115faf34de7b41c0b0a0dd3692ffba1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &218874537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2087,7 +2115,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 646259645}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6069.3516}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1378442585}
@@ -2109,7 +2137,7 @@ MonoBehaviour:
   Data:
     Duration: 0.5
     Target: {fileID: 1193052563}
-    Value: 100
+    Value: 200
     Ease: 200
 --- !u!114 &646259648
 MonoBehaviour:
@@ -2123,7 +2151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9fc21c8e2bf09498bc4523fe015d04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Duration: 5
+  Duration: 6
 --- !u!114 &646259649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2771,7 +2799,7 @@ GameObject:
   - component: {fileID: 1074879426}
   m_Layer: 0
   m_Name: UI_Camera
-  m_TagString: Untagged
+  m_TagString: UICamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4390,6 +4418,7 @@ Transform:
   m_Children:
   - {fileID: 178146878}
   - {fileID: 1547056748}
+  - {fileID: 118505666}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
