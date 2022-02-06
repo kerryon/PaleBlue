@@ -103,6 +103,7 @@ public class GameManager : MonoBehaviour
         ES3.DeleteKey("VALUES");
         ES3.DeleteKey("randomEventTimer");
         ES3.DeleteKey("randomEventSurvived");
+        ES3.DeleteKey("LifeLine");
         SceneManager.LoadSceneAsync(2, LoadSceneMode.Single);
     }
 

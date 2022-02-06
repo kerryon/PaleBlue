@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Variables : MonoBehaviour
@@ -111,6 +113,19 @@ void Awake()
         {
             UpdateValues();
         }
+
+        StartCoroutine(TrackLife());
+    }
+
+    IEnumerator TrackLife()
+    {
+        List<float> ll = new List<float>();
+
+        ll = ES3.Load("LifeLine", ll);
+        yield return new WaitForSeconds(1);
+
+        ll.Add(Map(human, 0, 100000, 0, 500));
+        ES3.Save("LifeLine", ll);
     }
 
     public void SetValues()
