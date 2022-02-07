@@ -32,7 +32,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PB_End.unity
     guid: b9200473b05304766b878d42dfb15869
-  - enabled: 0
-    path: 
-    guid: 3ea91e4bc3592459480a04fd4b016801
   m_configObjects: {}

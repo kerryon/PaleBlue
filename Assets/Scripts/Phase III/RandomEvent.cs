@@ -1,4 +1,5 @@
 using System.Collections;
+using SpaceGraphicsToolkit;
 using UnityEngine;
 
 public class RandomEvent : MonoBehaviour
@@ -57,7 +58,7 @@ public class RandomEvent : MonoBehaviour
         }
 
         GameObject e = Instantiate(events[catastrophe], gameObject.transform);
-        e.name = "randomEvent_" + catastrophe;
+        e.name = "e_" + catastrophe;
 
         transform.GetChild(0).GetComponent<RandomEventHandler>().CreatePinPrefab(catastrophe);
 
@@ -95,12 +96,12 @@ public class RandomEvent : MonoBehaviour
 
     public void WildfireEvent()
     {
-
+        GameObject.FindGameObjectWithTag("Atmosphere").GetComponent<SgtAtmosphereDepthTex>().HorizonColor = new Color32(255, 204, 204, 255);// rot (FFCCCC) (OV = CCFFFB)
     }
 
     public void OilEvent()
     {
-
+        transform.parent.GetChild(0).GetComponent<SgtPlanetWaterGradient>().Shallow = Color.black;
     }
 
     public void VolcanoEvent()
@@ -115,6 +116,6 @@ public class RandomEvent : MonoBehaviour
 
     public void SuperGauEvent()
     {
-
+        GameObject.FindGameObjectWithTag("Atmosphere").GetComponent<SgtAtmosphere>().Color = new Color32(249, 255, 0, 255); // gelb (F9FF00)
     }
 }

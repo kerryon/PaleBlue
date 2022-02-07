@@ -317,7 +317,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 30, y: 30}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 2
+  m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &133488810
 GameObject:
@@ -1759,7 +1759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Leben \xFCber 7 Tage"
+  m_text: "Ver\xE4nderung der Lebewesenanzahl"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -2979,7 +2979,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 30, y: 30}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 2
+  m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &1887725184
 GameObject:
@@ -3039,7 +3039,7 @@ MonoBehaviour:
   m_StartAxis: 0
   m_CellSize: {x: 30, y: 30}
   m_Spacing: {x: 0, y: 0}
-  m_Constraint: 2
+  m_Constraint: 0
   m_ConstraintCount: 2
 --- !u!1 &2072051273
 GameObject:

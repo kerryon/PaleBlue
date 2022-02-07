@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -24,9 +25,15 @@ public class LifeLineDisplay : MonoBehaviour
         for (int i = 0; i < ll.Count; i++)
         {
             float x = (i+1) * (lineLength / ll.Count);
-            points[i+1] = new Vector3(x, ll[i], 0.0f);
+            points[i+1] = new Vector3(x, Map(ll[i], 0f, ll.Max(), 0f, 300f), 0.0f);
             Debug.Log(points[i+1].x);
         }
         lr.SetPositions(points);
+    }
+
+    private float Map(float input, float oldLow, float oldHigh, float newLow, float newHigh)
+    {
+        float t = Mathf.InverseLerp(oldLow, oldHigh, input);
+        return Mathf.Lerp(newLow, newHigh, t);
     }
 }
