@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class ActionBaum : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject plantingScreen;
+    public GameObject endScreen;
+
+    public void StartPlanting()
     {
-        
+        plantingScreen.SetActive(true);
+        Invoke(nameof(StopPlanting), 10f);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void StopPlanting()
     {
-        
+        plantingScreen.SetActive(false);
+        endScreen.SetActive(true);
+    }
+
+    public void PlantTree()
+    {
+        Variables.Instance.h_agriculture -= 1000f;
+    }
+
+    public void ExitAction()
+    {
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

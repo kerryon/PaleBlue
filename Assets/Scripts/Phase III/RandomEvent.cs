@@ -111,7 +111,7 @@ public class RandomEvent : MonoBehaviour
 
     public void TsunamiEvent()
     {
-
+        transform.parent.GetChild(0).GetComponent<SgtPlanetWaterTexture>().Strength = 5;
     }
 
     public void SuperGauEvent()

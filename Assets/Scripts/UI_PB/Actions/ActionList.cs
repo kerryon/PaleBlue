@@ -51,4 +51,11 @@ public class ActionList : MonoBehaviour
         yield return new WaitForSeconds(7);
         notification.SetActive(false);
     }
+
+    public void DestroyAction()
+    {
+        transform.parent.transform.GetChild(0).gameObject.SetActive(true);
+        transform.GetChild(1).GetComponentInChildren<Animator>().SetTrigger("ActionOut");
+        Destroy(transform.GetChild(1).gameObject, 1.2f);
+    }
 }

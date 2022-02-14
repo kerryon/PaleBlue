@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionGrundwasser : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CreateGreenSpaces()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_urbanisation -= 10000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

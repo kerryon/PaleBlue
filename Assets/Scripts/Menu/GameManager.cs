@@ -88,11 +88,13 @@ public class GameManager : MonoBehaviour
             Variables.Instance.reproductionRate = 0.3f;
             Variables.Instance.water = 10000f;
             Variables.Instance.human = 1000f;
+            Variables.Instance.maxWater = 20000f;
         }
 
         ES3.Save("CLI", 4);
         ES3.Save("HC", 1);
         ES3.Save("WATER", 10000f);
+        ES3.Save("Property_maxWater", 20000f);
         ES3.Save("HUMAN", 1000f);
         ES3.Save("RAIN", 300f);
         ES3.Save("Property_actionHours", 0);

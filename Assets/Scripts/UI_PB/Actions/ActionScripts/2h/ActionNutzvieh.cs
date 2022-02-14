@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionNutzvieh : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CancelMeatConsumption()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_agriculture -= 10000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

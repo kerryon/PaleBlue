@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionImportExport : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void WorldTrade()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_agriculture -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

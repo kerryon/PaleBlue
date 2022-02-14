@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionPipelines : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CreatePipelines()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_waterStructure -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

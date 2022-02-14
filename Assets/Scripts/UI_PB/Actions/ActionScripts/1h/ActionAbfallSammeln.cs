@@ -40,8 +40,7 @@ public class ActionAbfallSammeln : MonoBehaviour
     public void ExitAction()
     {
         trashPicked = false;
-        transform.parent.parent.transform.GetChild(0).gameObject.SetActive(true);
-        Destroy(gameObject, 1.2f);
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 
     IEnumerator FadeTextOut()

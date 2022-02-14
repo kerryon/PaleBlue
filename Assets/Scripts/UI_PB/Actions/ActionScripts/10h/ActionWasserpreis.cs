@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionWasserpreis : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void RegulateWaterPrice()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_conflict -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

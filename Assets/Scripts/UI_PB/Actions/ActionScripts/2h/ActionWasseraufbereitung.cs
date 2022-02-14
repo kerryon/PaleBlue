@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionWasseraufbereitung : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void WaterTreatment()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_wasteWater -= 10000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

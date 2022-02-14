@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionEnergie : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void EnergySwitch()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_energy -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

@@ -42,9 +42,4 @@ public class Endcard : MonoBehaviour
             }
         }
     }
-
-    void Update()
-    {
-        
-    }
 }

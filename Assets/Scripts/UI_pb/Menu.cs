@@ -33,6 +33,8 @@ public class Menu : MonoBehaviour
 
     private bool historyLoaded = false;
 
+    private readonly Color32[] colors = { new Color32(96, 154, 255, 255), new Color32(255, 96, 96, 255) };
+
     public void Awake()
     {
         menuBtn.SetActive(false);
@@ -72,6 +74,7 @@ public class Menu : MonoBehaviour
         {
             sheet.SetCell(0, row, row);
             sheet.SetCell(1, row, 0);
+            sheet.SetCell(2, row, (int)Variables.Instance.timespan.TotalDays);
         }
 
         sheet.Save("history.csv");
@@ -102,6 +105,7 @@ public class Menu : MonoBehaviour
         {
             sheet.SetCell(0, 0, Variables.Instance.historyCount);
             sheet.SetCell(1, 0, ScriptableObjectValue);
+            sheet.SetCell(2, 0, (int)Variables.Instance.timespan.TotalDays);
 
             GameObject newHistoryObject = Instantiate(prefab, Levels.transform);
             newHistoryObject.name = "H_" + Variables.Instance.historyCount;
@@ -126,15 +130,34 @@ public class Menu : MonoBehaviour
             {
                 Image titleImage = Levels.transform.GetChild(i + 2).GetComponent<Image>();
                 TMP_Text title = Levels.transform.GetChild(i + 2).GetChild(0).GetComponent<TMP_Text>();
+                Image day = Levels.transform.GetChild(i + 2).GetChild(1).GetComponent<Image>();
+                TMP_Text dayText = day.transform.GetChild(0).GetComponent<TMP_Text>();
                 if (sheet.GetCell<int>(1, i) < historyContent.Length)
                 {
                     titleImage.sprite = historyContent[sheet.GetCell<int>(1, i)].titleImage;
                     title.text = historyContent[sheet.GetCell<int>(1, i)].topic;
+                    if (sheet.GetCell<int>(2, i) % 2 == 0)
+                    {
+                        day.color = colors[0];
+                    } else
+                    {
+                        day.color = colors[1];
+                    }
+                    dayText.text = sheet.GetCell<int>(2, i).ToString();
                 }
                 else
                 {
                     titleImage.sprite = actionContent[sheet.GetCell<int>(1, i) - historyContent.Length].titleImage;
                     title.text = actionContent[sheet.GetCell<int>(1, i) - historyContent.Length].topic;
+                    if (sheet.GetCell<int>(2, i) % 2 == 0)
+                    {
+                        day.color = colors[0];
+                    }
+                    else
+                    {
+                        day.color = colors[1];
+                    }
+                    dayText.text = sheet.GetCell<int>(2, i).ToString();
                 }
             }
             historyLoaded = true;

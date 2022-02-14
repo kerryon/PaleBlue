@@ -9,11 +9,6 @@ public class RandomEventHandler : MonoBehaviour
 
     public Sprite[] sprites;
 
-    void Start()
-    {
-
-    }
-
     public void CreatePinPrefab(int pin)
     {
         Vector3 onPlanet = Random.onUnitSphere * PlanetRadius;

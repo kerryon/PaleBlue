@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionMeeresschutz : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void CreateOceanSafeZones()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_overfishing -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionGesetze : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void SetLaw()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_industry -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

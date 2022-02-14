@@ -76,7 +76,9 @@ public class Variables : MonoBehaviour
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
     private readonly float maxRain = 300f;
-    private float maxWater = 10000f; //muss von Spielern erhöht werden
+
+    [Header("WaterMaxValue")]
+    public float maxWater = 10000f; //muss von Spielern erhöht werden
 
     private float wC;
     private float hC;
@@ -245,15 +247,15 @@ public class Variables : MonoBehaviour
         if (h_waterStructure >= hv) { h_waterStructure = hv; } else if (h_waterStructure <= 0) { h_waterStructure = 0; }
 
         w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -1f);
-        w_current += Map(w_temperature + w_ice + w_weatherExtremes, wv*3, 0f, 1f, -2f);
+        w_current += Map(w_temperature + w_ice + w_weatherExtremes, wv*3, 0f, 2f, -2f);
         w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -1f);
-        w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 1f, -2f);
+        w_temperature += Map(w_carbonDioxide + w_ice, wv*2, 0f, 2f, -2f);
         w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -1f);
         w_carbonDioxide += Map(h_energy + h_industry, 0f, hv*2, 1f, -1f);
         w_fishCount += Map(Mathf.InverseLerp(0f ,hv, h_overfishing) + Mathf.InverseLerp(0f, hv, h_waste) + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 4f, 1f, -1f);
         w_groundwater += Map(Mathf.InverseLerp(0f, hv, h_urbanisation) + Mathf.InverseLerp(0f, hv, h_agriculture) + Mathf.InverseLerp(0f, hv, h_waterStructure) + Mathf.InverseLerp(wv, 0f, w_distribution), 0f, 4f, 1f, -1f);
         w_trees += Map(h_agriculture + h_urbanisation, 0f, hv*2, 1f, -1f);
-        w_ice += Map(w_carbonDioxide + w_temperature, wv*2, 0f, 1f, -2f);
+        w_ice += Map(w_carbonDioxide + w_temperature, wv*2, 0f, 2f, -2f);
 
         if (w_distribution >= wv) { w_distribution = wv; } else if (w_distribution <= 0) { w_distribution = 0; }
         if (w_current >= wv) { w_current = wv; } else if (w_current <= 0) { w_current = 0; }

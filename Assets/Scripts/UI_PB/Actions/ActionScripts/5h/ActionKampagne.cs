@@ -4,15 +4,9 @@ using UnityEngine;
 
 public class ActionKampagne : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void StartCampaign()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Variables.Instance.h_luxury -= 20000f;
+        GetComponentInParent<ActionList>().DestroyAction();
     }
 }
