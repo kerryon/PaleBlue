@@ -33,9 +33,7 @@ public class Menu : MonoBehaviour
 
     private bool historyLoaded = false;
 
-    private readonly Color32[] colors = { new Color32(96, 154, 255, 255), new Color32(255, 96, 96, 255) };
-
-    public void Awake()
+    void Awake()
     {
         menuBtn.SetActive(false);
         menuScreen.SetActive(false);
@@ -130,34 +128,18 @@ public class Menu : MonoBehaviour
             {
                 Image titleImage = Levels.transform.GetChild(i + 2).GetComponent<Image>();
                 TMP_Text title = Levels.transform.GetChild(i + 2).GetChild(0).GetComponent<TMP_Text>();
-                Image day = Levels.transform.GetChild(i + 2).GetChild(1).GetComponent<Image>();
-                TMP_Text dayText = day.transform.GetChild(0).GetComponent<TMP_Text>();
+                TMP_Text day = Levels.transform.GetChild(i + 2).GetChild(1).GetComponent<TMP_Text>();
                 if (sheet.GetCell<int>(1, i) < historyContent.Length)
                 {
                     titleImage.sprite = historyContent[sheet.GetCell<int>(1, i)].titleImage;
                     title.text = historyContent[sheet.GetCell<int>(1, i)].topic;
-                    if (sheet.GetCell<int>(2, i) % 2 == 0)
-                    {
-                        day.color = colors[0];
-                    } else
-                    {
-                        day.color = colors[1];
-                    }
-                    dayText.text = sheet.GetCell<int>(2, i).ToString();
+                    day.text = sheet.GetCell<int>(2, i).ToString() + " d";
                 }
                 else
                 {
                     titleImage.sprite = actionContent[sheet.GetCell<int>(1, i) - historyContent.Length].titleImage;
                     title.text = actionContent[sheet.GetCell<int>(1, i) - historyContent.Length].topic;
-                    if (sheet.GetCell<int>(2, i) % 2 == 0)
-                    {
-                        day.color = colors[0];
-                    }
-                    else
-                    {
-                        day.color = colors[1];
-                    }
-                    dayText.text = sheet.GetCell<int>(2, i).ToString();
+                    day.text = sheet.GetCell<int>(2, i).ToString() + " d";
                 }
             }
             historyLoaded = true;

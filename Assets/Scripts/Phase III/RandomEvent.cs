@@ -87,11 +87,11 @@ public class RandomEvent : MonoBehaviour
         }
     }
 
-    private void CatastropheAvoided(GameObject e)
+    public void CatastropheAvoided()
     {
         survived = true;
         ES3.Save("randomEventSurvived", survived);
-        Destroy(e);
+        Destroy(transform.GetChild(0).gameObject);
     }
 
     public void WildfireEvent()

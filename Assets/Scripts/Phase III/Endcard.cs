@@ -30,7 +30,7 @@ public class Endcard : MonoBehaviour
         list.Add(waterStorageRate_itemCount);
 
         _alive.text = "Überlebende\n<font=Fonts/Config-text>" + Variables.Instance.human.ToString("n0").Replace(",", ".") + "</font>";
-        _dead.text = "Tote gesamt\n<font=Fonts/Config-text>" + "00000" +"</font>";
+        _dead.text = "Tote gesamt\n<font=Fonts/Config-text>" + Variables.Instance.deaths.ToString("n0").Replace(",", ".") + "</font>";
 
         for (int i = 0; i < list.Count; i++)
         {

@@ -20,4 +20,9 @@ public class RandomEventHandler : MonoBehaviour
         newObject.transform.rotation = newObject.transform.rotation * Quaternion.Euler(-90, 0, 0);
         newObject.transform.localScale = new Vector3(7,7,7);
     }
+
+    public void EndEvent()
+    {
+        transform.parent.GetComponent<RandomEvent>().CatastropheAvoided();
+    }
 }
