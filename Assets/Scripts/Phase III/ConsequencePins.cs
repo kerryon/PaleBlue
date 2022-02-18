@@ -20,7 +20,7 @@ public class ConsequencePins : MonoBehaviour
 
     private void CheckConsequences()
     {
-        waterSystem = new float[] { Variables.Instance.w_groundwater, Variables.Instance.w_trees, Variables.Instance.w_temperature, Variables.Instance.w_current, Variables.Instance.w_carbonDioxide, Variables.Instance.w_weatherExtremes, Variables.Instance.w_ice, Variables.Instance.w_fishCount, Variables.Instance.w_contamination, Variables.Instance.w_distribution, Mathf.Lerp(100000f, 49999f, Variables.Instance.rain/300f) };
+        waterSystem = new float[] { Variables.Instance.w_groundwater, Variables.Instance.w_trees, Variables.Instance.w_temperature, Variables.Instance.w_current, Variables.Instance.w_carbonDioxide, Variables.Instance.w_weatherExtremes, Variables.Instance.w_ice, Variables.Instance.w_fishCount, Variables.Instance.w_contamination, Variables.Instance.w_distribution, Mathf.Lerp(100000f, 49999f, Variables.Instance.rain/350f) };
 
         for (int i = 0; i < waterSystem.Length; i++)
         {

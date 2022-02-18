@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionGrundwasser : MonoBehaviour
+public class ActionPipelines : MonoBehaviour
 {
-    public void CreateGreenSpaces()
+    public void CreatePipelines()
     {
-        Variables.Instance.h_urbanisation -= 10000f;
+        Variables.Instance.h_waterStructure -= 30000f;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 }

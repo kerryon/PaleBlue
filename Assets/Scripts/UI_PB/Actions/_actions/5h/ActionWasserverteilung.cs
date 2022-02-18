@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionNutzvieh : MonoBehaviour
+public class ActionWasserverteilung : MonoBehaviour
 {
-    public void CancelMeatConsumption()
+    public void DistributeWater()
     {
-        Variables.Instance.h_agriculture -= 10000f;
+        Variables.Instance.h_waterStructure -= 30000f;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 }

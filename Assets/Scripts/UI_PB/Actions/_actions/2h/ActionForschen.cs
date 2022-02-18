@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionOrganisationen : MonoBehaviour
+public class ActionForschen : MonoBehaviour
 {
-    public void OrganisationFund(int area)
+    public void Research()
     {
-        switch (area)
+        int randomField = Random.Range(0, 9);
+
+        switch(randomField)
         {
             case 0:
                 Variables.Instance.h_conflict -= 20000f;

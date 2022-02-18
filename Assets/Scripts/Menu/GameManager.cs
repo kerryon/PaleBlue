@@ -89,6 +89,8 @@ public class GameManager : MonoBehaviour
             Variables.Instance.water = 10000f;
             Variables.Instance.human = 1000f;
             Variables.Instance.maxWater = 20000f;
+            Variables.Instance.deaths = 0f;
+            Variables.Instance.s = 0f;
         }
 
         ES3.Save("CLI", 4);
@@ -99,9 +101,11 @@ public class GameManager : MonoBehaviour
         ES3.Save("RAIN", 300f);
         ES3.Save("Property_actionHours", 0);
         ES3.Save("Property_actionCounter", 0);
+        ES3.Save("Property_stateCount", 0f);
         ES3.Save("StartedAt", DateTime.Now);
-        ES3.DeleteFile("history.csv");
+        ES3.Save("GameOver", false);
         ES3.Save("CloudNeedsCreation", true);
+        ES3.DeleteFile("history.csv");
         ES3.DeleteKey("VALUES");
         ES3.DeleteKey("randomEventTimer");
         ES3.DeleteKey("randomEventSurvived");

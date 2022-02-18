@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionPipelines : MonoBehaviour
+public class ActionNutzvieh : MonoBehaviour
 {
-    public void CreatePipelines()
+    public void CancelMeatConsumption()
     {
-        Variables.Instance.h_waterStructure -= 20000f;
+        Variables.Instance.h_agriculture -= 20000f;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 }

@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionWasserverteilung : MonoBehaviour
+public class ActionGesetze : MonoBehaviour
 {
-    public void DistributeWater()
+    public void SetLaw()
     {
-        Variables.Instance.h_waterStructure -= 20000f;
+        Variables.Instance.h_industry -= 40000f;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 }

@@ -113,21 +113,24 @@ public class Variables : MonoBehaviour
         }
         Started = ES3.Load("StartedAt", currentDate);
 
-        InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
-
-        if (currentLevelIndex > 6)
+        if (currentLevelIndex != 8)
         {
-            UpdateValues();
-        }
+            InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
 
-        StartCoroutine(TrackLife());
+            if (currentLevelIndex > 6)
+            {
+                UpdateValues();
+            }
+
+            StartCoroutine(TrackLife());
+        }
     }
 
     private IEnumerator TrackLife()
     {
         ll = ES3.Load("LifeLine", ll);
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.2f);
 
         ll.Add(human);
         ES3.Save("LifeLine", ll);
@@ -251,16 +254,16 @@ public class Variables : MonoBehaviour
         if (h_wasteWater >= hv) { h_wasteWater = hv; } else if (h_wasteWater <= 0) { h_wasteWater = 0; }
         if (h_waterStructure >= hv) { h_waterStructure = hv; } else if (h_waterStructure <= 0) { h_waterStructure = 0; }
 
-        w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -1f);
-        w_current += Map(w_temperature*2 + w_ice + w_weatherExtremes, wv*4, 0f, 2f, -2f);
-        w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -1f);
-        w_temperature += Map(w_carbonDioxide*2 + w_ice, wv*3, 0f, 2f, -2f);
-        w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -1f);
-        w_carbonDioxide += Map(h_energy + h_industry, 0f, hv*2, 1f, -1f);
-        w_fishCount += Map(Mathf.InverseLerp(0f ,hv, h_overfishing)*2 + Mathf.InverseLerp(0f, hv, h_waste) + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 5f, 1f, -1f);
-        w_groundwater += Map(Mathf.InverseLerp(0f, hv, h_urbanisation) + Mathf.InverseLerp(0f, hv, h_agriculture) + Mathf.InverseLerp(0f, hv, h_waterStructure) + Mathf.InverseLerp(wv, 0f, w_distribution), 0f, 4f, 1f, -1f);
-        w_trees += Map(h_agriculture + h_urbanisation, 0f, hv*2, 1f, -1f);
-        w_ice += Map(w_carbonDioxide*2 + w_temperature, wv*3, 0f, 2f, -2f);
+        w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -0.5f);
+        w_current += Map(w_temperature*2 + w_ice + w_weatherExtremes, wv*4, 0f, 2f, -1.5f);
+        w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -0.5f);
+        w_temperature += Map(w_carbonDioxide*2 + w_ice, wv*3, 0f, 2f, -1.5f);
+        w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -0.5f);
+        w_carbonDioxide += Map(h_energy + h_industry, 0f, hv*2, 1f, -0.5f);
+        w_fishCount += Map(Mathf.InverseLerp(0f ,hv, h_overfishing)*2 + Mathf.InverseLerp(0f, hv, h_waste) + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 5f, 1f, -0.5f);
+        w_groundwater += Map(Mathf.InverseLerp(0f, hv, h_urbanisation) + Mathf.InverseLerp(0f, hv, h_agriculture) + Mathf.InverseLerp(0f, hv, h_waterStructure) + Mathf.InverseLerp(wv, 0f, w_distribution) + rC, 0f, 5f, 1f, -0.5f);
+        w_trees += Map(h_agriculture + h_urbanisation, 0f, hv*2, 1f, -0.5f);
+        w_ice += Map(w_carbonDioxide*2 + w_temperature, wv*3, 0f, 2f, -1.5f);
 
         if (w_distribution >= wv) { w_distribution = wv; } else if (w_distribution <= 0) { w_distribution = 0; }
         if (w_current >= wv) { w_current = wv; } else if (w_current <= 0) { w_current = 0; }

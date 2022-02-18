@@ -27,7 +27,7 @@ public class ActionWerturteile : MonoBehaviour
 
     public void ExitAction()
     {
-        Variables.Instance.h_conflict -= 10000;
+        Variables.Instance.h_conflict -= 15000;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 

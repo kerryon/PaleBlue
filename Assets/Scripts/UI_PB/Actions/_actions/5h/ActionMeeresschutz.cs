@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionImportExport : MonoBehaviour
+public class ActionMeeresschutz : MonoBehaviour
 {
-    public void WorldTrade()
+    public void CreateOceanSafeZones()
     {
-        Variables.Instance.h_agriculture -= 20000f;
+        Variables.Instance.h_overfishing -= 30000f;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 }

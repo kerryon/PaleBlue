@@ -15,18 +15,45 @@ MonoBehaviour:
   index: 30
   pathName: 2
   actionName: Wolken erstellen
-  actionDescription: action description
+  actionDescription: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers
+    zwischen Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser
+    in Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend,
+    doch setzen sie das Wasser schnell um.\n\nDeine Handlung ist f\xFCr den Niederschlag
+    ma\xDFgeblich wichtig. Ohne Regen keine Wasserregeneration."
   Icon: {fileID: 21300000, guid: 66e5b77ce3edf497bb7df72e5b8902cd, type: 3}
   NextPie: {fileID: 0}
-  topic: Wolken und Niederschlag
-  description: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
-    Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
-    Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
-    setzen sie das Wasser schnell um."
+  topic: Wolken & Niederschlag
+  description: 
   FABText: 
   FABInfoTitle: Wolken und Niederschlag
-  FABInfo: "Wolken \xFCben im Wasserkreislauf die Funktion eines Mittlers zwischen
-    Verdunstung und Niederschlag aus. Zwar ist das in ihnen enthaltene Wasser in
-    Bezug auf die Wasservorkommen der Erde mengenm\xE4\xDFig recht unbedeutend, doch
-    setzen sie das Wasser schnell um."
+  FABInfo: "Der Wasserkreislauf beginnt, wenn Wasser aus den Meeren verdunstet und
+    dabei in die Atmosph\xE4re gelangt. Dieses verdunstete Wasser gelangt in Form
+    von Tau, Regen, Hagel oder Schnee wieder auf die Erdoberfl\xE4che zur\xFCck.\n\nVerdunstung
+    und Niederschlag befinden sich im Gleichgewicht und immerfort im Kreislauf. Die
+    Strahlungsw\xE4rme der Sonne ist der Motor, der die Zirkulation des Wassers in
+    fester, fl\xFCssiger und gasf\xF6rmiger Form in der Erdatmosph\xE4re, auf der
+    Erdoberfl\xE4che und im obersten Bereich der Erdrinde antreibt. Wenn der Niederschlag
+    den Boden erreicht, sickert er in den Boden ein, wo er entweder bis zum Grundwasser
+    vordringt, langsam hangabw\xE4rts flie\xDFt oder von den Pflanzen aufgenommen
+    und verdunstet wird. Die Fl\xFCsse haben die Aufgabe, das Wasser aus der Umgebung
+    aufzunehmen und ins Meer oder einen See zu leiten, um das Wasser zu ersetzen,
+    das dort verdunstet ist.\n\nIm Wasserkreislauf geht kein Wasser verloren, es
+    \xE4ndert nur seinen Aggregatszustand. Unser Wasser befindet sich also in einem
+    ewigen Kreislauf: Wasser verdunstet, der Wasserdampf steigt auf und bildet Wolken
+    aus denen Regen f\xE4llt. Es bilden sich Seen, B\xE4che und Fl\xFCsse. Das Wasser
+    verdunstet wieder oder flie\xDFt ins Meer zur\xFCck und der Kreislauf beginnt
+    von vorn.\n\nWasser kann nicht verbraucht werden, ist aber auch nicht vermehrbar.
+    Von dem immer gleich bleibenden Vorrat geht nicht ein Tropfen verloren. Auch
+    wenn der Mensch Wasser f\xFCr seinen Bedarf entnimmt, geschieht das in einem
+    Kreislauf. Aus einem Grundwasserk\xF6rper oder einer Quelle wird Wasser entnommen
+    und \xFCber Rohre in die Haushalte gepumpt. Dort benutzen wir es zum Trinken,
+    Kochen, Waschen und Sp\xFClen. Aber alles Wasser, das wir gebrauchen, geht fr\xFCher
+    oder sp\xE4ter als Abwasser in die Kanalisation und in eine Kl\xE4ranlage, von
+    der es gereinigt wieder in den nat\xFCrlichen Kreislauf zur\xFCckgeleitet wird.
+    J\xE4hrlich fallen durchschnittlich zwischen 96.000 km3 und 119.000 km3 Niederschl\xE4ge
+    auf die Landmassen unserer Erde (zum Vergleich: Der Bodensee hat ein Volumen
+    von rund 50 km3). Davon verdunsten 40-80% und weitere 13-15% flie\xDFen in Oberfl\xE4chengew\xE4ssern
+    ab, deren Wasser nur teilweise f\xFCr die menschliche Nutzung verwendet werden
+    kann.\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
+    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
   titleImage: {fileID: 21300000, guid: f15dbf758fc6e4a8684129d9d2c0d333, type: 3}

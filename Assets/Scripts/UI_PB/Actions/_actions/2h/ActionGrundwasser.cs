@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ActionWasseraufbereitung : MonoBehaviour
+public class ActionGrundwasser : MonoBehaviour
 {
-    public void WaterTreatment()
+    public void CreateGreenSpaces()
     {
-        Variables.Instance.h_wasteWater -= 10000f;
+        Variables.Instance.h_urbanisation -= 20000f;
         GetComponentInParent<ActionList>().DestroyAction();
     }
 }

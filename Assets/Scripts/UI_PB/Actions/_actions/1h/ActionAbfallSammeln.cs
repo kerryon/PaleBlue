@@ -32,7 +32,7 @@ public class ActionAbfallSammeln : MonoBehaviour
 
         if (!trashPicked)
         {
-            Variables.Instance.h_waste -= 5000f;
+            Variables.Instance.h_waste -= 10000f;
             trashPicked = true;
         }
     }

@@ -15,9 +15,16 @@ public class ActionInvestieren : MonoBehaviour
     public void ExitAction()
     {
         int value = (int)slider.value;
-        Variables.Instance.actionHours -= value;
+        if (Variables.Instance.actionHours < value)
+        {
+            StartCoroutine(GetComponentInParent<ActionList>().ToggleNotification());
+        }
+        else
+        {
+            Variables.Instance.actionHours -= value;
+            GetComponentInParent<ActionList>().DestroyAction();
+        }
         Variables.Instance.maxWater += slider.value * 1000;
 
-        GetComponentInParent<ActionList>().DestroyAction();
     }
 }

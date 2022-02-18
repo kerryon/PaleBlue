@@ -15,12 +15,19 @@ MonoBehaviour:
   index: 23
   pathName: 1
   actionName: Investieren
-  actionDescription: 2
+  actionDescription: "Der Katastrophenschutz soll der Bev\xF6lkerung im Ernstfall
+    m\xF6glichst schnell helfen. Daf\xFCr ist es wichtig, jederzeit gut vorbereitet
+    zu sein: Die Helferinnen und Helfer k\xFCmmern sich um Vorbeugung, Warnung, Soforthilfe
+    bei einer akuten Krise und die nachtr\xE4gliche Analyse, um sich auf den n\xE4chsten
+    Katastrophenfall noch besser vorzubereiten.\n\nDeine Investitionen beeinflussen
+    die St\xE4rke der Auswirkung von Naturkatastrophen und -ereignissen und erh\xF6hen
+    die maximal nutzbare Menge Wasser."
   Icon: {fileID: 21300000, guid: e39b68e5765e249fe92d38644080a6b5, type: 3}
   NextPie: {fileID: 0}
   topic: Katastrophenschutz
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: 
+  FABInfoTitle: Investieren... und nochmal Investieren
+  FABInfo: "\n\n<link=https://www.planet-wissen.de/natur/meer/atlantik/verschmutzung-des-atlantiks-100.html><style=Link>Lothar
+    Nickels \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 507c5b458f93a448f8c6048083d06af8, type: 3}

@@ -13,11 +13,9 @@ MonoBehaviour:
   m_Name: Con_08
   m_EditorClassIdentifier: 
   index: 17
-  topic: 'Wasserverschmutzung/
+  topic: 'Wasserverschmutzung &
 
-    Krankheiten/
-
-    Pandemien'
+    Krankheiten'
   description: 
   FABText: 
   FABInfoTitle: Wasserverschmutzung hat Folgen

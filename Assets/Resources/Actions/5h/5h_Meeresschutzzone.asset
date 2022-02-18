@@ -15,12 +15,57 @@ MonoBehaviour:
   index: 34
   pathName: 5
   actionName: Meeresschutzzone einrichten
-  actionDescription: 
+  actionDescription: "In den 1950ern Jahren schien der Reichtum der Meere nahezu
+    unersch\xF6pflich. Doch innerhalb weniger Jahrzehnte haben es die Menschen geschafft,
+    die Best\xE4nde der wichtigsten Speisefische bis auf einen Bruchteil der fr\xFCheren
+    F\xFClle zu pl\xFCndern.\n\nMit deinem Eingriff kann sich der Fischbestand schneller
+    erholen und somit zu einer besseren Wasser\xF6kologie beitragen."
   Icon: {fileID: 21300000, guid: 410962271029e42609b05607f90d96dd, type: 3}
   NextPie: {fileID: 0}
   topic: Meeresschutzzone
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: 
+  FABInfoTitle: Meeresschutz
+  FABInfo: "Viele Fischvorkommen sind bereits ganz zusammengebrochen. Aber die Situation
+    ist nicht ausweglos. Einige L\xE4nder haben bereits gezeigt, dass sich die Fischbest\xE4nde
+    durch ein nachhaltiges Fischereimanagement wieder erholen k\xF6nnen.\n\nWer zu
+    Beginn des 20. Jahrhunderts behauptet h\xE4tte, der Fisch in den Meeren k\xF6nne
+    einmal so gut wie verschwinden, w\xE4re f\xFCr verr\xFCckt erkl\xE4rt worden.
+    In den 1950er-Jahren, nach der Zwangspause der beginnenden industriellen Fischerei
+    durch den Zweiten Weltkrieg, erschienen die Fischbest\xE4nde noch unendlich.
+    Viele glaubten sogar, dass das Meer die Ern\xE4hrung der stetig wachsenden Weltbev\xF6lkerung
+    auf Dauer sichern k\xF6nnte. Man m\xFCsse den Fisch nur herausfangen.\n\nDoch
+    der technische Fortschritt eroberte nicht nur die Kontinente, sondern auch die
+    Meere. Innerhalb weniger Jahrzehnte breitete sich der industrielle Fischfang
+    von den klassischen Fischereigebieten auf der Nordhalbkugel \xFCber alle Meere
+    aus.\n\nImmer gr\xF6\xDFere Fangschiffe mit immer gr\xF6\xDFeren Motoren konnten
+    immer gr\xF6\xDFere Netze ausbringen. Und das mit Pr\xE4zision. Wo fr\xFCher
+    scharfkantige Riffe und Wracks gro\xDFz\xFCgig umfahren werden mussten, um die
+    teuren Netze nicht zu gef\xE4hrden, sorgen heute hochsensible 3D-Sonarger\xE4te,
+    digitale Karten und Satellitennavigation f\xFCr metergenaues Befischen.\n\nAuf
+    dem freien Meer k\xF6nnen gro\xDFe Fischschw\xE4rme geortet, umfahren und bis
+    auf das letzte Exemplar erbeutet werden. Selbst die Tiefsee wird nicht mehr verschont:
+    Die Fischer lassen ihre Netze heute bis zu 2000 Meter hinab in die Tiefe.\n\nInnerhalb
+    der vergangenen 60 Jahre hat sich die Menge des gefangenen Fisches vervielfacht
+    \u2013 von 12,8 Millionen Tonnen im Jahr 1950 auf etwa 80 Millionen Tonnen pro
+    Jahr seit der Jahrtausendwende.\n\nDie Folge: Der Bestand der gro\xDFen Speise-
+    und Raubfische wie Thunfisch, Schwertfisch und Hai ist um 90 Prozent zur\xFCckgegangen.
+    Gerade die f\xFCr die Fortpflanzung so wichtigen Altfische, die durch ihre Gr\xF6\xDFe
+    viele Nachkommen zeugen k\xF6nnten, fehlen.\n\nNach Angaben der Weltgesundheitsorganisation
+    gelten etwa 33 Prozent aller Fischbest\xE4nde als bis an die biologische Grenze
+    befischt. Weitere 60 Prozent sind bereits v\xF6llig ersch\xF6pft. In den europ\xE4ischen
+    Fanggebieten ist die Situation noch dramatischer: Im Mittelmeer gelten beispielsweise
+    62 Prozent der Best\xE4nde als \xFCberfischt (Stand: 2018).\n\nJahrzehntelang
+    wichen die Fischer auf immer neue, weiter entfernte Fischbest\xE4nde aus, um
+    ihre Netze zu f\xFCllen. Doch dies ist mittlerweile kaum mehr m\xF6glich, weil
+    es weltweit so gut wie keine wenig befischten Gebiete mehr gibt.\n\nNach Berechnungen
+    des UN-Umweltprogramms Unep ist sp\xE4testens 2050 weltweit keine kommerzielle
+    Fischerei mehr m\xF6glich \u2013 werden die Fischbest\xE4nde nicht st\xE4rker
+    geschont. W\xFCrden wir unsere heimischen W\xE4lder auf diese Weise ausnutzen,
+    lebten wir l\xE4ngst in einer baumarmen Steppe.\n\nDas Ausma\xDF der Katastrophe
+    wird langsam, aber sicher auch der Politik und der Fischereiindustrie selbst
+    bewusst. In den vergangenen Jahren hat dies zu strengeren Schutzma\xDFnahmen
+    gef\xFChrt. Vor allem bei der Tiefseefischerei vollzieht sich ein Wandel. Denn
+    sie ist in zweifacher Hinsicht problematisch.\n\n<link=https://www.planet-wissen.de/natur/meer/ueberfischung_der_meere/index.html><style=Link>Vladimir
+    Rydl und Inka Reichert \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 431e70cdfc05141b085a863d2fb51da5, type: 3}

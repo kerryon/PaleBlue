@@ -19,11 +19,11 @@ public class HistoryObject : MonoBehaviour
 
         if (value < _menu.historyContent.Length)
         {
-            text.text = "<font=Fonts/Config-Bold><size=150%><line-height=50%>" + _menu.historyContent[value].FABInfoTitle.Replace(";", "\n") + "</line-height></size></font>" + "\n\n<line-indent=5%>" + _menu.historyContent[value].FABInfo.Replace(";", "\n");
+            text.text = "<font=Fonts/Config-Bold><size=150%><line-height=70%>" + _menu.historyContent[value].FABInfoTitle.Replace(";", "\n") + "</line-height></size></font>" + "\n\n<line-indent=5%></line-indent>" + _menu.historyContent[value].FABInfo.Replace(";", "\n");
         }
         else
         {
-            text.text = "<font=Fonts/Config-Bold><size=150%><line-height=50%>" + _menu.actionContent[value - _menu.historyContent.Length].FABInfoTitle.Replace(";", "\n") + "</line-height></size></font>" + "\n\n<line-indent=5%>" + _menu.actionContent[value - _menu.historyContent.Length].FABInfo.Replace(";", "\n");
+            text.text = "<font=Fonts/Config-Bold><size=150%><line-height=70%>" + _menu.actionContent[value - _menu.historyContent.Length].FABInfoTitle.Replace(";", "\n") + "</line-height></size></font>" + "\n\n<line-indent=5%></line-indent>" + _menu.actionContent[value - _menu.historyContent.Length].FABInfo.Replace(";", "\n");
         }
     }
 }

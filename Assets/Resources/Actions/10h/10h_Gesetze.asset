@@ -21,6 +21,7 @@ MonoBehaviour:
   topic: Das ist ein Gesetz!
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: 
+  FABInfoTitle: Gesetze und Richtlinien
+  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
+    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
   titleImage: {fileID: 21300000, guid: 52ca2114fedd54aab82d4db59a5e307c, type: 3}

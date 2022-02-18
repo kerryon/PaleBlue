@@ -11,11 +11,13 @@ public class PinPrefab : MonoBehaviour
     [Header("Max Pins")]
     public int maxPins;
 
+    SpriteRenderer _spriteRenderer;
     Menu _menu;
 
     void Start()
     {
         _menu = GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>();
+        _spriteRenderer = transform.GetChild(0).GetComponent<SpriteRenderer>();
     }
 
     public void PopupContentDistribution()
@@ -41,7 +43,7 @@ public class PinPrefab : MonoBehaviour
             }
         }
 
-        if (transform.GetChild(0).GetComponent<SpriteRenderer>().color != selectedColor && popup.popUpContent[num].index < 100)
+        if (_spriteRenderer.color != selectedColor && popup.popUpContent[num].index < 100)
         {
             PinSelected(num);
         }
@@ -49,7 +51,7 @@ public class PinPrefab : MonoBehaviour
 
     public void PinSelected(int num)
     {
-        transform.GetChild(0).GetComponent<SpriteRenderer>().color = selectedColor;
+        _spriteRenderer.color = selectedColor;
         _menu.AppendHistory(popup.popUpContent[num].index);
     }
 }

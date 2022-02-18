@@ -416,10 +416,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<font=\"Fonts/Config-Bold\">Jetzt ist es an der Zeit zu warten und ab
-    und zu zu schauen, wie sich dein Planet entwickelt.</font>\n\nHier stehen n\xFCtzliche
-    Informationen zum Gameplay und zum Verlauf des Spiels. \n\n<link=\"https://de.wikipedia.org/wiki/Link\"><u>Klick
-    hier</u></link>"
+  m_text: "<font=\"Fonts/Config-Bold\">Jetzt ist es erstmal an der Zeit zu warten
+    und ab und zu zu schauen, wie sich dein Planet entwickelt.</font>\n\nIm Spielverlauf
+    erscheinen immer wieder Pins mit Informationen \xFCberZust\xE4nde und Entwicklungen,
+    die auf die Befindlichkeit deines Planeten hinweisen. Jede Handlung hat Konsequenzen
+    und vergiss nicht: Alles l\xE4uft in Echtzeit \u2013 also jede einzelne Sekunde
+    z\xE4hlt. \n\n<link=\"https://paleblue.webflow.io/\"><u>Website besuchen</u></link>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
@@ -2252,7 +2254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HorizontalFit: 0
-  m_VerticalFit: 0
+  m_VerticalFit: 2
 --- !u!114 &1340887450
 MonoBehaviour:
   m_ObjectHideFlags: 0

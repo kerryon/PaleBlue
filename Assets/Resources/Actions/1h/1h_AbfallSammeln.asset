@@ -15,12 +15,56 @@ MonoBehaviour:
   index: 22
   pathName: 1
   actionName: Abfall sammeln
-  actionDescription: 1
+  actionDescription: "Tankerungl\xFCcke, \xD6lteppiche, Plastikm\xFCll: Der Mensch
+    verpestet die Weltmeere und schadet ihren Bewohnern. Jedes Jahr landen mehr Abf\xE4lle
+    im Meer als Fische herausgeholt werden.\n\nDeine Handlungen beeinflussen die
+    Abf\xE4lle in den Ozeanen und somit die Wasserverunreinigung. Dies wirkt sich
+    positiv auf die Wasserqualit\xE4t aus."
   Icon: {fileID: 21300000, guid: 03a0fb878714f457484f45cb36b68a25, type: 3}
   NextPie: {fileID: 0}
   topic: "Der M\xFCll und das Meer"
   description: 
-  FABText: lorem ipsum fab text
-  FABInfoTitle: 
-  FABInfo: 
+  FABText: 
+  FABInfoTitle: "Der M\xFCll und das Meer"
+  FABInfo: "Nicht nur mit \xD6l verpestet der Mensch die Weltmeere und schadet ihren
+    Bewohnern. Auch seinen sogenannten Zivilisationsm\xFCll, der zum gro\xDFen Teil
+    aus Plastik besteht, versenkt er im Wasser.\n\nDie weltweite Produktion von Kunststoff
+    liegt j\xE4hrlich bei 360 Millionen Tonnen (Stand 2018). Unterschiedlichen Sch\xE4tzungen
+    zufolge landen davon zwischen f\xFCnf und 13 Millionen Tonnen in den Weltmeeren.\n\nDie
+    Vereinten Nationen haben herausgefunden, dass jedes Jahr mehr Abf\xE4lle im Meer
+    landen als Fische herausgeholt werden. Unz\xE4hlige Feuerzeuge, Verpackungen
+    oder Kunststoffflaschen sind damit f\xFCrs Erste zwar verschwunden, aber weg
+    sind sie trotzdem nicht. Denn sie unterliegen nicht wie Holz oder Lebensmittelreste
+    einem nat\xFCrlichen Zersetzungsprozess.\n\nForscher fanden 2010 im Nordatlantik
+    einen Plastikm\xFCllteppich, der aus 200.000 Plastikteilen pro Quadratkilometer
+    besteht. Davon waren die meisten weniger als einen Zentimeter im Durchmesser
+    gro\xDF. Wellen und die ultraviolette Strahlung der Sonne haben die urspr\xFCnglich
+    gro\xDFen Plastikteile zerbr\xF6selt. Ihre Zahl und Oberfl\xE4che sind dadurch
+    gewaltig gestiegen. Am Strand liegen sie klein wie Sandk\xF6rner und sind erst
+    auf den zweiten Blick von diesen zu unterscheiden.\n\nStrandurlaub ist also keineswegs
+    mehr Sonnenbaden auf sandigem Untergrund. L\xE4ngst schon ist er mancherorts
+    durchsetzt von kleinsten Plastikpartikeln, die von den Gezeiten wieder an Land
+    gesp\xFClt werden.\n\nKunststoffm\xFCll stellt auch eine lebensbedrohliche Gefahr
+    f\xFCr die Tierwelt dar. Seev\xF6gel verfangen sich darin oder k\xF6nnen Plastikteile,
+    die im Wasser umhertreiben, nicht von ihrer Nahrung unterscheiden und verschlucken
+    sie. Es kommt zu Besch\xE4digungen der Magenwand, oder der Magendarmtrakt wird
+    verstopft.\n\nViele Tiere ern\xE4hren sich also im wahrsten Sinne des Wortes
+    falsch, weil sie nicht anders k\xF6nnen. Durchschnittlich wurden in ihren M\xE4gen
+    300 Milligramm Kunststoff gefunden. Setzt man das in Relation zum Menschen, entspricht
+    es einer ordentlich gef\xFCllten Brotdose voller Plastik. Oft genug ist nicht
+    einmal mehr Platz f\xFCr richtige Nahrung. Die traurige Bilanz der Seev\xF6gel,
+    die an diesem \"Junkfood\" verenden, bel\xE4uft sich gesch\xE4tzt j\xE4hrlich
+    auf eine Million.\n\nVerschlimmert wird die Situation dadurch, dass sich zus\xE4tzlich
+    toxische Substanzen an die Oberfl\xE4che der Kunststoffteile anlagern \u2013
+    etwa DDT (Dichlordiphenyltrichlorethan) oder PCB (Polychlorierte Biphenyle).
+    Sie werden regelrecht aufgesaugt und es entstehen extrem giftige Verbindungen.\n\nUnmengen
+    kleinster Partikel schweben davon im Wasser. Niedere Meeresbewohner oder Organismen
+    wie Plankton nehmen die Giftcocktails auf. Weil sie am Anfang der Nahrungskette
+    im Meer stehen, findet der verseuchte Plastikm\xFCll so nach und nach den Weg
+    zur\xFCck zum Menschen.\n\nKein Wissenschaftler wei\xDF, wie sich das letztlich
+    auswirkt. Einigkeit herrscht aber sowohl bei Forschern wie Umweltsch\xFCtzern,
+    dass ein \xF6ffentliches Bewusstsein f\xFCr diese Problematik geschaffen werden
+    muss, was schon im Kindesalter beginnen sollte.\n\nAu\xDFerdem w\xE4re die Abkehr
+    von Plastik hin zu umweltfreundlichen Kunststoffen ein L\xF6sungsansatz.\n\n<link=https://www.planet-wissen.de/natur/meer/atlantik/verschmutzung-des-atlantiks-100.html><style=Link>Lothar
+    Nickels \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 4b176554bbe06415abd66e4c713c4c9f, type: 3}

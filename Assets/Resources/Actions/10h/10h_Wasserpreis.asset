@@ -22,5 +22,6 @@ MonoBehaviour:
   description: 
   FABText: 
   FABInfoTitle: 
-  FABInfo: 
+  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
+    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
   titleImage: {fileID: 21300000, guid: 93bdc9f20b65247c3b8c5ec730c81f83, type: 3}

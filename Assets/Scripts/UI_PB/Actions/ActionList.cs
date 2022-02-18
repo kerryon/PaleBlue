@@ -43,7 +43,7 @@ public class ActionList : MonoBehaviour
         _menu.AppendHistory(Variables.Instance.currentActionIndex);
     }
 
-    IEnumerator ToggleNotification()
+    public IEnumerator ToggleNotification()
     {
         GameObject notification = transform.GetChild(0).gameObject;
         notification.SetActive(true);
