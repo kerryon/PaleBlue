@@ -10,6 +10,8 @@ public class PopUp : MonoBehaviour
     public Animator animatorInfoPopup;
     private Animator animatorPopup;
 
+    public Animator buttons;
+
     [Header("Scriptable Objects")]
     public ScriptableObjectContent[] popUpContent;
 
@@ -38,6 +40,10 @@ public class PopUp : MonoBehaviour
         if (!gameObject.activeSelf)
         {
             gameObject.SetActive(true);
+            if (buttons)
+            {
+                buttons.SetTrigger("ButtonsDisabled");
+            }
         }
     }
 
@@ -52,6 +58,12 @@ public class PopUp : MonoBehaviour
         animatorFAB.SetTrigger("FABTrigger");
         animatorInfoPopup.SetTrigger("FABInfoTrigger");
         animatorPopup.SetTrigger("PopUpTrigger");
+
+        if (buttons)
+        {
+            buttons.SetTrigger("ButtonsEnabled");
+        }
+
         yield return new WaitForSeconds(1);
         gameObject.SetActive(false);
     }

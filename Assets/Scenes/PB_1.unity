@@ -418,10 +418,12 @@ MonoBehaviour:
       m_Calls: []
   m_text: "<font=\"Fonts/Config-Bold\">Jetzt ist es erstmal an der Zeit zu warten
     und ab und zu zu schauen, wie sich dein Planet entwickelt.</font>\n\nIm Spielverlauf
-    erscheinen immer wieder Pins mit Informationen \xFCberZust\xE4nde und Entwicklungen,
+    erscheinen immer wieder Pins mit Informationen \xFCber Zust\xE4nde und Entwicklungen,
     die auf die Befindlichkeit deines Planeten hinweisen. Jede Handlung hat Konsequenzen
     und vergiss nicht: Alles l\xE4uft in Echtzeit \u2013 also jede einzelne Sekunde
-    z\xE4hlt. \n\n<link=\"https://paleblue.webflow.io/\"><u>Website besuchen</u></link>"
+    z\xE4hlt. \n\nDu kannst auch jederzeit die <link=\"https://paleblue.webflow.io/\"><style=Link>Website
+    besuchen</style></link> und die mehr \xFCber das Gameplay, die Funktionen und
+    Zielvorstellungen durchlesen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}
   m_sharedMaterial: {fileID: 6910404561093065764, guid: c81743c0b455a447292fd3974b4d7da3, type: 2}

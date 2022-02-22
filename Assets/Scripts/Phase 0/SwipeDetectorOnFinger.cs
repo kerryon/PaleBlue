@@ -25,10 +25,10 @@ public class SwipeDetectorOnFinger : MonoBehaviour
 
     private IEnumerator Functionality()
     {
+        GameObject.FindGameObjectWithTag("Menu").GetComponent<Menu>().AppendHistory(9);
         CameraDragObject.SetActive(true);
         yield return new WaitForSeconds(1);
         Destroy(TrailObject);
         Destroy(SwipeObject);
-        
     }
 }

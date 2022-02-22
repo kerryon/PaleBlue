@@ -8,7 +8,7 @@ public class CloudDensity : MonoBehaviour
     void Start()
     {
         _clouds = gameObject.GetComponent<SgtCloudsphere>();
-        InvokeRepeating(nameof(SetCloudDensity), 0f, 1f);
+        InvokeRepeating(nameof(SetCloudDensity), 0f, 5f);
     }
 
     private void SetCloudDensity()

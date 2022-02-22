@@ -77,7 +77,7 @@ public class Variables : MonoBehaviour
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
     private readonly float maxRain = 300f;
-    private readonly double state = 7f / 604800f;
+    private readonly float state = 7f / 604800f;
 
     [Header("WaterMaxValue")]
     public float maxWater = 10000f; //muss von Spielern erhöht werden
@@ -188,7 +188,6 @@ public class Variables : MonoBehaviour
         if (timespan.TotalDays >= 7 && gameOver == false)
         {
             gameOver = true;
-            ES3.Save("GameOver", true);
             GameOver();
         }
 
@@ -199,20 +198,21 @@ public class Variables : MonoBehaviour
 
         if (human * waterUseRate < water)
         {
-            human += Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, reproductionRate));
+            //human += Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, reproductionRate));
+            human += reproductionRate * (1 - hC);
         }
         else if (human * waterUseRate > water && human > 0)
         {
-            float rate = Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, waterStorageRate));
+            //float rate = Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, waterStorageRate));
+            float rate = waterStorageRate * hC;
             human -= rate;
             deaths += rate;
         }
-        else
+        else if (human <= 0)
         {
             human = 0f;
             if (!gameOver) {
                 gameOver = true;
-                ES3.Save("GameOver", true);
                 GameOver();
             }
         }
@@ -227,7 +227,7 @@ public class Variables : MonoBehaviour
         }
 
         //s = (float)timespan.TotalDays;
-        s += (float)state;
+        s += state;
         e = s * wC;
         w = Mathf.InverseLerp(0f, 10f, c * 0.5f + (1 - wC) * 0.5f + hC * 3f + Map(waterQuality + waterQuantity + waterEcology + waterSealevel, 0f, 4f, 0f, 6f));
         c = Mathf.InverseLerp(wv*3, 0f, w_current + w_carbonDioxide + w_trees);
@@ -426,7 +426,7 @@ public class Variables : MonoBehaviour
     public void GameOver()
     {
         CancelInvoke();
-
+        ES3.Save("GameOver", true);
         GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>().LoadNextLvl();
     }
 }

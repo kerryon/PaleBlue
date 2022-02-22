@@ -15,7 +15,7 @@ public class ConsequencePins : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating(nameof(CheckConsequences), 0f, 10f);
+        InvokeRepeating(nameof(CheckConsequences), 1f, 10f);
     }
 
     private void CheckConsequences()

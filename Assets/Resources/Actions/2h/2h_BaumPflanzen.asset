@@ -15,13 +15,42 @@ MonoBehaviour:
   index: 25
   pathName: 2
   actionName: "B\xE4ume pflanzen"
-  actionDescription: 
+  actionDescription: "Ein Drittel unserer Erde ist mit Wald bedeckt. W\xE4lder liefern
+    Sauerstoff, speichern klimasch\xE4dliches CO2 und bieten unz\xE4hligen Tieren
+    Heimat, Nahrung und Wasser. Trotzdem lassen wir zu, dass der Wald rasend schnell
+    verschwindet \u2013 Rodung f\xFCr Fleisch, Toilettenpapier, Schokocreme und Holz
+    f\xFCr die Trends der M\xF6belindustrie. L\xE4ngst hat unser Konsum-Verhalten
+    Auswirkungen auf das Weltklima.\n\nMit deiner Einwirkung werden B\xE4ume gepflanzt,
+    die wiederum Wasser speichern und Grundwasserbest\xE4nde sch\xFCtzen. Die allgemeine
+    Wasserquantit\xE4t steigt."
   Icon: {fileID: 21300000, guid: 6ecda2cdabab84dbea1ae95f9d4b1670, type: 3}
   NextPie: {fileID: 0}
   topic: "B\xE4ume"
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
-    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
+  FABInfoTitle: Mehr als nur Holz
+  FABInfo: "Der Baum kann als gro\xDFe Fabrik verstanden werden, in der viele Transportvorg\xE4nge
+    und chemische Prozesse stattfinden und koordiniert werden m\xFCssen.\n\n<font=Fonts/Config-Bold>Der
+    Wasserkreislauf</font>\n\nDie Wurzeln des Baumes nehmen Wasser und gel\xF6ste
+    Mineralstoffe aus dem Boden auf. Nun muss das mineralhaltige Wasser durch das
+    gesamte Sprosssystem des Baumes transportiert werden \u2013 also \xFCber den
+    Stamm in die einzelnen Zweige und Bl\xE4tter.\n\nDabei nehmen die Bl\xE4tter
+    eine besondere Funktion ein, da sie in ihrer Gesamtheit eine riesige Verdunstungsoberfl\xE4che
+    bilden. Da st\xE4ndig Wasser an den Bl\xE4ttern verdunstet, muss der Baum immer
+    f\xFCr Nachschub aus den Wurzeln sorgen.\n\nSo entsteht ein stetiger Wasserstrom
+    von den Wurzeln in die Bl\xE4tter. Das Wasser verdunstet haupts\xE4chlich durch
+    die Spalt\xF6ffnungen der Bl\xE4tter. Irgendwann f\xE4llt es wieder als Niederschlag
+    auf die Erde und kann erneut durch die Wurzeln des Baumes aufgenommen werden.\n\n<font=Fonts/Config-Bold>Die
+    Atmung des Baums</font>\n\nDurch die Spalt\xF6ffnungen der Bl\xE4tter findet
+    auch der Gasaustausch des Baumes mit der Atmosph\xE4re statt. Der Baum nimmt,
+    wie alle gr\xFCnen Pflanzen, Kohlendioxid aus der Atmosph\xE4re auf und verarbeitet
+    es mithilfe der Lichtenergie zu Zucker.\n\nZucker braucht der Baum als Energielieferant
+    f\xFCr seine Wachstums- und Stoffwechselprozesse. Der Vorgang, Zucker aus Kohlendioxid
+    herzustellen, ist sehr komplex und wird als Photosynthese bezeichnet.\n\nAls
+    Abfallprodukt der Photosynthese gibt der Baum Sauerstoff frei, den alle Lebewesen
+    zum Atmen brauchen. Auch der Baum atmet und verbraucht hierf\xFCr Sauerstoff.
+    Allerdings weitaus weniger, als er produziert.\n\nDie Wurzelzellen m\xFCssen
+    ebenfalls mit Sauerstoff versorgt werden und geben Kohlendioxid frei. Dieser
+    Vorgang ist Teil der sogenannten Bodenatmung.\n\n<link=https://www.planet-wissen.de/natur/pflanzen/baeume/pwiewiefunktionierteinbaum100.html><style=Link>Phoebe
+    Rosenkranz \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: b720569be6ba7449b95361c4cd08b429, type: 3}

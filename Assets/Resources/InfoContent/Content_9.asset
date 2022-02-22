@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Content_9
   m_EditorClassIdentifier: 
   index: 9
-  topic: EMPTY
-  description: EMPTY
+  topic: Hier ist Zeit Geld
+  description: 
   FABText: EMPTY
-  FABInfoTitle: EMPTY
-  FABInfo: EMPTY
+  FABInfoTitle: "F\xFCr den Spielverlauf ..."
+  FABInfo: ...
   titleImage: {fileID: 0}

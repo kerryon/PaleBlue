@@ -13,7 +13,7 @@ public class InfoSwipe : MonoBehaviour, IDragHandler, IEndDragHandler
     public float percentThreshold = 0.2f;
     public float easing = 0.5f;
     public int totalPages = 1;
-    private int currentPage = 1;
+    public int currentPage = 1;
 
     public GameObject swipeIndicator;
 

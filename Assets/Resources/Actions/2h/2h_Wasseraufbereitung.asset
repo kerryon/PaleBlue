@@ -15,13 +15,66 @@ MonoBehaviour:
   index: 29
   pathName: 2
   actionName: Wasseraufbereitung und Abwasser
-  actionDescription: 
+  actionDescription: "Trinkwasser aus der Kanalisation, Wasser f\xFCr Toilettensp\xFClung
+    und den Garten aus Abwasser? Vielleicht sogar aus der eigenen kleinen Haus-Kl\xE4ranlage?
+    Das alles gibt es schon heute. Vor allem an einigen Orten in der Welt, die mit
+    ihrem Wasser haushalten m\xFCssen.\n\nMit deiner Handlung verringert sich die
+    Menge an Abw\xE4ssern im Planetensystem. Das Wasser wird weniger verunreinigt
+    und die Wasserqualit\xE4t steigt."
   Icon: {fileID: 21300000, guid: 29085d286f4cb4420b114c6e0d21ed1b, type: 3}
   NextPie: {fileID: 0}
   topic: Wasseraufbereitung
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
-    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
+  FABInfoTitle: Wasseraufbereitung
+  FABInfo: "\"New Water\": Trinkwasser aus Abwasser: Der Wasserversorger von Singapur
+    ist Vorreiter in der Abwassertechnik. Das Unternehmen gewinnt hochreines Trinkwasser
+    aus kommunalem Abwasser. Technisch ist das heute m\xF6glich, aber mit der Akzeptanz
+    in der Bev\xF6lkerung hapert es noch.\n\nDeshalb werden in Singapur F\xFChrungen
+    angeboten, in denen den Besuchern erkl\xE4rt wird, wie die neue Technik funktioniert
+    und warum sie angesichts zunehmender Wasserknappheit notwendig ist.\n\nF\xFCr
+    das Wasser werben die Versorger unter anderem mit einem positiv klingenden Namen:
+    \"New Water\". Inzwischen werden rund 30 Prozent des Wasserbedarfs \xFCber recyceltes
+    Abwasser gedeckt.\n\nAbwasser filtern und desinfizieren: Die Abwassertechnik
+    steht an einer Schwelle, die von Wissenschaftlern als Paradigmenwechsel bezeichnet
+    wird. Die Zukunft liegt in der Wiederverwendung von Wasser. \n\nTechnisch m\xF6glich
+    wird das durch die Membrantechnik. Das verschmutzte Wasser wird gefiltert und
+    durch eine Reihe von Membranen mit feinsten Poren gedr\xFCckt. Die meisten unerw\xFCnschten
+    Stoffe, auch Bakterien, werden dadurch herausgefiltert.\n\nDamit aus Abwasser
+    Trinkwasser wird, muss es zus\xE4tzlich mit ultraviolettem Licht behandelt werden.
+    Die sogenannte UV-Desinfektion reduziert die Anzahl der Keime im Wasser um ein
+    Vielfaches.\n\nAbwasser recyceln: Bisher beruht das Prinzip der Wasserversorgung
+    in den Industriel\xE4ndern auf dem Prinzip des Wegwerfens. Kostbares Trinkwasser
+    wird entnommen und nach Gebrauch im Kl\xE4rwerk entsorgt. Das hei\xDFt, es wird
+    zwar dem Wasserkreislauf durch Einleitung in ein meist flie\xDFendes Gew\xE4sser
+    wieder zugef\xFChrt, aber nicht direkt weiter genutzt.\n\nWissenschaftler mahnen
+    an, dass angesichts des Klimawandels und der Zunahme der Weltbev\xF6lkerung dieses
+    Versorgungssystem nicht mehr zeitgem\xE4\xDF ist. So wie im M\xFCllsystem heute
+    \xFCblich, m\xFCsste in Zukunft auch das Abwasser entsprechend der Nutzung getrennt
+    werden. Dann kann Abwasser als eine Ressource behandelt werden und von gro\xDFem
+    Nutzen sein.\n\nAbwasser und Inhaltsstoffe wiederverwerten: Die Forschung steht
+    vor der Aufgabe, ein Abwassersystem zu entwickeln, das eine nachhaltige Nutzung
+    der Ressource Wasser erm\xF6glicht. Das Ziel ist eine Wiederverwendung nicht
+    nur des Wassers, sondern auch der Inhaltsstoffe im Abwasser. Abwasser wird in
+    Grauwasser, Gelbwasser, Braunwasser und Schwarzwasser unterteilt.\n\nGrauwasser
+    ist das Wasser, das zum Waschen von K\xF6rper und Kleidung genutzt wurde. Gelbwasser
+    ist mit Urin und Braunwasser mit Kot vermischt. Schwarzwasser nennt man das gesamte
+    Abwasser, das in die Kanalisation flie\xDFt. Diese Abw\xE4sser zu trennen ist
+    sinnvoll, weil jedes f\xFCr sich genutzt werden kann. \n\nAus Gelbwasser wird
+    D\xFCngemittel, aus Braunwasser l\xE4sst sich Energie gewinnen und Grauwasser
+    l\xE4sst sich sehr einfach in Wasser verwandeln, das man zum Beispiel zum Blumengie\xDFen
+    und zum erneuten Waschen verwenden kann.\n\nWasser-Recycling in Deutschland:
+    In Deutschland findet der Einbau von Grauwasseranlagen in Wohnh\xE4usern oder
+    Hotels immer mehr Verbreitung. Das ist aber nur zu empfehlen, wenn die Anlage
+    beim Bau des Hauses mit eingeplant wird. Ein nachtr\xE4glicher Einbau ist sehr
+    teuer. \n\nDabei wird das Grauwasser \u2013 also das Wasser, das beim Duschen,
+    Baden oder H\xE4ndewaschen anf\xE4llt \u2013 vom restlichen Abwasser getrennt.
+    In einer Wasserrecycling-Anlage wird Grauwasser so aufbereitet, dass es zum Putzen
+    und Gie\xDFen und f\xFCr die Toilettensp\xFClung wiederverwendet werden kann.\n\nSolche
+    Anlagen sollten in jedem Fall von Fachleuten eingebaut werden. Da das bestehende
+    Wasserversorgungssystem in Deutschland gut funktioniert und Wasser-Recycling
+    nur in Neubauten rentabel ist, wird es hier auf absehbare Zeit keine Trennung
+    der Abw\xE4sser in gr\xF6\xDFerem Umfang geben. Deutsche Unternehmen verkaufen
+    allerdings Systeme des Wasser-Recyclings in andere Regionen der Welt.\n\n<link=https://www.planet-wissen.de/natur/umwelt/wasserversorgung_in_deutschland/pwieabwasseraufbereitung100.html><style=Link>Ana
+    Rios \u2013 Planet Wissen</style></link>"
   titleImage: {fileID: 21300000, guid: 923b2238764f24c6a8977d0491b9dbee, type: 3}
