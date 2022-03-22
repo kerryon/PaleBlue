@@ -14,6 +14,8 @@ public class Variables : MonoBehaviour
     public int actionHours;
     public int actionCount;
     public int currentActionIndex;
+    [HideInInspector] public float[] values = new float[20];
+    [HideInInspector] public bool valuesSet = false;
 
     [Header("Parameter")]
     public float water;
@@ -71,8 +73,6 @@ public class Variables : MonoBehaviour
     public DateTime lastClosed;
     public DateTime Started;
 
-    private float[] values = new float[20];
-    private bool valuesSet = false;
     private bool gameOver = false;
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
@@ -117,7 +117,7 @@ public class Variables : MonoBehaviour
         {
             InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
 
-            if (currentLevelIndex > 6)
+            if (currentLevelIndex == 7)
             {
                 UpdateValues();
             }
@@ -181,34 +181,34 @@ public class Variables : MonoBehaviour
     {
         if (!valuesSet)
         {
-            SetValues();
             valuesSet = true;
+            SetValues();
         }
 
-        if (timespan.TotalDays >= 7 && gameOver == false)
+        if (timespan.TotalDays >= 7 && !gameOver)
         {
             gameOver = true;
             GameOver();
         }
 
-        // Lerp variables for calculations
         wC = Mathf.InverseLerp(0f, maxWater, water);
         hC = Mathf.InverseLerp(0f, water, human * waterUseRate);
         rC = Mathf.Abs(Mathf.LerpUnclamped(1f , 0f, rain / maxRain));
 
-        if (human * waterUseRate < water)
+        if (human * waterUseRate < water && human > 0)
         {
             //human += Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, reproductionRate));
-            human += reproductionRate * (1 - hC);
+            float rate = reproductionRate * (1 + (1 - hC)) + Map(human, 0f, 604800f, 0f, 3f);
+            human += rate;
         }
         else if (human * waterUseRate > water && human > 0)
         {
             //float rate = Mathf.Pow(human, Mathf.Lerp(0.001f, 0.007f, waterStorageRate));
-            float rate = waterStorageRate * hC;
+            float rate = waterStorageRate * (1 + Mathf.InverseLerp(human * waterUseRate, 0f, water)) + Map(human, 0f, 604800f, 0f, 3f);
             human -= rate;
             deaths += rate;
         }
-        else if (human <= 0)
+        else
         {
             human = 0f;
             if (!gameOver) {
@@ -255,15 +255,15 @@ public class Variables : MonoBehaviour
         if (h_waterStructure >= hv) { h_waterStructure = hv; } else if (h_waterStructure <= 0) { h_waterStructure = 0; }
 
         w_distribution += Map(h_conflict + h_luxury + h_waterStructure, 0f, hv*3, 1f, -0.5f);
-        w_current += Map(w_temperature*2 + w_ice + w_weatherExtremes, wv*4, 0f, 2f, -1.5f);
+        w_current += Map(w_temperature*2 + w_ice + w_weatherExtremes ,wv*4, 0f, 3f, -2.5f); // !!!
         w_contamination += Map(h_waste + h_wasteWater, 0f, hv*2, 1f, -0.5f);
-        w_temperature += Map(w_carbonDioxide*2 + w_ice, wv*3, 0f, 2f, -1.5f);
+        w_temperature += Map(w_carbonDioxide*2 + w_ice, wv*3, 0f, 3f, -2.5f); // !!!
         w_weatherExtremes += Map(Mathf.InverseLerp(0f, hv, h_waterStructure) + (1 - wC) + rC, 0f, 3f, 1f, -0.5f);
         w_carbonDioxide += Map(h_energy + h_industry, 0f, hv*2, 1f, -0.5f);
-        w_fishCount += Map(Mathf.InverseLerp(0f ,hv, h_overfishing)*2 + Mathf.InverseLerp(0f, hv, h_waste) + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 5f, 1f, -0.5f);
+        w_fishCount += Map(Mathf.InverseLerp(0f ,hv, h_overfishing)*2 + Mathf.InverseLerp(0f, hv, h_waste) + Mathf.InverseLerp(wv, 0f, w_temperature) + Mathf.InverseLerp(wv, 0f, w_carbonDioxide), 0f, 5f, 2f, -1.5f); // !!!
         w_groundwater += Map(Mathf.InverseLerp(0f, hv, h_urbanisation) + Mathf.InverseLerp(0f, hv, h_agriculture) + Mathf.InverseLerp(0f, hv, h_waterStructure) + Mathf.InverseLerp(wv, 0f, w_distribution) + rC, 0f, 5f, 1f, -0.5f);
         w_trees += Map(h_agriculture + h_urbanisation, 0f, hv*2, 1f, -0.5f);
-        w_ice += Map(w_carbonDioxide*2 + w_temperature, wv*3, 0f, 2f, -1.5f);
+        w_ice += Map(w_carbonDioxide*2 + w_temperature, wv*3, 0f, 3f, -2.5f); // !!!
 
         if (w_distribution >= wv) { w_distribution = wv; } else if (w_distribution <= 0) { w_distribution = 0; }
         if (w_current >= wv) { w_current = wv; } else if (w_current <= 0) { w_current = 0; }
@@ -294,7 +294,7 @@ public class Variables : MonoBehaviour
         }
     }
 
-    private float Map(float input, float oldLow, float oldHigh, float newLow, float newHigh)
+    private static float Map(float input, float oldLow, float oldHigh, float newLow, float newHigh)
     {
         float t = Mathf.InverseLerp(oldLow, oldHigh, input);
         return Mathf.Lerp(newLow, newHigh, t);

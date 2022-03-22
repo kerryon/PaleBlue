@@ -53,7 +53,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: 606b93ca7a4d89941a38a6d9440aad1f, type: 3}
+        m_Texture: {fileID: 2800000, guid: 453e1b53992910b4f838719b18cd591d, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -125,11 +125,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HeightMap:
-        m_Texture: {fileID: 2800000, guid: 4b5ae8939ea814b4085531ff1b0fc50b, type: 3}
+        m_Texture: {fileID: 2800000, guid: f9305596078eca747a7b67b5c20b6dd2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c0f8f52875f085b49a502fb25fdfb8d1, type: 3}
+        m_Texture: {fileID: 2800000, guid: e6d6a2f356725b747a6860019cb03aaa, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MaskMap:
@@ -206,7 +206,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlbedoShift: 0
-    - _BumpScale: 2.25
+    - _BumpScale: 1.55
+    - _CW_DisableFog: 0
     - _Cutoff: 0.5
     - _DetailBumpStrength: 2.93
     - _DetailBumpStrengthA: 0.29
@@ -217,21 +218,21 @@ Material:
     - _DetailNoiseTiling: 0.1
     - _DetailNormalMapScale: 1
     - _DetailScale: 30
-    - _DetailScaleA: 0.34
+    - _DetailScaleA: 0
     - _DetailScaleA_Ext_1: 1
-    - _DetailScaleB: 0.17
+    - _DetailScaleB: 0
     - _DetailScaleB_Ext_1: 1
     - _DetailScaleG: 0
     - _DetailScaleG_Ext_1: 1
     - _DetailScaleR: 1.15
     - _DetailScaleR_Ext_1: 1
     - _DetailStrength: 1
-    - _DetailTiling: 17
+    - _DetailTiling: 20
     - _DetailTilingA: 20
     - _DetailTilingB: 300
-    - _DetailTiling_Ext_1: 50
+    - _DetailTiling_Ext_1: 10
     - _DstBlend: 0
-    - _GlossMapScale: 0.55
+    - _GlossMapScale: 0.5
     - _Glossiness: 0.27
     - _GlossyReflections: 1
     - _HasDetail: 1
@@ -274,7 +275,7 @@ Material:
     - _WaterTiling: 25
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8028758, g: 0.61934644, b: 0.50379086, a: 1}
+    - _Color: {r: 0.78013074, g: 0.57542485, b: 0.44653597, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NightDirection: {r: 0, g: 0, b: 1, a: 1}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 1}

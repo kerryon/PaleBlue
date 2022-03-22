@@ -21,7 +21,7 @@ MonoBehaviour:
   topic: Erfindungen
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: Ich habe da eine Idee ...
   FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
     Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
   titleImage: {fileID: 21300000, guid: d1ff1209ca6234f03a9149e9fe03d3a5, type: 3}

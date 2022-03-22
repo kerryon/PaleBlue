@@ -140,6 +140,7 @@ public class Intro : MonoBehaviour
             Variables.Instance.rain = 300f;
             Variables.Instance.deaths = 0f;
             Variables.Instance.s = 0f;
+            Variables.Instance.valuesSet = false;
         }
 
         ES3.Save("NAME", "Planet");

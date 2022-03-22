@@ -11,7 +11,7 @@ public class TogglePostProcessing : MonoBehaviour
 
     void Start()
     {
-        volume = GameObject.Find("PostProcessing").GetComponent<Volume>();
+        volume = GameObject.FindGameObjectWithTag("PostProcessing").GetComponent<Volume>();
         volume.profile.TryGet(out chAb);
         volume.profile.TryGet(out coAd);
     }

@@ -10,9 +10,16 @@ public class Endcard : MonoBehaviour
     private float reproductionRate_itemCount;
     private float waterStorageRate_itemCount;
 
+    public Image randomEventIcon;
+    public GameObject ConsequenceIconHolder;
+    private int randomEventNum;
+
     public GameObject imgPrefab;
-    public Sprite[] imgPrefabSprite;
     public GameObject prefabHolder;
+    public Sprite[] imgPrefabSprite;
+
+    public Sprite[] randomEventSprite;
+    public Sprite[] ConsequenceSprite;
 
     List<float> list = new List<float>();
 
@@ -24,6 +31,14 @@ public class Endcard : MonoBehaviour
         waterUseRate_itemCount = Variables.Instance.waterUseRate * 10;
         reproductionRate_itemCount = Variables.Instance.reproductionRate * 10;
         waterStorageRate_itemCount = Variables.Instance.waterStorageRate * 10;
+
+        randomEventNum = ES3.Load("randomEvent", 0);
+        randomEventIcon.sprite = randomEventSprite[randomEventNum];
+
+        for (int i = 0; i < 3; i++)
+        {
+            ConsequenceIconHolder.transform.GetChild(i).GetComponent<Image>().sprite = ConsequenceSprite[Random.Range(0, ConsequenceSprite.Length)]; // Richtig berechen
+        }
 
         list.Add(waterUseRate_itemCount);
         list.Add(reproductionRate_itemCount);

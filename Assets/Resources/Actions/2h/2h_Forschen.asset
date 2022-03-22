@@ -15,13 +15,47 @@ MonoBehaviour:
   index: 26
   pathName: 2
   actionName: Forschen
-  actionDescription: 
+  actionDescription: "Einsteins Relativit\xE4tstheorie, die Erfindung der Druckerpresse,
+    die Entdeckung von Impfstoffen: Wissenschaftliche Erkenntnisse legten den Grundstein
+    f\xFCr viele bahnbrechende Entwicklungen.\n\nDeine Forschungen geben neue Erkenntnisse
+    und ver\xE4ndern grunds\xE4tzliche Handhabungen mit Wasser, wordurch ein zuf\xE4lliges
+    Handlungsfeld des Wassers beeinflusst wird."
   Icon: {fileID: 21300000, guid: a481a31b089a3481b88b807c11960d2a, type: 3}
   NextPie: {fileID: 0}
   topic: Forschung
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
-    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
+  FABInfoTitle: "Forschung f\xFCr den Fortschritt"
+  FABInfo: "<font=Fonts/Config-Bold>Forschung hilft, die Welt zu verstehen. Sie erkennt
+    Naturgesetze mit ihren Mechanismen und Regulationen. Es ist faszinierend, was
+    Wissenschaft und Forschung leisten: vom kleinsten Molek\xFCl bis zur Unendlichkeit
+    des Weltalls, von der unbelebten Natur bis zur Vielfalt der Organismen.\n\nNeugier,
+    Erkenntnisstreben, Entdeckungs- und Erfindergeist formen die Kultur der \u201EWissensgesellschaft\u201C,
+    in der Know-how zur wichtigsten Grundlage geworden sind. Ohne Wissenschaft, Forschung
+    und Technologie sind moderne Gesellschaften undenkbar.</font>\n\n<font=Fonts/Config-Bold>Warum
+    \xFCber Wissenschaft und Forschung diskutieren?</font>\n\nWissenschaft und Forschung
+    sind keine Selbstl\xE4ufer. Sie kosten viel Geld und ben\xF6tigen staatliche
+    Finanzierung. Was soll finanziert werden? Wo sollen die Forschungspriorit\xE4ten
+    liegen?\n\nWissenschaft und Forschung sind kein Selbstzweck. Gesellschaft und
+    Wissenschaft interagieren miteinander. Dennoch ben\xF6tigt Wissenschaft ein hohes
+    Ma\xDF an Autonomie. Was erwartet die Gesellschaft von Wissenschaft? Was darf
+    Wissenschaft, was nicht? Welche gesellschaftliche Verantwortung tr\xE4gt Wissenschaft?\n\nWissenschaft,
+    Forschung und Technologie bergen gro\xDFe Chancen aber auch Risiken in sich.
+    Es entstehen Fragen, die Wissenschaft allein nicht beantworten kann: Welche Risiken
+    ist eine Gesellschaft bereit zu tragen? Was ist akzeptabel, was nicht?\n\nEs
+    geht letztlich um die Frage, wie wir in Zukunft leben wollen. Wissenschaft, Forschung
+    und Technologie pr\xE4gen unsere Lebensstile und beeinflussen unsere Werthaltungen.
+    Deshalb sind wir alle aufgefordert, mitzudenken und mitzudiskutieren.\n\n<font=Fonts/Config-Bold>Probleml\xF6sungspotenziale</font>\n\nWissenschaft
+    und Forschung verbessern die Lebensqualit\xE4t. Sie tragen zur L\xF6sung grundlegender
+    Probleme der Menschen bei: in Bezug auf Gesundheit, Ern\xE4hrung, Ressourcen
+    und Umwelt. Die steigenden Lebenserwartungen bei guter Gesundheit sind daf\xFCr
+    ein positives Beispiel. Auch die Corona-Krise hat gezeigt, wie notwendig gute
+    Forschung ist. Anstehende Herausforderungen, wie Klimawandel, Energiewende oder
+    Artensterben, lassen sich ohne Wissenschaft nicht bew\xE4ltigen.\n\nEs gibt aber
+    auch Schattenseiten: Ma\xDFloser technologischer Fortschritt bringt Gesellschaft
+    und Umwelt aus dem Gleichgewicht. Unreflektiertes Machbarkeitsdenken f\xFChrt
+    zu ethischen Problemen und verletzt potenziell die Menschenw\xFCrde und das Humane
+    in der Gesellschaft.\n\nDeshalb braucht es nicht nur wissenschaftlich-technologisches
+    Know-how, sondern auch Reflexionsverm\xF6gen und Urteilskraft.\n\n<link=https://www.kas.de/de/wissenschaft-forschung-und-technologie><style=Link>KAS
+    \u2013 Wissenschaft, Forschung und Technologie</style></link>"
   titleImage: {fileID: 21300000, guid: 9205a67dd87b048b5bc4175d803d096c, type: 3}

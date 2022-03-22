@@ -11,9 +11,10 @@ public class PlanetState : MonoBehaviour
     void Start()
     {
         planet = GetComponent<SgtPlanet>();
+        InvokeRepeating(nameof(UpdateSeaLevel), 0f, 20f);
     }
 
-    void Update()
+    void UpdateSeaLevel()
     {
         planet.WaterLevel = Mathf.Lerp(0.5f, 0.15f, Variables.Instance.waterSealevel);
     }

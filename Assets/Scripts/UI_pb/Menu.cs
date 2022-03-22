@@ -51,6 +51,14 @@ public class Menu : MonoBehaviour
         if (Variables.Instance.historyCount == 1 || !ES3.FileExists("history.csv"))
         {
             CreateHistory(1);
+
+            if (Variables.Instance.currentLevelIndex == 7)
+            {
+                for (int i = 2; i < 10; i++)
+                {
+                    AppendHistory(i);
+                }
+            }
         } else
         {
             AppendHistory(0);

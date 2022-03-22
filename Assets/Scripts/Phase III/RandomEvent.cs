@@ -1,4 +1,5 @@
 using System.Collections;
+using SpaceGraphicsToolkit.Atmosphere;
 using SpaceGraphicsToolkit;
 using UnityEngine;
 

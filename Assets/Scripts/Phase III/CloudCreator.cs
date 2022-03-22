@@ -1,6 +1,6 @@
 using UnityEngine;
-using SpaceGraphicsToolkit;
 using System.Collections;
+using SpaceGraphicsToolkit.Cloudsphere;
 
 public class CloudCreator : MonoBehaviour
 {

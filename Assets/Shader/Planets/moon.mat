@@ -189,7 +189,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _AlbedoShift: 0
-    - _BumpScale: 0.59
+    - _BumpScale: 4
     - _Cutoff: 0.5
     - _DetailBumpStrength: 2.93
     - _DetailBumpStrengthA: 0.87
@@ -209,12 +209,12 @@ Material:
     - _DetailScaleR: 1
     - _DetailScaleR_Ext_1: 1
     - _DetailStrength: 1
-    - _DetailTiling: 50
+    - _DetailTiling: 30
     - _DetailTilingA: 100
     - _DetailTilingB: 300
     - _DetailTiling_Ext_1: 10
     - _DstBlend: 0
-    - _GlossMapScale: 0.554
+    - _GlossMapScale: 0.8
     - _Glossiness: 0.27
     - _GlossyReflections: 1
     - _HasDetail: 1
@@ -230,7 +230,7 @@ Material:
     - _HasWater: 0
     - _IceOverWater: 0
     - _LodRange: 1
-    - _Metallic: 0.403
+    - _Metallic: 0.5
     - _Mode: 0
     - _NightOffset: 0
     - _NightSharpness: 1

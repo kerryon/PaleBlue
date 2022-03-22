@@ -172,13 +172,13 @@ Material:
     - _DetailScaleB: 0
     - _DetailScaleB_Ext_1: 0
     - _DetailScaleG: 0.35
-    - _DetailScaleG_Ext_1: 1.2
-    - _DetailScaleR: 0.7
+    - _DetailScaleG_Ext_1: 0.5
+    - _DetailScaleR: 0.5
     - _DetailScaleR_Ext_1: 1
     - _DetailTiling: 15
     - _DetailTilingA: 10
     - _DetailTilingB: 10
-    - _DetailTiling_Ext_1: 35
+    - _DetailTiling_Ext_1: 20
     - _GlossMapScale: 0.15
     - _HasDetail: 1
     - _HasDetailA: 0

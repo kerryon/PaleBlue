@@ -15,13 +15,51 @@ MonoBehaviour:
   index: 27
   pathName: 2
   actionName: Grundwasser regenerieren
-  actionDescription: 
+  actionDescription: "Die gr\xF6\xDFten S\xFC\xDFwasservorkommen weltweit liegen
+    im Untergrund. Diese Grundwasservorkommen sind in vielen Regionen die wichtigste
+    Quelle f\xFCr die Wasserversorgung. Der Zustand des Grundwassers ist deshalb
+    systematisch zu \xFCberwachen und der Eintrag von Schadstoffen so weit wie m\xF6glich
+    zu verhindern.\n\nMit deinen Handlungen sorgst du f\xFCr eine bessere Grundwasserregeneration,
+    die die Wasserquantit\xE4t beeinflusst."
   Icon: {fileID: 21300000, guid: 97a2a775857c94cdfa8dda3d33447dad, type: 3}
   NextPie: {fileID: 0}
   topic: Grundwasser
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
-    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
+  FABInfoTitle: Grundwasser
+  FABInfo: "<font=Fonts/Config-Bold>Die gr\xF6\xDFten S\xFC\xDFwasservorkommen weltweit
+    liegen im Untergrund. Diese Grundwasservorkommen sind in vielen Regionen die
+    wichtigste Quelle f\xFCr die Wasserversorgung. Der Zustand des Grundwassers ist
+    deshalb systematisch zu \xFCberwachen und der Eintrag von Schadstoffen so weit
+    wie m\xF6glich zu verhindern.</font>\n\nGrundwasser ist Teil des Wasserkreislaufs.
+    Es stammt ganz \xFCberwiegend aus Regenwasser, das durch den Boden und den Untergrund
+    bis in die Grundwasserleiter sickert. Oberfl\xE4chennahe Grundwasservorkommen
+    versorgen Pflanzen mit Wasser und bilden wertvolle Feuchtbiotope. Das Grundwasser
+    tritt in Quellen zu Tage und speist B\xE4che und Fl\xFCsse. Gerade in den regenarmen
+    Zeiten des Jahres stammt ein gro\xDFer Teil des Wassers in unseren Fl\xFCssen
+    aus dem Grundwasser. Qualit\xE4t und Menge des Grundwassers beeinflussen damit
+    auch die Oberfl\xE4chengew\xE4sser. Rund 74 Prozent des Trinkwassers stammen
+    aus Grundwasser, das damit die wichtigste Trinkwasserressource Deutschlands ist.\n\nAbgesehen
+    von regionalen Ausnahmen bestehen im Hinblick auf die verf\xFCgbaren Grundwassermengen
+    in Deutschland keine Probleme. Grundwasser galt in der Vergangenheit im Vergleich
+    zu oberirdischen Gew\xE4ssern als gut gesch\xFCtzt gegen\xFCber anthropogenen
+    Verunreinigungen. Doch Reinigungs- und R\xFCckhalteverm\xF6gen der \xFCberlagernden
+    Bodenschichten wurden \xFCbersch\xE4tzt. Die systematische \xDCberwachung der
+    Grundwasserbeschaffenheit durch die Bundesl\xE4nder hat gezeigt, dass der gute
+    Zustand unseres Grundwassers vielerorts gef\xE4hrdet ist. Es sind vor allem die
+    diffusen Eintr\xE4ge von Stickstoff und Pestiziden aus der Landwirtschaft, die
+    das Grundwasser belasten. Weitere Ursache f\xFCr Verunreinigungen sind diffuse
+    Eintr\xE4ge aus Industrie und Verkehr sowie aus punktuellen Quellen oder linienf\xF6rmigen
+    Belastungen wie zum Beispiel Altstandorte, Altablagerungen, Unf\xE4llen mit wassergef\xE4hrdenden
+    Stoffen oder undichten Abwasserkan\xE4len.\n\nEine Sanierung des Grundwassers
+    ist, wenn \xFCberhaupt, nur mit gro\xDFem finanziellen und technischen Aufwand
+    und in langen Zeitr\xE4umen m\xF6glich. Die konsequente Anwendung des Vorsorgeprinzips
+    ist deshalb von ganz besonderer Bedeutung. Dazu geh\xF6rt auch eine systematische,
+    regelm\xE4\xDFige \xDCberwachung des Grundwassers, f\xFCr die in Deutschland
+    die L\xE4nder zust\xE4ndig sind. Dadurch lassen sich Gef\xE4hrdungen des Grundwassers
+    fr\xFChzeitig erkennen und geeignete Ma\xDFnahmen k\xF6nnen rechtzeitig ergriffen
+    werden. Aufgrund seiner herausragenden Bedeutung f\xFCr die Trinkwasserversorgung
+    und wichtigen \xF6kologischen Funktionen ist ein fl\xE4chendeckender Grundwasserschutz,
+    wie im Wasserhaushaltsgesetz verankert, erforderlich.\n\n<link=https://www.umweltbundesamt.de/themen/wasser/grundwasser><style=Link>Umwelt
+    Bundesamt \u2013 Grundwasser</style></link>"
   titleImage: {fileID: 21300000, guid: a2cc523d74bb541d7b2b7ce7554fdbdd, type: 3}

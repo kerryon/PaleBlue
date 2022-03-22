@@ -191,6 +191,7 @@ Material:
     m_Floats:
     - _AlbedoShift: 0
     - _BumpScale: 0.91
+    - _CW_DisableFog: 0
     - _Cutoff: 0.5
     - _DetailBumpStrength: 2.93
     - _DetailBumpStrengthA: 0.87

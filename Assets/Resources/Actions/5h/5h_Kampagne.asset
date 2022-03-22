@@ -21,7 +21,7 @@ MonoBehaviour:
   topic: "Aufkl\xE4rung schaffen!"
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "Aufkl\xE4rung schaffen!"
   FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
     Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
   titleImage: {fileID: 21300000, guid: 860fc55fa78904bc694bdafdde252f38, type: 3}

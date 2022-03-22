@@ -1,5 +1,5 @@
 using UnityEngine;
-using SpaceGraphicsToolkit;
+using SpaceGraphicsToolkit.Belt;
 
 public class AsteroideBeltVanish : MonoBehaviour
 {

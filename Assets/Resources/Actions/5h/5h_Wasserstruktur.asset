@@ -21,7 +21,7 @@ MonoBehaviour:
   topic: Wasserstrukturen
   description: 
   FABText: 
-  FABInfoTitle: 
+  FABInfoTitle: "Umleitungen der Gew\xE4sser und des Lanschaftsbildes"
   FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
     Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
   titleImage: {fileID: 21300000, guid: 8262a2457f4f34626a5c32609ca5d408, type: 3}

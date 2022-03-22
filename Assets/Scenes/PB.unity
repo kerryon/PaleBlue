@@ -1602,8 +1602,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 50, y: -50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 605280946}
+  m_Children: []
   m_Father: {fileID: 776729903}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1634,7 +1633,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shallow: {r: 0.8254717, g: 0.88913614, b: 1, a: 1}
-  deep: {r: 0.3764706, g: 0.6039216, b: 1, a: 1}
+  deep: {r: 0.2706924, g: 0.43693092, b: 0.7264151, a: 1}
   ease: 1
   sharpness: 1.5
   scale: 10
@@ -1654,129 +1653,11 @@ MonoBehaviour:
   meshCollider: {fileID: 0}
   radius: 50
   material: {fileID: 2100000, guid: 1e48404a44c9a499ca101e4e1030b673, type: 2}
-  sharedMaterial: {fileID: 605280949}
+  sharedMaterial: {fileID: 0}
   waterLevel: 0.13
   displace: 1
-  displacement: 5
+  displacement: 1
   clampWater: 1
---- !u!1 &605280945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 605280946}
-  - component: {fileID: 605280949}
-  - component: {fileID: 605280948}
-  - component: {fileID: 605280947}
-  m_Layer: 7
-  m_Name: Atmosphere
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &605280946
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605280945}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 509728356}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &605280947
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605280945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a0751a07bdf5a4641bf618cd878965cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  width: 256
-  format: 5
-  horizonColor: {r: 1, g: 1, b: 1, a: 1}
-  innerColor: {r: 0.15, g: 0.54, b: 1, a: 1}
-  innerEase: 8
-  innerColorSharpness: 2
-  innerAlphaSharpness: 3
-  outerColor: {r: 0.29, g: 0.73, b: 1, a: 1}
-  outerEase: 3
-  outerColorSharpness: 2
-  outerAlphaSharpness: 3
---- !u!114 &605280948
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605280945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b85c1f42538e90049b23d0bec8830d4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  color: {r: 0.3764706, g: 0.6039216, b: 1, a: 1}
-  brightness: 0.8
-  renderQueue:
-    Group: 3000
-    Offset: 0
-  innerDepthTex: {fileID: 0}
-  innerMeshRadius: 52
-  outerDepthTex: {fileID: 0}
-  outerMesh: {fileID: 4300004, guid: 182b522b5361cb141bfbb96849bc7614, type: 3}
-  outerMeshRadius: 1.05
-  outerSoftness: 500
-  height: 5
-  innerFog: 0.2
-  outerFog: 0
-  sky: 1
-  middle: 0.5
-  cameraOffset: 0
-  lit: 0
-  ambientColor: {r: 0, g: 0, b: 0, a: 0}
-  ambientBrightness: 1
-  maxLights: 2
-  maxSphereShadows: 2
-  lightingTex: {fileID: 0}
-  scattering: 0
-  groundScattering: 1
-  scatteringTex: {fileID: 0}
-  scatteringStrength: 3
-  scatteringMie: 50
-  scatteringRayleigh: 0.1
-  scatteringHdr: 0
-  night: 0
-  nightSky: 0.25
-  nightEase: 0
-  nightStart: 0.4
-  nightEnd: 0.6
-  nightPower: 2
---- !u!114 &605280949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605280945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b770d959612e3a64195501b962088da4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  material: {fileID: 0}
-  renderers: []
 --- !u!1 &613734910
 GameObject:
   m_ObjectHideFlags: 0
@@ -2150,7 +2031,7 @@ GameObject:
   - component: {fileID: 653260036}
   m_Layer: 0
   m_Name: PostProcessing
-  m_TagString: Untagged
+  m_TagString: PostProcessing
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2993,6 +2874,7 @@ MonoBehaviour:
   useHover: 0
   useMouse: 1
   useSimulator: 1
+  disableMouseEmulation: 1
   recordFingers: 1
   recordThreshold: 5
   recordLimit: 10
@@ -4847,7 +4729,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wohlergehen
+  m_text: "Lebensqualit\xE4t"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 188bb0daf4a0945ea9aa65f6ceae8c60, type: 2}
   m_sharedMaterial: {fileID: -4285811704893378088, guid: 188bb0daf4a0945ea9aa65f6ceae8c60, type: 2}
@@ -8059,6 +7941,28 @@ MonoBehaviour:
   actionHours: 0
   actionCount: 0
   currentActionIndex: 0
+  values:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  valuesSet: 0
   water: 10000
   human: 1000
   deaths: 0
@@ -8652,7 +8556,9 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 494204064069164692, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
+    - {fileID: 747240172824743377, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 42a84eab09f1f421faaf2fc7ebaccbb7, type: 3}
 --- !u!1001 &3793434097808895768
 PrefabInstance:
@@ -8906,7 +8812,8 @@ PrefabInstance:
       propertyPath: m_RenderPostProcessing
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8019689084518906496, guid: b79465f5e2c7a41b2bc4ee2e4a12ee28, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b79465f5e2c7a41b2bc4ee2e4a12ee28, type: 3}
 --- !u!20 &8019689082965868376 stripped
 Camera:

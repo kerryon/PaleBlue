@@ -5389,7 +5389,7 @@ Material:
     - _MaskEdgeSoftness: 0.01
     - _MaskInverse: 0
     - _MaskSoftnessX: 0
-    - _MaskSoftnessY: 50
+    - _MaskSoftnessY: 80
     - _MaskWipeControl: 0.5
     - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0

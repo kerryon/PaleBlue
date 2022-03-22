@@ -1,5 +1,5 @@
 using UnityEngine;
-using SpaceGraphicsToolkit;
+using SpaceGraphicsToolkit.Cloudsphere;
 
 public class CloudDensity : MonoBehaviour
 {

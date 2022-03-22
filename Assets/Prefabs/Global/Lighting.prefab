@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494204063635639268}
   - component: {fileID: 494204063635639269}
-  - component: {fileID: 747240172824743377}
+  - component: {fileID: 3837209199037442365}
   m_Layer: 0
   m_Name: SecondaryLight
   m_TagString: Untagged
@@ -127,7 +127,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &747240172824743377
+--- !u!114 &3837209199037442365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -136,15 +136,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 494204063635639270}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e37c2a965976004183aefdd3b15ac31, type: 3}
+  m_Script: {fileID: 11500000, guid: b4b14168cdecfdf4cba4957774bf23d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   treatAsPoint: 0
-  multiplier: 1
-  intensityInSGT: 1
-  intensityInStandard: 1
-  intensityInURP: 0.9
-  intensityInHDRP: 120000
+  useLightIntensity: 1
+  brightness: 0.7
 --- !u!1 &494204063719278336
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,7 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 494204064069164694}
   - component: {fileID: 494204064069164695}
-  - component: {fileID: 494204064069164692}
+  - component: {fileID: 762411432555444081}
   m_Layer: 0
   m_Name: MainLight
   m_TagString: Untagged
@@ -337,7 +334,7 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
---- !u!114 &494204064069164692
+--- !u!114 &762411432555444081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -346,15 +343,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 494204064069164680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e37c2a965976004183aefdd3b15ac31, type: 3}
+  m_Script: {fileID: 11500000, guid: b4b14168cdecfdf4cba4957774bf23d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   treatAsPoint: 0
-  multiplier: 1
-  intensityInSGT: 1.2
-  intensityInStandard: 1.2
-  intensityInURP: 1.5
-  intensityInHDRP: 120000
+  useLightIntensity: 1
+  brightness: 1
 --- !u!1 &494204064457764247
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,3 +449,4 @@ MonoBehaviour:
     m_Bits: 4294967291
   maxScale: {x: 3, y: 3, z: 3}
   radius: 1
+  maxRaycastDistance: 1000000

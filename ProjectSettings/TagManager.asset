@@ -32,6 +32,7 @@ TagManager:
   - Pin11
   - Variables
   - UICamera
+  - PostProcessing
   layers:
   - Default
   - TransparentFX

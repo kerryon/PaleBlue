@@ -15,13 +15,43 @@ MonoBehaviour:
   index: 28
   pathName: 2
   actionName: Nutzvieh
-  actionDescription: 
+  actionDescription: "Die Landwirtschaft erzeugt mit Methan und Lachgas viele klimasch\xE4dliche
+    Emissionen. Der Gro\xDFteil stammt aus der Tierhaltung \u2013 die mit Abstand
+    gr\xF6\xDFten Klimas\xFCnder: Rinder.\n\nMit deinen Handlungen wird ein Wandel
+    in der Landwirtschaft und im Konsumverhalten vorangetrieben, der wiederum auf
+    viele Felder des Umweltsytems (Treibhausgase, Grundwasser, Baumbestand) Einfluss
+    nimmt."
   Icon: {fileID: 21300000, guid: 10771a0b07be94784b029b8c0964b24c, type: 3}
   NextPie: {fileID: 0}
-  topic: Nutztier und das Klima
+  topic: Tiere und das Klima
   description: 
   FABText: 
-  FABInfoTitle: 
-  FABInfo: "\n\n<link=https://www.generationblue.at/wasserwissen/trinkwasser_abwasser/wasserkreislauf.html><style=Link>Generation
-    Blue \u2013 Bundesministerium f\xFCr Landwirtschaft, Regionen und Tourismus \xD6sterreich</style></link>"
+  FABInfoTitle: Tiere und das Klima
+  FABInfo: "Den gr\xF6\xDFten Einfluss auf unsere Treibhausgasemissionen haben in
+    Deutschland die Sektoren Energie, Industrie und Verkehr. Doch mit etwa sieben
+    Prozent ist die Landwirtschaft ebenfalls f\xFCr einen nennenswerten Anteil der
+    Gesamtemissionen verantwortlich. Neben Kohlenstoffdioxid werden hier vor allem
+    die klimasch\xE4dlichen Gase Methan (CH4) und Lachgas (N2O) ausgesto\xDFen.\n\nB\xF6den
+    setzen zum Beispiel gro\xDFe Mengen an Lachgas frei, die zuvor als D\xFCngemittel
+    auf die Felder ausgetragen wurden. Bedeutend mehr Treibhausgase entstehen jedoch
+    durch die Haltung von Nutztieren wie Rindern, Schweinen, Schafen oder Gefl\xFCgel
+    \u2013 sie sind f\xFCr gut die H\xE4lfte der Landwirtschaftsemissionen verantwortlich.
+    Methan entsteht unter anderem bei der Verdauung von Wiederk\xE4uern wie Rindern
+    oder Schafen. Aber auch die Lagerung und Ausbringung von Tiermist und G\xFClle
+    setzt Methan und Lachgas frei.\n\n<font=Fonts/Config-Bold>Weniger Fleisch und
+    Milch konsumieren</font>\n\nUm die Emissionen aus der Nutztierhaltung zu reduzieren,
+    gibt es verschiedene Ans\xE4tze. Der Mist der Tiere m\xFCsste zum Beispiel so
+    gelagert werden, dass kein Klimagas in die Umwelt entweichen kann. Woran au\xDFerdem
+    geforscht wird: Futtermittelzus\xE4tze, die dazu f\xFChren sollen, dass bei der
+    Verdauung von Wiederk\xE4uern weniger Methan entsteht. Es wird sogar versucht,
+    Rinder so zu z\xFCchten, dass sie verdauungsbedingt insgesamt weniger Methan
+    aussto\xDFen. Diese Ans\xE4tze haben sich in der Praxis allerdings noch nicht
+    bew\xE4hrt.\n\nImmerhin: Seit 1990 sind die Emissionen aus der Tierhaltung gesunken.
+    Das liegt vor allem daran, dass auch die Tierbest\xE4nde gesunken sind. Denn
+    heutzutage k\xF6nnen weniger Hochleistungsrinder dieselbe Menge Milch produzieren.\n\nAm
+    Ende steht dennoch eine Weisheit, die schon lange kein Geheimnis mehr ist: Der
+    Konsum von Fleisch- und Milchprodukten ist unter Klima-Aspekten kritisch. Wenn
+    wir weniger Rinder und Schweine halten, w\xFCrde das somit auch die Treibhausgasemissionen
+    insgesamt senken.\n\n<link=https://www.quarks.de/umwelt/landwirtschaft/so-viele-treibhausgase-kommen-aus-der-nutztierhaltung/><style=Link>Quarks
+    \u2013 So viele Treibhausgase kommen aus der Nutztierhaltung</style></link>"
   titleImage: {fileID: 21300000, guid: 0cd7001500d1e4e67809712b5cd073e7, type: 3}

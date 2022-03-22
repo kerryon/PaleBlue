@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using SpaceGraphicsToolkit.Atmosphere;
+using SpaceGraphicsToolkit.Cloudsphere;
 using SpaceGraphicsToolkit;
 
 public class EvolvePlanet : MonoBehaviour
@@ -92,7 +94,7 @@ public class EvolvePlanet : MonoBehaviour
         planetWaterGradient.Scale = _Scale[materialIndex];
 
         cloudsphere.Color = _CColor[materialIndex];
-        cloudsphere.AmbientColor = _AmbientColor[materialIndex];
+        //cloudsphere.AmbientColor = _AmbientColor[materialIndex];
         cloudsphere.Radius = _Radius[materialIndex];
         cloudsphereDepth.RimColor = _RimColor[materialIndex];
 
@@ -115,7 +117,7 @@ public class EvolvePlanet : MonoBehaviour
         float planetWaterGradientSharpness_Initial = planetWaterGradient.Sharpness;
         float planetWaterGradientScale_Initial = planetWaterGradient.Scale;
         Color cloudsphereColor_Initial = cloudsphere.Color;
-        Color cloudsphereAmbientColor_Initial = cloudsphere.AmbientColor;
+        //Color cloudsphereAmbientColor_Initial = cloudsphere.AmbientColor;
         float cloudsphereRadius_Initial = cloudsphere.Radius;
         Color cloudsphereDepthRimColor_Initial = cloudsphereDepth.RimColor;
         Color atmosphereColor_Initial = atmosphere.Color;
@@ -135,7 +137,7 @@ public class EvolvePlanet : MonoBehaviour
             planetWaterGradient.Scale = Mathf.Lerp(planetWaterGradientScale_Initial, _Scale[materialIndex], time / duration);
 
             cloudsphere.Color = Color.Lerp(cloudsphereColor_Initial, _CColor[materialIndex], time / duration);
-            cloudsphere.AmbientColor = Color.Lerp(cloudsphereAmbientColor_Initial, _AmbientColor[materialIndex], time / duration);
+            //cloudsphere.AmbientColor = Color.Lerp(cloudsphereAmbientColor_Initial, _AmbientColor[materialIndex], time / duration);
             cloudsphere.Radius = Mathf.Lerp(cloudsphereRadius_Initial, _Radius[materialIndex], time / duration);
             cloudsphereDepth.RimColor = Color.Lerp(cloudsphereDepthRimColor_Initial, _RimColor[materialIndex], time / duration);
 
