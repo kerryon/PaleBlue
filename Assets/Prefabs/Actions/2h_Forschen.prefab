@@ -214,6 +214,9 @@ MonoBehaviour:
   result: {fileID: 742554791583547338}
   startUI: {fileID: 9085293389476535459}
   exitUI: {fileID: 2839448381635636096}
+  json: {fileID: 4900000, guid: ba06c7b98bcae4f7f9a796dfeb91cc37, type: 3}
+  topicList:
+    topic: []
 --- !u!1 &2728657795719900638
 GameObject:
   m_ObjectHideFlags: 0

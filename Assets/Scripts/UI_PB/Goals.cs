@@ -21,7 +21,14 @@ public class Goals : MonoBehaviour
 
     void OnEnable()
     {
-        CreateGoals((int)Variables.Instance.timespan.TotalDays + 1);
+        if (Variables.Instance.timespan.TotalDays > 7)
+        {
+            CreateGoals(7);
+        }
+        else
+        {
+            CreateGoals((int)Variables.Instance.timespan.TotalDays + 1);
+        }
     }
 
     void OnDisable()

@@ -1,0 +1,44 @@
+﻿{
+    "topic": [
+        {
+            "name": "conflict",
+            "description": "conflict"
+        },
+        {
+            "name": "luxury",
+            "description": "luxury"
+        },
+        {
+            "name": "industry",
+            "description": "industry"
+        },
+        {
+            "name": "agriculture",
+            "description": "444"
+        },
+        {
+            "name": "waste",
+            "description": "waste"
+        },
+        {
+            "name": "urbanisation",
+            "description": "urb"
+        },
+        {
+            "name": "energy",
+            "description": "energy"
+        },
+        {
+            "name": "overfishing",
+            "description": "overfish"
+        },
+        {
+            "name": "wastewater",
+            "description": "ww"
+        },
+        {
+            "name": "waterstructure",
+            "description": "ws"
+        }
+    ]
+}

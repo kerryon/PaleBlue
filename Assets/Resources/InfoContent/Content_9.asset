@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Content_9
   m_EditorClassIdentifier: 
   index: 9
-  topic: Info
+  topic: Allgemeine Infos zum Gameplay
   description: 
   FABText: 
   FABInfoTitle: Hier ist Zeit Geld
-  FABInfo: "F\xFCr den Spielverlauf ..."
+  FABInfo: "F\xFCr den Spielverlauf ........."
   titleImage: {fileID: 21300000, guid: 42681dae757a24fdc8627e3e12c80496, type: 3}
