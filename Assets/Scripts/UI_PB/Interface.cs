@@ -5,7 +5,6 @@ using UnityEngine;
 public class Interface : MonoBehaviour
 {
     public Camera UICamera;
-    public TMP_Text text;
     public GameObject actionMenu;
     private Menu _menu;
     private GameObject buttons;
@@ -20,8 +19,6 @@ public class Interface : MonoBehaviour
 
         levelLoader = GameObject.FindGameObjectWithTag("LL").GetComponent<LevelLoader>();
         levelLoader.AttachCam(UICamera);
-
-        text.gameObject.SetActive(false);
 
         Invoke(nameof(EnableButtons), 5f);
     }

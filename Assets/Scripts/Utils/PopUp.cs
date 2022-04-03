@@ -43,8 +43,16 @@ public class PopUp : MonoBehaviour
             if (buttons)
             {
                 buttons.SetTrigger("ButtonsDisabled");
+                buttons.gameObject.transform.GetChild(0).GetComponent<Animator>().SetTrigger("FABTrigger");
+                StartCoroutine(ActionsSetActive());
             }
         }
+    }
+
+    IEnumerator ActionsSetActive()
+    {
+        yield return new WaitForSeconds(1);
+        buttons.gameObject.transform.GetChild(0).gameObject.SetActive(false);
     }
 
     public void FadeOutPopup()
@@ -61,7 +69,9 @@ public class PopUp : MonoBehaviour
 
         if (buttons)
         {
+            yield return new WaitForSeconds(0.2f);
             buttons.SetTrigger("ButtonsEnabled");
+            buttons.gameObject.transform.GetChild(0).gameObject.SetActive(true);
         }
 
         yield return new WaitForSeconds(1);

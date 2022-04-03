@@ -34,7 +34,8 @@ public class PinPrefab : MonoBehaviour
             popup.FABInfo.text = popup.popUpContent[num].FABInfo.Replace(";", "\n");
             popup.titleImage.sprite = popup.popUpContent[num].titleImage;
             popup.button.onClick.RemoveAllListeners();
-            if (num != maxPins - 1)
+
+            if (num != maxPins - 1 || Variables.Instance.currentLevelIndex == 7)
             {
                 popup.button.onClick.AddListener(() => onClick[0]?.Invoke());
             } else
