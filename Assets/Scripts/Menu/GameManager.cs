@@ -29,10 +29,10 @@ public class GameManager : MonoBehaviour
 
         startTime = Time.time;
 
-        if (currentLevelIndex < 4)
+        if (currentLevelIndex <= 4)
         {
             continueButton.interactable = false;
-            continueButton.GetComponentInChildren<TMP_Text>().color = new Color32(0, 0, 0, 70);
+            continueButton.gameObject.GetComponentInChildren<TMP_Text>().color = new Color32(0, 0, 0, 70);
 
         }
         else

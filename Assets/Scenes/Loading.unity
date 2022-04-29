@@ -789,6 +789,7 @@ MonoBehaviour:
   useHover: 0
   useMouse: 1
   useSimulator: 1
+  disableMouseEmulation: 1
   recordFingers: 1
   recordThreshold: 5
   recordLimit: 1
@@ -1146,6 +1147,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreStartedOverGui: 1
+  requiredButtons: -1
   requiredSelectable: {fileID: 0}
   onFinger:
     m_PersistentCalls:
@@ -1171,6 +1173,9 @@ MonoBehaviour:
       m_Bits: 4294967291
     Distance: 0
   onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &135403478
@@ -1767,8 +1772,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 276.8753, y: -185.98999}
-  m_SizeDelta: {x: 453.7506, y: 231.98}
+  m_AnchoredPosition: {x: 276.89102, y: -185.98999}
+  m_SizeDelta: {x: 453.78204, y: 231.98}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &392891569
 MonoBehaviour:
@@ -1982,8 +1987,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 276.8753, y: -411.97998}
-  m_SizeDelta: {x: 453.7506, y: 120}
+  m_AnchoredPosition: {x: 276.89102, y: -411.97998}
+  m_SizeDelta: {x: 453.78204, y: 120}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &412792293
 MonoBehaviour:
@@ -3261,6 +3266,7 @@ GameObject:
   - component: {fileID: 821724563}
   - component: {fileID: 821724562}
   - component: {fileID: 821724561}
+  - component: {fileID: 821724565}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -3288,7 +3294,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -300, y: -992.9005}
+  m_SizeDelta: {x: -300, y: -992.87134}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &821724561
 MonoBehaviour:
@@ -3368,6 +3374,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821724559}
   m_CullTransparentMesh: 0
+--- !u!95 &821724565
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821724559}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a94afd858d3f94dc38820536efaa3fb9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &864448639
 GameObject:
   m_ObjectHideFlags: 0
@@ -5062,6 +5087,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreStartedOverGui: 1
+  requiredButtons: -1
   requiredSelectable: {fileID: 0}
   onFinger:
     m_PersistentCalls:
@@ -5087,6 +5113,9 @@ MonoBehaviour:
       m_Bits: 4294967291
     Distance: 0
   onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &1338369531
@@ -7107,6 +7136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ignoreStartedOverGui: 1
+  requiredButtons: -1
   requiredSelectable: {fileID: 0}
   onFinger:
     m_PersistentCalls:
@@ -7132,5 +7162,8 @@ MonoBehaviour:
       m_Bits: 4294967291
     Distance: 0
   onWorld:
+    m_PersistentCalls:
+      m_Calls: []
+  onScreen:
     m_PersistentCalls:
       m_Calls: []

@@ -8720,10 +8720,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 6543377308921293826, guid: b79465f5e2c7a41b2bc4ee2e4a12ee28, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -500
-      objectReference: {fileID: 0}
     - target: {fileID: 8019689083809051232, guid: b79465f5e2c7a41b2bc4ee2e4a12ee28, type: 3}
       propertyPath: m_Name
       value: CameraPivot

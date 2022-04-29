@@ -2,15 +2,24 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!21 &2100000
 Material:
-  serializedVersion: 6
+  serializedVersion: 8
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: stateEarly
   m_Shader: {fileID: 4800000, guid: 8d82487c84181094f812dc054bd6f2f5, type: 3}
-  m_ShaderKeywords: _DETAIL _DETAIL_NORMAL _DETAIL_ON _DETAIL_ON_DEF_1 _DETAIL_R
-    _LIGHTS _NORMALMAP _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A _WATER
+  m_ValidKeywords:
+  - _DETAIL_NORMAL
+  - _DETAIL_ON
+  - _DETAIL_ON_DEF_1
+  - _DETAIL_R
+  - _WATER
+  m_InvalidKeywords:
+  - _DETAIL
+  - _LIGHTS
+  - _NORMALMAP
+  - _SMOOTHNESS_TEXTURE_ALBEDO_CHANNEL_A
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -204,6 +213,7 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    m_Ints: []
     m_Floats:
     - _AlbedoShift: 0
     - _BumpScale: 1.55
@@ -277,7 +287,7 @@ Material:
     - _WaterTiling: 25
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.8104575, g: 0.63398695, b: 0.52287585, a: 1}
+    - _Color: {r: 0.8028758, g: 0.61934644, b: 0.50379086, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NightDirection: {r: 0, g: 0, b: 1, a: 1}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 1}

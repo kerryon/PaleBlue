@@ -7,7 +7,6 @@ using System.IO;
 
 public class Creature : MonoBehaviour
 {
-    private Texture2D SourceImage;
     private Sprite MySprite;
     public GameObject Drawing;
     public GameObject Props;
