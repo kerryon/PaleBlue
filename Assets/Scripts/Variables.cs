@@ -80,7 +80,7 @@ public class Variables : MonoBehaviour
     private readonly float state = 7f / 604800f;
 
     [Header("WaterMaxValue")]
-    public float maxWater = 10000f; //muss von Spielern erhöht werden
+    public float maxWater = 10000f; //muss von Spielenden erhöht werden
 
     private float wC;
     private float hC;
