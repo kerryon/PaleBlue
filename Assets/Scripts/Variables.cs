@@ -73,14 +73,15 @@ public class Variables : MonoBehaviour
     public DateTime lastClosed;
     public DateTime Started;
 
-    private bool gameOver = false;
+    [Header("Game State")]
+    public bool gameOver = false;
     private readonly float wv = 100000f;
     private readonly float hv = 50000f;
     private readonly float maxRain = 300f;
     private readonly float state = 7f / 604800f;
 
     [Header("WaterMaxValue")]
-    public float maxWater = 10000f; //muss von Spielenden erhöht werden
+    public float maxWater = 20000f; //muss von Spielenden erhöht werden
 
     private float wC;
     private float hC;
@@ -113,7 +114,7 @@ public class Variables : MonoBehaviour
         }
         Started = ES3.Load("StartedAt", currentDate);
 
-        if (currentLevelIndex != 8)
+        if (!gameOver)
         {
             InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
 
@@ -124,6 +125,11 @@ public class Variables : MonoBehaviour
 
             StartCoroutine(TrackLife());
         }
+    }
+
+    public void RestartValueCalculation()
+    {
+        InvokeRepeating(nameof(ValueCalculation), 0, 1.0f);
     }
 
     private IEnumerator TrackLife()
@@ -185,7 +191,7 @@ public class Variables : MonoBehaviour
             SetValues();
         }
 
-        if (timespan.TotalDays >= 7 && !gameOver)
+        if (timespan.TotalDays >= 7)
         {
             gameOver = true;
             GameOver();
@@ -211,10 +217,8 @@ public class Variables : MonoBehaviour
         else
         {
             human = 0f;
-            if (!gameOver) {
-                gameOver = true;
-                GameOver();
-            }
+            gameOver = true;
+            GameOver();
         }
 
         if (rain > 0f)
@@ -341,7 +345,7 @@ public class Variables : MonoBehaviour
 #if UNITY_IOS || UNITY_EDITOR
     void OnApplicationFocus(bool focus)
     {
-        if (focus)
+        if (focus && !gameOver)
         {
             UpdateValues();
         }

@@ -86,16 +86,18 @@ public class GameManager : MonoBehaviour
             Variables.Instance.waterUseRate = 0.4f;
             Variables.Instance.waterStorageRate = 0.5f;
             Variables.Instance.reproductionRate = 0.3f;
-            Variables.Instance.water = 10000f;
+            Variables.Instance.water = 20000f;
             Variables.Instance.human = 1000f;
             Variables.Instance.maxWater = 20000f;
             Variables.Instance.deaths = 0f;
             Variables.Instance.s = 0f;
+            Variables.Instance.gameOver = false;
+            Variables.Instance.RestartValueCalculation();
         }
 
         ES3.Save("CLI", 4);
         ES3.Save("HC", 1);
-        ES3.Save("WATER", 10000f);
+        ES3.Save("WATER", 20000f);
         ES3.Save("Property_maxWater", 20000f);
         ES3.Save("HUMAN", 1000f);
         ES3.Save("RAIN", 300f);

@@ -53,7 +53,7 @@ Material:
     m_Floats:
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _WobbleThreshold: 3
+    - _WobbleThreshold: 1.8627441
     m_Colors:
     - _Rotation: {r: 2.8, g: 0.1, b: 0.1, a: 0}
   m_BuildTextureStacks: []
