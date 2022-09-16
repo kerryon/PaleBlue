@@ -264,6 +264,8 @@ Material:
     - _NightSharpness: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _QueueControl: -1
+    - _QueueOffset: 0
     - _Smoothness: 1
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
@@ -287,7 +289,7 @@ Material:
     - _WaterTiling: 25
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.78013074, g: 0.57542485, b: 0.44653597, a: 1}
+    - _Color: {r: 0.7952941, g: 0.6047059, b: 0.4847059, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _NightDirection: {r: 0, g: 0, b: 1, a: 1}
     - _WaterColor: {r: 1, g: 1, b: 1, a: 1}
